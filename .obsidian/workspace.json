@@ -11,10 +11,14 @@
             "id": "5e1a752141be9ec6",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
+              "type": "markdown",
+              "state": {
+                "file": "Java/basics.md",
+                "mode": "source",
+                "source": false
+              },
               "icon": "lucide-file",
-              "title": "New tab"
+              "title": "basics"
             }
           }
         ]
@@ -152,6 +156,7 @@
             "state": {
               "type": "outline",
               "state": {
+                "file": "Java/basics.md",
                 "followCursor": false,
                 "showSearch": true,
                 "searchQuery": ""
@@ -159,9 +164,19 @@
               "icon": "lucide-list",
               "title": "Outline"
             }
+          },
+          {
+            "id": "6dd87622bcdae2f7",
+            "type": "leaf",
+            "state": {
+              "type": "git-view",
+              "state": {},
+              "icon": "git-pull-request",
+              "title": "Source Control"
+            }
           }
         ],
-        "currentTab": 4
+        "currentTab": 5
       }
     ],
     "direction": "horizontal",
@@ -175,10 +190,11 @@
       "daily-notes:Open today's daily note": false,
       "templates:Insert template": false,
       "command-palette:Open command palette": false,
-      "bases:Create new base": false
+      "bases:Create new base": false,
+      "obsidian-git:Open Git source control": false
     }
   },
-  "active": "eeee5d9975eb157f",
+  "active": "1070fda6ce08d499",
   "lastOpenFiles": [
     "Java/oops.md",
     "Java/Strings.md",
