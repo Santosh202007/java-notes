@@ -5960,7 +5960,7 @@ public class Main {
 }
 ```
 
-# But why is this actually powerful?
+#### But why is this actually powerful?
 
 Without polymorphism, you might write:
 
@@ -6039,5 +6039,5 @@ makeSound(new Horse());
 ```
 You don't have to modify `makeSound()`.
 
-That's the real power.
 
+### 5.9 A REAL LIFE EXAMPLE
