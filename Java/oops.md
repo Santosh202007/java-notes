@@ -5628,27 +5628,26 @@ This is one of the foundations of **polymorphism**.
 
 Suppose:
 
-Animal a = new Dog();
+```Animal a = new Dog();```
 
 You cannot directly do:
 
-a.bark();   // ❌
+```a.bark();   // ❌```
 
 because `bark()` belongs to `Dog`, not `Animal`.
 
 To access it, you need **downcasting**:
 
+```
 Dog d = (Dog) a;
-
-  
+d.bark();
+```
 
 d.bark();
 
 So the relationship is:
-
+```
 Dog d = new Dog();
-
-  
 
 Animal a = d;       // Upcasting
 
@@ -5663,8 +5662,8 @@ Dog d2 = (Dog) a;   // Downcasting
                      ↓
 
                 Dog reference
-
-### ⭐ Core rule to remember
+```
+#### ⭐ Core rule to remember
 
 > **Upcasting: Child object → Parent reference.**
 
