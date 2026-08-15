@@ -6085,3 +6085,5 @@ public class Main {
 Payment made using Credit Card
 Payment made using UPI**
 ```
+
+#### 5.10 Accessing variables
