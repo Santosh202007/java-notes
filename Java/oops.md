@@ -6224,6 +6224,7 @@ Static method
 → no runtime polymorphism
 ```
 
+Static methods are hidden, not overridden. They belong to the class, not the object, so the reference type (Animal) determines which static method is called — there's no runtime polymorphism for static methods.
 
 ### 5.12  Private and Final Methods in Polymorphism
 
