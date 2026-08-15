@@ -5520,9 +5520,5 @@ Remember this:
 > **Object type determines which overridden implementation actually runs.**
 
 
-## 11. Type Cast
-
-hjcvcvgajgfcfgaayD,JAGA,JVAJdgAJFAwDULGFYcxHga,YfAS,JXBASJCGA,JD,jdaskjchaJgfqhmdvajk,fgasjbwasjdgdvajdvwhbxsjchgycxvsjnagsyvdjnvgwyfgifkeihwfyjhbfejeyejfbeydgdyuethe osd etistd7 feigec
-
 
   
