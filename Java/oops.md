@@ -6406,3 +6406,38 @@ Therefore:
 - `final` methods **are inherited**
 - `final` methods **cannot be overridden**
 - They do **not participate in runtime polymorphism**
+
+##### c) The Four Most Important Cases
+
+Memorize the behavior, not the code.
+
+|Member|Overridden?|Runtime polymorphism?|
+|---|---|---|
+|Instance method|✅ Yes|✅ Yes|
+|Static method|❌ No|❌ No|
+|Instance variable|❌ No|❌ No|
+|Constructor|❌ No|❌ No|
+
+So if you see:
+
+Parent p = new Child();
+
+ask:
+
+> **What am I accessing?**
+
+#### Method?
+
+Potentially **Child's overridden version**.
+
+### Variable?
+
+**Parent's version** based on reference type.
+
+### Static method?
+
+**Parent's version** based on reference/class context.
+
+### Constructor?
+
+Constructors aren't polymorphic.
