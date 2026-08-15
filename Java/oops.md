@@ -5184,7 +5184,7 @@ That's literally **poly (many) + morph (forms)**. 💯
 
 It is the basis of **runtime polymorphism**.
 
-### b) Basic Example
+#### b) Basic Example
 
 ```
 class Animal {
@@ -5214,7 +5214,7 @@ public class Main {
 Dog barks
 ```
 
-### c) Why?
+#### c) Why?
 
 Look at:
 
@@ -5249,7 +5249,7 @@ Dog.sound()
 
 This runtime decision is **Dynamic Method Dispatch**.
 
-### NOTE: if Animal does not have sound()
+#### NOTE: if Animal does not have sound()
 Suppose:
 
 ```
@@ -5280,7 +5280,7 @@ It asks:
 
 Therefore, this code **will not compile**.
 
-### Why?
+#### Why?
 
 Even though the actual object is a `Dog`, the reference is an `Animal` reference.
 
@@ -5300,7 +5300,7 @@ So:
 a.sound();   // ❌ Compile-time error
 ```
 
-### But this works:
+#### But this works:
 
 ```
 Animal a = new Dog();
@@ -5316,7 +5316,7 @@ a.sound();
 
 through an `Animal` reference if `Animal` doesn't declare/inherit `sound()`.
 
-### Compare:
+#### Compare:
 
 ```
 class Animal {
@@ -5353,7 +5353,7 @@ Java:
 
 **So the parent/reference type must have the method for the call to be legal. Then runtime dispatch decides which overridden version runs.** 🔥
 
-### d) The key rule 🔥
+#### d) The key rule 🔥
 
 > **Reference type decides what methods are accessible.**  
 > **Object type decides which overridden method actually runs.**
@@ -5368,7 +5368,7 @@ a.sound();
 
 ---
 
-### e) Dynamic Method Dispatch requires
+#### e) Dynamic Method Dispatch requires
 
 Usually, you need:
 
@@ -5377,9 +5377,9 @@ Usually, you need:
 3. **Parent-class reference**
 4. **Child-class object**
 
-### f)For Dynamic Method Dispatch, the method must be **available in the reference type**, and the child may either **override it or inherit it**.
+#### f)For Dynamic Method Dispatch, the method must be **available in the reference type**, and the child may either **override it or inherit it**.
 
-### Case 1: Available in both → overriding
+##### Case 1: Available in both → overriding
 
 ```
 class Animal {
@@ -5400,7 +5400,7 @@ a.sound();  // Dog
 
 Here `sound()` exists in both → **Dog's overridden method executes.**
 
-### Case 2: Only available in parent → inherited
+##### Case 2: Only available in parent → inherited
 
 ```
 class Animal {
