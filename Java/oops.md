@@ -5539,25 +5539,20 @@ Even though the actual object is a `Dog`, the reference is `Animal`.
 
 This is where **runtime polymorphism** comes in.
 
+```
 class Animal {
-
     void sound() {
-
         System.out.println("Animal sound");
-
     }
-
 }
 
 class Dog extends Animal {
-
     @Override
-
     void sound() {
-
         System.out.println("Dog sound");
     }
 }
+```
 
 ```
 Animal a = new Dog();
@@ -5581,12 +5576,13 @@ For an **overridden instance method**, Java chooses the implementation based on 
 
 This is the classic pattern:
 
+```
 Animal a = new Dog();
-
 a.sound();
+```
 
 Think:
-
+```
         Animal reference
 
               ↓
@@ -5596,6 +5592,7 @@ Think:
         │ Dog object│
 
         └───────────┘
+```
 
 The reference determines **what members you can access**.
 
