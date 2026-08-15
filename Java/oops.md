@@ -6162,7 +6162,7 @@ Dog.sound()
 
 This is a classic interview trap.
 
-#### 5.11  What About Static Methods?
+### 5.11  What About Static Methods?
 
 Another important trap.
 
@@ -6172,6 +6172,7 @@ They are **hidden**.
 
 Example:
 
+```
 class Animal {
 
     static void show() {
@@ -6182,8 +6183,6 @@ class Animal {
 
 }
 
-  
-
 class Dog extends Animal {
 
     static void show() {
@@ -6193,14 +6192,14 @@ class Dog extends Animal {
     }
 
 }
+```
 
 Now:
 
+```
 Animal a = new Dog();
-
-  
-
 a.show();
+```
 
 Output:
 
@@ -6214,12 +6213,13 @@ The reference type determines which static method is called.
 
 So:
 
+```
 Overridden instance method
 
 → runtime polymorphism
 
-  
 
 Static method
 
 → no runtime polymorphism
+```
