@@ -6161,3 +6161,65 @@ Dog.sound()
 > **Fields → reference-type resolution**
 
 This is a classic interview trap.
+
+###  What About Static Methods?
+
+Another important trap.
+
+Static methods are **not overridden** in the runtime-polymorphism sense.
+
+They are **hidden**.
+
+Example:
+
+class Animal {
+
+    static void show() {
+
+        System.out.println("Animal");
+
+    }
+
+}
+
+  
+
+class Dog extends Animal {
+
+    static void show() {
+
+        System.out.println("Dog");
+
+    }
+
+}
+
+Now:
+
+Animal a = new Dog();
+
+  
+
+a.show();
+
+Output:
+
+Animal
+
+Why?
+
+Because static methods belong to the **class**, not the object.
+
+The reference type determines which static method is called.
+
+So:
+
+Overridden instance method
+
+→ runtime polymorphism
+
+  
+
+Static method
+
+→ no runtime polymorphism
