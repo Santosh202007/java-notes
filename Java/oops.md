@@ -5453,13 +5453,14 @@ Remember this:
 
 ### 5.6 Upcasting
 
-###  Definition
+#### a) Definition
 
 **Upcasting** means converting a **child class reference into a parent class reference**.
-
+```
 Dog d = new Dog();
 
 Animal a = d;
+```
 
 Here:
 
@@ -5467,8 +5468,12 @@ Here:
 - `Animal` → parent class
 - `a` → parent reference
 - Actual object → `Dog`
+#### b) Why is it called Upcasting?
 
+Because we move **up the inheritance hierarchy**:
 This is **upcasting**.
 
+```
 
+```
   
