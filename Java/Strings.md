@@ -247,7 +247,7 @@ public class Main {
 }
 ```
 
-### answers
+### answer
 # Initially
 
 ```
