@@ -5418,7 +5418,7 @@ a.sound();  // Animal
 
 `Dog` doesn't have its own `sound()`, but it **inherits** `Animal.sound()` → it still executes.
 
-### Case 3: Only available in child → ❌
+##### Case 3: Only available in child → ❌
 
 ```
 class Animal {
@@ -5436,7 +5436,7 @@ a.bark();   // ❌ Compile-time error
 
 Because `bark()` isn't available through the `Animal` reference.
 
-### The rule to remember 🔥
+The rule to remember 🔥
 
 > **The method must be available in the reference type. If the child overrides it, the child's version runs at runtime. If it doesn't override it, the inherited parent version runs.**
 
