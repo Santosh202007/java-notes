@@ -6269,3 +6269,49 @@ Dog
   ↓
 Separate method
 ```
+
+Therefore:
+
+- `private` methods are **not inherited**
+- `private` methods **cannot be overridden**
+- They do **not participate in runtime polymorphism**
+
+### Important Example
+```
+class Animal {
+
+    private void sound() {
+        System.out.println("Animal sound");
+    }
+
+    void makeSound() {
+        sound();
+    }
+}
+
+class Dog extends Animal {
+
+    void sound() {
+        System.out.println("Dog sound");
+    }
+}
+```
+
+```
+Animal a = new Dog();
+a.makeSound();
+```
+
+Output:
+
+Animal sound
+
+Why?
+
+`makeSound()` belongs to `Animal`, and its call:
+
+sound();
+
+refers to the `private` method inside `Animal`.
+
+`Dog.sound()` is a separate method and does not override it.
