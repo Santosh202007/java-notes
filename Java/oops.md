@@ -6445,5 +6445,55 @@ Constructors aren't polymorphic.
 ### 5.13 Constructor + Polymorphism Trap
 
 ```
+class Animal {
+    Animal() {
+        sound();
+    }
+
+    void sound() {
+        System.out.println("Animal");
+    }
+}
+
+class Dog extends Animal {
+    Dog() {
+        System.out.println("Dog constructor");
+    }
+
+    @Override
+    void sound() {
+        System.out.println("Dog");
+    }
+}
+```
 
 ```
+Dog d = new Dog();
+```
+
+What happens?
+
+The parent constructor runs first.
+
+Inside the parent constructor:
+```
+sound();
+```
+
+Which method is called?
+
+**Dog's `sound()`**.
+
+Why?
+
+Because `sound()` is an overridable instance method, and the actual object being constructed is a `Dog`.
+
+This is a **dangerous design pattern**, because the child part of the object hasn't finished initialization yet.
+
+So generally:
+
+> **Avoid calling overridable methods from constructors.**
+
+This is an important deeper Java concept.
+
+The output is same 
