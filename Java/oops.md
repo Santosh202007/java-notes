@@ -6223,3 +6223,16 @@ Static method
 
 → no runtime polymorphism
 ```
+
+
+# Private and Final Methods in Polymorphism
+
+## 1. Private Methods
+
+A `private` method **cannot be overridden**.
+
+### Why?
+
+Because a `private` method is **not inherited** by the child class.
+
+> A method that is not inherited cannot be overridden.
