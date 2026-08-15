@@ -792,7 +792,7 @@ or
 |`5e-2`|5 × 10⁻²|0.05|
 |`12e10`|12 × 10¹⁰|120000000000|
 
-# Type Conversion vs Type Casting in Java
+# Type Conversion and Type Casting 
 
 ##  Type Conversion
 
