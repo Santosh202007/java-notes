@@ -6304,14 +6304,42 @@ a.makeSound();
 
 Output:
 
+```
 Animal sound
+```
 
 Why?
 
 `makeSound()` belongs to `Animal`, and its call:
 
+```
 sound();
+```
 
 refers to the `private` method inside `Animal`.
 
 `Dog.sound()` is a separate method and does not override it.
+
+#### Note
+A `private` method is **not inherited** and cannot be accessed through the parent reference `a`.
+
+So:
+```
+class Animal {
+
+    private void sound() {
+        System.out.println("Animal sound");
+    }
+}
+
+class Dog extends Animal {
+
+    void sound() {
+        System.out.println("Dog sound");
+    }
+}
+
+```
+```
+
+```
