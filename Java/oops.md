@@ -6499,3 +6499,9 @@ The output is same even if you create
 ```
 Animal a = new Dog();
 ```
+
+### 5.14 Conclusion
+Whenever you see:
+```
+Parent p = new Child();
+```
