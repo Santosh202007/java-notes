@@ -940,9 +940,9 @@ int i = (int) l;
 
 ---
 
-#### Examples
+### Examples
 
-### Example 1 (Automatic)
+#### Example 1 (Automatic)
 
 ```
 int a = 25;
@@ -959,7 +959,7 @@ Output
 
 ---
 
-### Example 2 (Manual)
+#### Example 2 (Manual)
 
 ```
 double x = 19.99;
@@ -976,7 +976,7 @@ Output
 
 ---
 
-### Example 3
+#### Example 3
 
 ```
 char ch = 'A';
@@ -995,7 +995,7 @@ Because `'A'` has ASCII/Unicode value **65**.
 
 ---
 
-### Example 4
+#### Example 4
 
 ```
 int num = 66;
@@ -1012,7 +1012,7 @@ B
 
 ---
 
-### Example 5
+#### Example 5
 
 ```
 int i = 130;
@@ -1033,7 +1033,7 @@ A `byte` stores values only from **-128 to 127**. Since `130` is outside this ra
 
 ---
 
-# Conversion vs Casting
+### Conversion vs Casting
 
 | Feature     | Type Conversion | Type Casting |
 | ----------- | --------------- | ------------ |
