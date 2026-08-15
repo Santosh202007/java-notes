@@ -5484,4 +5484,15 @@ This is **upcasting**.
   Animal a = d;   // Upcasting
   ```
 
+#### c) Upcasting can be implicit
 
+Java automatically performs upcasting.
+
+`Dog d = new Dog();`
+`Animal a = d;`
+
+You don't need to do it explicitly:
+
+`Animal a = (Animal) d;`
+
+Although this is technically possible, the cast is unnecessary.
