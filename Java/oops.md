@@ -4343,7 +4343,7 @@ porchse
 ### final conclusion
 `this` always refers to the current object, which is the object that was created (even if it's a child object). When a child object is created, the parent constructor runs first. Inside the parent constructor, `this` still refers to the same child object, not a separate parent object. Therefore, if the parent constructor initializes a field using `this`, it initializes the parent field that exists inside that child object. When multiple classes in the inheritance hierarchy have fields with the same name, the executing class determines which field `this.field` refers to.
 
-## Method overriding
+# Method overriding
 
 Method overriding happens when a class provides its own implementation of a method which already exists in the parent class.
 The key idea:
@@ -4382,7 +4382,7 @@ Dog barks
 ```
 
 The child version is executed.
-# Why do we need overriding?
+## Why do we need overriding?
 
 Imagine:
 
@@ -4422,7 +4422,7 @@ and let each child provide its own implementation.
      sound()  sound()  sound()
      bark     meow     roar
 ```
-# What if you want the parent's version?
+## What if you want the parent's version?
 
 That's where your previous `super` knowledge comes in.
 
