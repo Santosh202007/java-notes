@@ -913,7 +913,7 @@ The decimal part is removed.
 
 ---
 
-## Narrowing Conversion Order
+#### Narrowing Conversion Order
 
 ```
 double
@@ -940,7 +940,7 @@ int i = (int) l;
 
 ---
 
-# Examples
+#### Examples
 
 ### Example 1 (Automatic)
 
