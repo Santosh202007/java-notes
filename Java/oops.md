@@ -6359,7 +6359,50 @@ A `final` method **cannot be overridden**.
 
 Because Java explicitly prevents a child class from providing a new implementation of a `final` method.
 ```
+class Animal {
 
+    final void sound() {
+        System.out.println("Animal sound");
+    }
+}
+
+class Dog extends Animal {
+
+    void sound() {
+        System.out.println("Dog sound");
+    }
+}
+
+public class Main {
+
+    public static void main(String[] args) {
+
+        Animal a = new Dog();
+        a.sound();
+    }
+}
 ```
 
-If the child tries:
+This causes a **compile-time error**.
+
+The parent is essentially saying:
+
+> "This method's implementation cannot be changed by subclasses."
+
+### Important Difference
+
+Unlike `private`, a `final` method **is inherited**.
+```
+Animal
+  |
+  | final sound()
+  ↓
+Dog inherits sound()
+  |
+  X  ← Cannot override
+```
+Therefore:
+
+- `final` methods **are inherited**
+- `final` methods **cannot be overridden**
+- They do **not participate in runtime polymorphism**
