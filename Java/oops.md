@@ -3965,9 +3965,9 @@ Every constructor reaches its parent through `super()`.
 
 
 
-### Note(Variable hiding)
+# Note(Variable hiding)
 How that internals work if two classes have same variable names and they use inheritance ,how the usage of this and super works
-## Example 1
+# Example 1
 ```
 package test;
 
@@ -5377,7 +5377,7 @@ Usually, you need:
 3. **Parent-class reference**
 4. **Child-class object**
 
-### 6.For Dynamic Method Dispatch, the method must be **available in the reference type**, and the child may either **override it or inherit it**.
+### f)For Dynamic Method Dispatch, the method must be **available in the reference type**, and the child may either **override it or inherit it**.
 
 ### Case 1: Available in both → overriding
 
