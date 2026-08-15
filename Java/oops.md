@@ -5011,7 +5011,7 @@ Java calls:
 Animal.sound()
 ```
 
-### Compare the two
+#### Compare the two
 
 **1. Runtime polymorphism:**
 
@@ -5031,7 +5031,7 @@ a.sound();
 
 ➡️ `Animal.sound()` runs ❌ not runtime polymorphism
 
-### The key thing 🔥
+#### The key thing 🔥
 
 The **overriding itself** is what makes runtime polymorphism possible, but you actually **demonstrate runtime polymorphism when a parent reference points to a child object**:
 
@@ -5041,8 +5041,8 @@ Animal a = new Dog();
 
 That's the part you should remember.
 
-### How method overriding enables run time poly
-### 1. First, method overriding
+#### How method overriding enables run time poly
+##### 1. First, method overriding
 
 Suppose:
 
@@ -5070,7 +5070,7 @@ Animal → sound() → "Animal sound"
 Dog    → sound() → "Dog barks"
 ```
 
-### 2. Now overriding enables runtime polymorphism
+##### 2. Now overriding enables runtime polymorphism
 
 We create:
 
@@ -5116,7 +5116,7 @@ Animal a = new Dog();
 
 That's **runtime polymorphism**.
 
-### What if there was NO overriding?
+##### What if there was NO overriding?
 
 Suppose:
 
@@ -5143,7 +5143,7 @@ There isn't a different `Dog.sound()` implementation to choose.
 
 So it simply uses the inherited `Animal.sound()`.
 
-### So remember this relationship 🧠
+#### So remember this relationship 🧠
 
 **Method overriding creates different implementations.**
 
@@ -5178,7 +5178,7 @@ That's literally **poly (many) + morph (forms)**. 💯
 
 
 ### 5.4 Dynamic method dispatch
-### a) Definition
+#### a) Definition
 
 **Dynamic Method Dispatch** is the mechanism by which Java decides **at runtime which overridden method to execute**.
 
