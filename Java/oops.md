@@ -6355,7 +6355,7 @@ And the `Dog.sound()` method **does not override** `Animal.sound()` — it is a 
 
 A `final` method **cannot be overridden**.
 
-### Why?
+#### Why?
 
 Because Java explicitly prevents a child class from providing a new implementation of a `final` method.
 ```
@@ -6389,7 +6389,7 @@ The parent is essentially saying:
 
 > "This method's implementation cannot be changed by subclasses."
 
-### Important Difference
+#### Important Difference
 
 Unlike `private`, a `final` method **is inherited**.
 ```
