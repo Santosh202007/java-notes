@@ -6496,4 +6496,7 @@ So generally:
 
 This is an important deeper Java concept.
 
-The output is same 
+The output is same even if you create
+```
+Animal a = new Dog();
+```
