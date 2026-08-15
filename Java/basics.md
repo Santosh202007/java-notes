@@ -934,7 +934,7 @@ You must use casting.
 Example:
 
 ```
-long l = 5000;
+long l = 5000000;
 int i = (int) l;
 ```
 
