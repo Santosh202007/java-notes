@@ -6355,7 +6355,7 @@ And the `Dog.sound()` method **does not override** `Animal.sound()` — it is a 
 
 A `final` method **cannot be overridden**.
 
-#### Why?
+##### Why?
 
 Because Java explicitly prevents a child class from providing a new implementation of a `final` method.
 ```
@@ -6426,19 +6426,19 @@ ask:
 
 > **What am I accessing?**
 
-#### Method?
+##### Method?
 
 Potentially **Child's overridden version**.
 
-#### Variable?
+##### Variable?
 
 **Parent's version** based on reference type.
 
-#### Static method?
+##### Static method?
 
 **Parent's version** based on reference/class context.
 
-#### Constructor?
+##### Constructor?
 
 Constructors aren't polymorphic.
 
@@ -6537,5 +6537,5 @@ If **yes** → JVM uses the actual object's implementation.
 
 If **no** → normal compile-time/reference-based resolution applies.
 
-#### ⭐ Core rule to remember
+##### ⭐ Core rule to remember
 In Java runtime polymorphism, the reference type determines what members can be accessed, while the actual object determines which overridden instance method executes.
