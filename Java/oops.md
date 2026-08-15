@@ -5452,7 +5452,7 @@ Remember this:
 > 
 > **Object type determines which overridden implementation actually runs.**
 
-### 5.6 Up casting
+### 5.6 Upcasting
 
 #### a) Definition
 
@@ -5674,5 +5674,243 @@ And:
 
 That second rule is **extremely important for understanding runtime polymorphism**.
 
-### 5.7 Down casting
+### 5.7 Downcasting
+
+#### a. Definition
+
+**Downcasting** means converting a **parent class reference into a child class reference**.
+
+```
+Animal a = new Dog();
+Dog d = (Dog) a;
+```
+
+Here:
+
+- `Animal` → parent class
+- `Dog` → child class
+- `a` → parent reference
+- `d` → child reference
+- Actual object → `Dog`
+
+This is **downcasting**.
+
+---
+
+#### b. Why is it called Downcasting?
+
+Because we move **down the inheritance hierarchy**:
+
+```
+        Animal
+
+          ↑
+
+         Dog
+```
+
+```
+Animal a = new Dog();
+Dog d = (Dog) a;   // Downcasting
+```
+`Animal` → `Dog` = moving downward.
+
+---
+
+#### c. Explicit casting is required
+
+Unlike upcasting, downcasting is **not automatic**.
+
+❌ This is not allowed:
+
+```
+Animal a = new Dog();
+Dog d = a;
+```
+You must explicitly cast:
+
+```
+Dog d = (Dog) a;
+```
+---
+
+#### d. Why do we need downcasting?
+
+After upcasting:
+
+`Animal a = new Dog();`
+
+The reference type is `Animal`.
+
+So you cannot access methods that exist only in `Dog`.
+
+`a.bark();   // ❌
+`
+After downcasting:
+
+```
+Dog d = (Dog) a;
+d.bark();   // ✅
+```
+
+So downcasting allows you to access **child-specific members**.
+
+---
+
+#### e. Downcasting works only when the actual object is the child
+
+This is extremely important.
+```
+Animal a = new Dog();
+Dog d = (Dog) a;   // ✅
+```
+
+Why?
+
+Reference type → Animal
+Actual object  → Dog
+
+The object really is a `Dog`, so the cast is valid.
+
+---
+
+#### f. Invalid downcasting
+
+```
+Animal a = new Cat();
+Dog d = (Dog) a;   // ❌
+```
+
+The reference is `Animal`, but the actual object is `Cat`.
+
+```
+Animal
+ ├── Dog
+ └── Cat
+```
+
+a → Cat object
+
+You cannot turn a `Cat` object into a `Dog`.
+
+This causes:
+ClassCastException at runtime.
+
+
+---
+
+#### g. Using `instanceof` to prevent the error
+
+You can check the actual object before downcasting:
+
+```
+Animal a = new Cat();
+
+if (a instanceof Dog) {
+    Dog d = (Dog) a;
+    d.bark();
+}
+```
+Since `a` actually refers to a `Cat`, the condition is false.
+
+---
+
+#### h. Upcasting → Downcasting
+
+These two are opposites.
+
+```
+Dog d1 = new Dog();
+Animal a = d1;       // Upcasting
+Dog d2 = (Dog) a;    // Downcasting
+```
+
+Think:
+```
+Dog object
+
+    ↓
+
+Animal reference
+
+    ↓
+
+Dog reference
+```
+---
+
+#### i. Down casting and polymorphism
+
+Consider:
+```
+class Animal {
+    void sound() {
+        System.out.println("Animal sound");
+    }
+}
+```
+  
+
+```
+class Dog extends Animal {
+    void sound() {
+        System.out.println("Dog sound");
+
+    }
+
+    void bark() {
+        System.out.println("Barking");
+    }
+}
+```
+
+```
+Animal a = new Dog();
+a.sound();   // Dog sound
+```
+Even before down casting, the overridden method works because of **runtime polymorphism**.
+
+Then:
+
+```
+Dog d = (Dog) a;
+d.bark();    // Barking
+```
+
+Down casting is needed here because `bark()` is **specific to `Dog`**.
+
+---
+
+#### j. Key distinction
+
+```
+Upcasting->
+Child reference → Parent reference
+Usually implicit
+Safer
+Used heavily for polymorphism
+```
+
+  
+```
+Down casting->
+Parent reference → Child reference
+Explicit cast required
+Can cause ClassCastException
+Used to access child-specific members
+```
+#### ⭐ Core rule to remember
+
+> **Downcasting = converting a parent reference back into a child reference.**
+```
+Animal a = new Dog();
+Dog d = (Dog) a;
+```
+
+And the golden rule:
+
+> **Downcasting is valid only if the actual object is an instance of the target child class.**
+
+
+### 5.8
 
