@@ -5968,7 +5968,6 @@ Without polymorphism, you might write:
 static void makeDogSound(Dog d) {
 
     d.sound();
-
 }
 ```
   
@@ -5986,7 +5985,7 @@ static void makeCatSound(Cat c) {
 static void makeLionSound(Lion l) {
 
     l.sound();
-
+    
 }
 ```
 
@@ -6021,9 +6020,7 @@ Instead, you write **one method**:
 
 ```
 static void makeSound(Animal a) {
-
     a.sound();
-
 }
 ```
 
