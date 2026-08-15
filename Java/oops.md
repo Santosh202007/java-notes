@@ -5496,3 +5496,203 @@ You don't need to do it explicitly:
 `Animal a = (Animal) d;`
 
 Although this is technically possible, the cast is unnecessary.
+
+#### d) What can we access?
+
+This is the **most important point**.
+
+When you have:
+
+Animal a = new Dog();
+
+The **reference type** is `Animal`.
+
+Therefore, you can directly access only members available through `Animal`.
+
+```
+class Animal {
+
+    void eat() {
+
+        System.out.println("Eating");
+
+    }
+
+}
+
+  
+
+class Dog extends Animal {
+
+    void bark() {
+
+        System.out.println("Barking");
+
+    }
+
+}
+
+```
+Animal a = new Dog();
+
+  
+
+a.eat();   // ✅
+
+a.bark();  // ❌
+
+Even though the actual object is a `Dog`, the reference is `Animal`.
+
+---
+
+### 5. But overridden methods behave differently
+
+This is where **runtime polymorphism** comes in.
+
+class Animal {
+
+    void sound() {
+
+        System.out.println("Animal sound");
+
+    }
+
+}
+
+  
+
+class Dog extends Animal {
+
+    @Override
+
+    void sound() {
+
+        System.out.println("Dog sound");
+
+    }
+
+}
+
+Animal a = new Dog();
+
+  
+
+a.sound();
+
+Output:
+
+Dog sound
+
+Why?
+
+Because:
+
+Reference type → Animal
+
+Actual object  → Dog
+
+For an **overridden instance method**, Java chooses the implementation based on the **actual object at runtime**.
+
+---
+
+### 6. Upcasting + Runtime Polymorphism
+
+This is the classic pattern:
+
+Animal a = new Dog();
+
+a.sound();
+
+Think:
+
+        Animal reference
+
+              ↓
+
+        ┌───────────┐
+
+        │ Dog object│
+
+        └───────────┘
+
+The reference determines **what members you can access**.
+
+The actual object determines **which overridden method executes**.
+
+---
+
+### 7. Why use Upcasting?
+
+It allows us to treat different child objects uniformly.
+
+Animal a1 = new Dog();
+
+Animal a2 = new Cat();
+
+Animal a3 = new Cow();
+
+Now all three can be handled as `Animal`.
+
+a1.sound();
+
+a2.sound();
+
+a3.sound();
+
+Each object can provide its own implementation of `sound()`.
+
+This is one of the foundations of **polymorphism**.
+
+---
+
+### 8. Important limitation
+
+Suppose:
+
+Animal a = new Dog();
+
+You cannot directly do:
+
+a.bark();   // ❌
+
+because `bark()` belongs to `Dog`, not `Animal`.
+
+To access it, you need **downcasting**:
+
+Dog d = (Dog) a;
+
+  
+
+d.bark();
+
+So the relationship is:
+
+Dog d = new Dog();
+
+  
+
+Animal a = d;       // Upcasting
+
+                     ↓
+
+              Animal reference
+
+  
+
+Dog d2 = (Dog) a;   // Downcasting
+
+                     ↓
+
+                Dog reference
+
+### ⭐ Core rule to remember
+
+> **Upcasting: Child object → Parent reference.**
+
+Animal a = new Dog();
+
+And:
+
+> **Reference type decides what you can access; actual object decides which overridden method runs.**
+
+That second rule is **extremely important for understanding runtime polymorphism**.
