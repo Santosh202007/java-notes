@@ -1,3 +1,4 @@
+
 # Why are Strings Immutable in Java?
 
 In Java, a `String` object cannot be modified after it is created. Whenever we perform an operation that appears to modify a string, Java actually creates a **new `String` object** instead of changing the existing one.
