@@ -6442,4 +6442,8 @@ Potentially **Child's overridden version**.
 
 Constructors aren't polymorphic.
 
-### 5.13
+### 5.13 Constructor + Polymorphism Trap
+
+```
+
+```
