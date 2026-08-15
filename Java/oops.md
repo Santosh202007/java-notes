@@ -6080,7 +6080,8 @@ public class Main {
 }
 ```
 
-oUTPUT
+ #### Output
 ```
-****
+Payment made using Credit Card
+Payment made using UPI**
 ```
