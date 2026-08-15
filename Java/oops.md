@@ -6389,7 +6389,7 @@ The parent is essentially saying:
 
 > "This method's implementation cannot be changed by subclasses."
 
-#### Important Difference
+ Important Difference
 
 Unlike `private`, a `final` method **is inherited**.
 ```
@@ -6407,7 +6407,7 @@ Therefore:
 - `final` methods **cannot be overridden**
 - They do **not participate in runtime polymorphism**
 
-##### c) The Four Most Important Cases
+#### c) The Four Most Important Cases
 
 Memorize the behavior, not the code.
 
