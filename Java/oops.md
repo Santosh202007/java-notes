@@ -6236,3 +6236,36 @@ A `private` method **cannot be overridden**.
 Because a `private` method is **not inherited** by the child class.
 
 > A method that is not inherited cannot be overridden.
+
+Example
+```
+class Animal {
+
+    private void sound() {
+        System.out.println("Animal sound");
+    }
+}
+
+class Dog extends Animal {
+
+    void sound() {
+        System.out.println("Dog sound");
+    }
+}
+```
+Here, `Dog.sound()` is **not overriding** `Animal.sound()`.
+
+They are two completely separate methods.
+```
+Animal
+  |
+  | private sound()
+  |
+  X  ← Not inherited
+  |
+Dog
+  |
+  | sound()
+  ↓
+Separate method
+```
