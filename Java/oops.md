@@ -6353,3 +6353,13 @@ And the `Dog.sound()` method **does not override** `Animal.sound()` — it is a 
 
 #### b. Final methods
 
+A `final` method **cannot be overridden**.
+
+### Why?
+
+Because Java explicitly prevents a child class from providing a new implementation of a `final` method.
+```
+
+```
+
+If the child tries:
