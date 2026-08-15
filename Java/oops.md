@@ -5474,6 +5474,14 @@ Because we move **up the inheritance hierarchy**:
 This is **upcasting**.
 
 ```
-
+        Animal
+          ↑
+         Dog
 ```
-  
+
+  ```
+  Dog d = new Dog();
+  Animal a = d;   // Upcasting
+  ```
+
+
