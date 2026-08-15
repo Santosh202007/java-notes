@@ -5452,7 +5452,7 @@ Remember this:
 > 
 > **Object type determines which overridden implementation actually runs.**
 
-### 5.6 Upcasting
+### 5.6 Up casting
 
 #### a) Definition
 
@@ -5673,3 +5673,6 @@ And:
 > **Reference type decides what you can access; actual object decides which overridden method runs.**
 
 That second rule is **extremely important for understanding runtime polymorphism**.
+
+### 5.7 Down casting
+
