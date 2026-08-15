@@ -4472,6 +4472,9 @@ super.sound();
 
 
 #  Polymorphism
+
+Definition
+
 The word literally means poly=many, morph=forms, so it means one thing can take many forms .
 Polymorphism essentially means that the same method can behave differently according to the object that's involved
 
@@ -4489,7 +4492,7 @@ a.sound();     //Cat's sound
 The method call is same but the behavior changes according to the object that's created. Where a is referring to a dog or cat.
 That's polymorphism.
 
-## . Why Do We Need Polymorphism?
+##  Why Do We Need Polymorphism?
 
 Imagine you have:
 
