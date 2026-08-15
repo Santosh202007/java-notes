@@ -5177,7 +5177,7 @@ a.sound();       // Cat's version
 That's literally **poly (many) + morph (forms)**. 💯
 
 
-### 9. Dynamic method dispatch
+# 9. Dynamic method dispatch
 ## 1. Definition
 
 **Dynamic Method Dispatch** is the mechanism by which Java decides **at runtime which overridden method to execute**.
