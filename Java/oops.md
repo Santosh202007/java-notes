@@ -6505,3 +6505,37 @@ Whenever you see:
 ```
 Parent p = new Child();
 ```
+split it mentally:
+```
+              Parent p = new Child()
+                    │
+          ┌─────────┴─────────┐
+          ↓                   ↓
+   Reference Type         Object Type
+      Parent                Child
+          │                   │
+          ↓                   ↓
+What can I call?       Which overridden
+                       method executes?
+```
+
+Then ask:
+
+#### Step 1 — Compiler
+
+> Is the method/member available through `Parent`?
+
+If **no** → compile-time error.
+
+If **yes** → continue.
+
+#### Step 2 — Runtime
+
+> Is this an overridden instance method?
+
+If **yes** → JVM uses the actual object's implementation.
+
+If **no** → normal compile-time/reference-based resolution applies.
+
+#### ⭐ Core rule to remember
+####
