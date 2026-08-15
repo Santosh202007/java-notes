@@ -725,7 +725,7 @@ F = 15
 
 ---
 
-# Quick Memory Trick
+## Quick Memory Trick
 
 ```
 Base 2  → Binary      → 0,1
@@ -1042,7 +1042,7 @@ A `byte` stores values only from **-128 to 127**. Since `130` is outside this ra
 | Syntax      | No cast needed  | `(datatype)` |
 | Data Loss   | No              | Possible     |
 | Safe        | Yes             | May not be   |
-### ✅ Implicit conversion _can_ be written explicitly.
+#### ✅ Implicit conversion _can_ be written explicitly.
 
 Example:
 
@@ -1062,7 +1062,7 @@ Both produce the same result.
 
 ---
 
-### ❌ Explicit conversion cannot become implicit.
+#### ❌ Explicit conversion cannot become implicit.
 
 Example:
 
