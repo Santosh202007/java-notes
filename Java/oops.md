@@ -5249,78 +5249,7 @@ Dog.sound()
 
 This runtime decision is **Dynamic Method Dispatch**.
 
-### 1. Definition
-
-**Dynamic Method Dispatch** is the mechanism by which Java decides **at runtime which overridden method to execute**.
-
-It is the basis of **runtime polymorphism**.
-
-### 2. Basic Example
-
-```
-class Animal {
-    void sound() {
-        System.out.println("Animal sound");
-    }
-}
-
-class Dog extends Animal {
-    @Override
-    void sound() {
-        System.out.println("Dog barks");
-    }
-}
-
-public class Main {
-    public static void main(String[] args) {
-        Animal a = new Dog();
-        a.sound();
-    }
-}
-```
-
-**Output:**
-
-```
-Dog barks
-```
-
-### 3. Why?
-
-Look at:
-
-```
-Animal a = new Dog();
-```
-
-There are **two types** involved:
-
-- **Reference type:** `Animal`
-- **Object type:** `Dog`
-
-At compile time:
-
-```
-a.sound();
-```
-
-Java checks whether `Animal` has a `sound()` method.
-
-At runtime, Java looks at the **actual object**:
-
-```
-a → Dog object
-```
-
-Since `Dog` has overridden `sound()`, Java executes:
-
-```
-Dog.sound()
-```
-
-This runtime decision is **Dynamic Method Dispatch**.
-
-## NOTE: if Animal does not have sound()
+### NOTE: if Animal does not have sound()
 Suppose:
 
 ```
@@ -5424,7 +5353,7 @@ Java:
 
 **So the parent/reference type must have the method for the call to be legal. Then runtime dispatch decides which overridden version runs.** 🔥
 
-### 4. The key rule 🔥
+### d) The key rule 🔥
 
 > **Reference type decides what methods are accessible.**  
 > **Object type decides which overridden method actually runs.**
@@ -5439,7 +5368,7 @@ a.sound();
 
 ---
 
-### 5. Dynamic Method Dispatch requires
+### e) Dynamic Method Dispatch requires
 
 Usually, you need:
 
