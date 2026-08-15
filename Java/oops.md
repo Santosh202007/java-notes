@@ -4471,7 +4471,7 @@ super.sound();
 → explicitly calls the parent version.
 
 
-### Polymorphism
+# 1. Polymorphism
 The word literally means poly=many, morph=forms, so it means one thing can take many forms .
 Polymorphism essentially means that the same method can behave differently according to the object that's involved
 
