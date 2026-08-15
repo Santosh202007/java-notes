@@ -4557,13 +4557,13 @@ There are two major forms:
 ```
 
 
-### Compile-time polymorphism
+## Compile-time polymorphism
 
 Usually achieved through:
 
 > **Method overloading**
 
-### Runtime polymorphism
+## Runtime polymorphism
 
 Achieved through:
 
@@ -4801,7 +4801,7 @@ and says:
 
 This is extremely important.
 
-# Why Can't We Access `bark()`?
+## Why Can't We Access `bark()`?
 
 ```
 Animal a = new Dog();
