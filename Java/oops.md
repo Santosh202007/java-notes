@@ -5572,7 +5572,7 @@ For an **overridden instance method**, Java chooses the implementation based on 
 
 ---
 
-### 6. Upcasting + Runtime Polymorphism
+#### f) Upcasting + Runtime Polymorphism
 
 This is the classic pattern:
 
@@ -5600,23 +5600,23 @@ The actual object determines **which overridden method executes**.
 
 ---
 
-### 7. Why use Upcasting?
+#### g) Why use Upcasting?
 
 It allows us to treat different child objects uniformly.
 
+```
 Animal a1 = new Dog();
-
 Animal a2 = new Cat();
-
 Animal a3 = new Cow();
+```
 
 Now all three can be handled as `Animal`.
 
+```
 a1.sound();
-
 a2.sound();
-
 a3.sound();
+```
 
 Each object can provide its own implementation of `sound()`.
 
