@@ -793,7 +793,7 @@ or
 |`12e10`|12 × 10¹⁰|120000000000|
 
 ### Type conversion and casting
-# ype Conversion vs Type Casting in Java
+# Type Conversion vs Type Casting in Java
 
 ## What is Type Conversion?
 
