@@ -4489,7 +4489,7 @@ a.sound();     //Cat's sound
 The method call is same but the behavior changes according to the object that's created. Where a is referring to a dog or cat.
 That's polymorphism.
 
-# 2. Why Do We Need Polymorphism?
+## 2. Why Do We Need Polymorphism?
 
 Imagine you have:
 
@@ -4541,7 +4541,7 @@ a.sound();
 ```
 
 The code can treat them all as `Animal`, while Java chooses the appropriate implementation.
-# 3. The Two Types of Polymorphism in Java
+## 3. The Two Types of Polymorphism in Java
 
 There are two major forms:
 
@@ -4557,20 +4557,20 @@ There are two major forms:
 ```
 
 
-## Compile-time polymorphism
+### Compile-time polymorphism
 
 Usually achieved through:
 
 > **Method overloading**
 
-## Runtime polymorphism
+### Runtime polymorphism
 
 Achieved through:
 
 > **Method overriding + inheritance**
 
 
-# 4. Compile-Time Polymorphism
+## 4. Compile-Time Polymorphism
 
 Consider:
 
@@ -4614,7 +4614,7 @@ This is also called:
 
 > **Static polymorphism / early binding**
 
-# 5. Runtime Polymorphism
+## 5. Runtime Polymorphism
 
 Now the important one.
 
@@ -4685,7 +4685,7 @@ new Cat()
 Java chooses the method based on the **actual object at runtime**.
 
 That's runtime polymorphism.
-## 5.1 But Which Overridden Method Executes?
+### 5.1 But Which Overridden Method Executes?
 
 Now:
 
