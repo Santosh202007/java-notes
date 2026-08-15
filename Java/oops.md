@@ -6042,3 +6042,45 @@ You don't have to modify `makeSound()`.
 
 ### 5.9 A REAL LIFE EXAMPLE
 
+```
+class Payment {
+
+    void pay() {
+        System.out.println("Making a payment");
+    }
+}
+
+class CreditCard extends Payment {
+
+    @Override
+    void pay() {
+        System.out.println("Payment made using Credit Card");
+    }
+}
+
+class UPI extends Payment {
+
+    @Override
+    void pay() {
+        System.out.println("Payment made using UPI");
+    }
+}
+
+public class Main {
+
+    static void processPayment(Payment p) {
+        p.pay();
+    }
+
+    public static void main(String[] args) {
+
+        processPayment(new CreditCard());
+        processPayment(new UPI());
+    }
+}
+```
+
+oUTPUT
+```
+****
+```
