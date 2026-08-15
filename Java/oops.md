@@ -4685,7 +4685,7 @@ new Cat()
 Java chooses the method based on the **actual object at runtime**.
 
 That's runtime polymorphism.
-# 6. But Which Overridden Method Executes?
+## 6. But Which Overridden Method Executes?
 
 Now:
 
@@ -4741,7 +4741,7 @@ Dog
 This is the core mechanism of **runtime polymorphism**.
 
 
-# 7. What Can the Reference Access?
+## 7. What Can the Reference Access?
 
 Suppose:
 
@@ -4830,7 +4830,7 @@ a.bark();
 ```
 
 is invalid because `Animal` doesn't declare `bark()`.
-# 8. The Most Important Concept: Reference Type vs Object Type
+## 8. The Most Important Concept: Reference Type vs Object Type
 
 This is where you need to be extremely clear.
 
@@ -5177,14 +5177,14 @@ a.sound();       // Cat's version
 That's literally **poly (many) + morph (forms)**. 💯
 
 
-# 9. Dynamic method dispatch
-## 1. Definition
+## 9. Dynamic method dispatch
+### a) Definition
 
 **Dynamic Method Dispatch** is the mechanism by which Java decides **at runtime which overridden method to execute**.
 
 It is the basis of **runtime polymorphism**.
 
-### 2. Basic Example
+### b) Basic Example
 
 ```
 class Animal {
@@ -5214,7 +5214,7 @@ public class Main {
 Dog barks
 ```
 
-### 3. Why?
+### c) Why?
 
 Look at:
 
