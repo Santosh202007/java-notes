@@ -6116,8 +6116,9 @@ Animal
 ```
 
 Not:
-
-- [x] Dog
+```
+Dog
+```
 
 Why?
 
@@ -6125,6 +6126,7 @@ Because **instance variables are not dynamically dispatched**.
 
 Variables are resolved based on the **reference type**.
 
+```
 a.name
 
  ↓
@@ -6134,18 +6136,23 @@ reference type = Animal
  ↓
 
 Animal.name
+```
 
 But methods:
 
+```
 a.sound()
+```
 
 are dynamically dispatched when overridden:
 
+```
 actual object = Dog
 
  ↓
 
 Dog.sound()
+```
 
 ### Remember:
 
