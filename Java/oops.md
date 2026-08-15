@@ -6225,9 +6225,9 @@ Static method
 ```
 
 
-### Private and Final Methods in Polymorphism
+### 5.12  Private and Final Methods in Polymorphism
 
-#### 1. Private Methods
+#### a. Private Methods
 
 A `private` method **cannot be overridden**.
 
@@ -6320,7 +6320,7 @@ refers to the `private` method inside `Animal`.
 
 `Dog.sound()` is a separate method and does not override it.
 
-#### Note
+##### Note
 A `private` method is **not inherited** and cannot be accessed through the parent reference `a`.
 
 So:
@@ -6350,3 +6350,5 @@ The important point is:
 > `a.sound()` looks for an accessible `sound()` method based on the **reference type `Animal`**. But `Animal.sound()` is private, so it cannot be accessed.
 
 And the `Dog.sound()` method **does not override** `Animal.sound()` — it is a completely separate method.
+
+#### b.Final methods
