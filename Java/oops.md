@@ -6086,7 +6086,7 @@ Payment made using Credit Card
 Payment made using UPI**
 ```
 
-#### 5.10 Accessing variables
+### 5.10 Accessing variables
 
 This is an important trap.
 
@@ -6154,7 +6154,7 @@ actual object = Dog
 Dog.sound()
 ```
 
-### Remember:
+#### Remember:
 
 > **Methods → runtime dispatch**
 > 
@@ -6162,7 +6162,7 @@ Dog.sound()
 
 This is a classic interview trap.
 
-###  What About Static Methods?
+#### 5.11  What About Static Methods?
 
 Another important trap.
 
