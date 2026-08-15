@@ -6351,4 +6351,4 @@ The important point is:
 
 And the `Dog.sound()` method **does not override** `Animal.sound()` — it is a completely separate method.
 
-#### b.Final methods
+#### b. Final methods
