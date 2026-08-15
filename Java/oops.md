@@ -5912,5 +5912,52 @@ And the golden rule:
 > **Downcasting is valid only if the actual object is an instance of the target child class.**
 
 
-### 5.8
+### 5.8 The Real Power: Methods Taking Parent Types
+```
+class Animal {
+
+    void sound() {
+        System.out.println("Animal makes a sound");
+    }
+}
+
+class Dog extends Animal {
+
+    @Override
+    void sound() {
+        System.out.println("Dog barks");
+    }
+}
+
+class Cat extends Animal {
+
+    @Override
+    void sound() {
+        System.out.println("Cat meows");
+    }
+}
+
+class Lion extends Animal {
+
+    @Override
+    void sound() {
+        System.out.println("Lion roars");
+    }
+}
+
+public class Main {
+
+    static void makeSound(Animal a) {
+        a.sound();
+    }
+
+    public static void main(String[] args) {
+
+        makeSound(new Dog());
+        makeSound(new Cat());
+        makeSound(new Lion());
+    }
+}
+```
+
 
