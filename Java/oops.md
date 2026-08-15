@@ -4741,7 +4741,7 @@ Dog
 This is the core mechanism of **runtime polymorphism**.
 
 
-## 5.2 What Can the Reference Access?
+### 5.2 What Can the Reference Access?
 
 Suppose:
 
@@ -4801,7 +4801,7 @@ and says:
 
 This is extremely important.
 
-## Why Can't We Access `bark()`?
+### Why Can't We Access `bark()`?
 
 ```
 Animal a = new Dog();
@@ -4830,7 +4830,7 @@ a.bark();
 ```
 
 is invalid because `Animal` doesn't declare `bark()`.
-## 5.3 The Most Important Concept: Reference Type vs Object Type
+### 5.3 The Most Important Concept: Reference Type vs Object Type
 
 This is where you need to be extremely clear.
 
@@ -4842,7 +4842,7 @@ Animal a = new Dog();
 
 There are two types involved.
 
-### Reference type
+#### Reference type
 
 ```
 Animal
@@ -4850,7 +4850,7 @@ Animal
 
 This is the **type of the reference variable**.
 
-### Object type
+#### Object type
 
 ```
 Dog
@@ -4869,10 +4869,10 @@ Animal a = new Dog();
 
 This distinction is **fundamental** to polymorphism.
 
-### Note
+#### Note
 Method overriding is the mechanism that provides run time polymorphism
 
-### Very basic example
+#### Very basic example
 
 ```
 class Animal {
@@ -5177,7 +5177,7 @@ a.sound();       // Cat's version
 That's literally **poly (many) + morph (forms)**. 💯
 
 
-## 5.4 Dynamic method dispatch
+### 5.4 Dynamic method dispatch
 ### a) Definition
 
 **Dynamic Method Dispatch** is the mechanism by which Java decides **at runtime which overridden method to execute**.
@@ -5440,7 +5440,7 @@ Because `bark()` isn't available through the `Animal` reference.
 
 > **The method must be available in the reference type. If the child overrides it, the child's version runs at runtime. If it doesn't override it, the inherited parent version runs.**
 
-## 5.5 The Deep Rule
+### 5.5 The Deep Rule
 
 Remember this:
 
