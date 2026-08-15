@@ -5960,4 +5960,87 @@ public class Main {
 }
 ```
 
+# But why is this actually powerful?
+
+Without polymorphism, you might write:
+
+```
+static void makeDogSound(Dog d) {
+
+    d.sound();
+
+}
+```
+  
+
+```
+static void makeCatSound(Cat c) {
+
+    c.sound();
+
+}
+```
+
+
+```
+static void makeLionSound(Lion l) {
+
+    l.sound();
+
+}
+```
+
+
+
+That's ugly.
+
+```
+And imagine you have:
+
+Dog
+
+Cat
+
+Lion
+
+Tiger
+
+Elephant
+
+Horse
+
+Cow
+
+Monkey
+
+```
+
+You'd need a separate method for every animal.
+
+Instead, you write **one method**:
+
+```
+static void makeSound(Animal a) {
+
+    a.sound();
+
+}
+```
+
+And every future subclass automatically works:
+
+```
+makeSound(new Dog());
+
+makeSound(new Cat());
+
+makeSound(new Lion());
+
+makeSound(new Tiger());
+
+makeSound(new Horse());
+```
+You don't have to modify `makeSound()`.
+
+That's the real power.
 
