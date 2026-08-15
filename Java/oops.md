@@ -3500,7 +3500,7 @@ If you write `this()`, Java does **not** insert `super()` into that constructor.
 Instead,
 
 the constructor called through `this()` must eventually call `super()`.
-### Rule 5
+### Rule 4
 
 `this()` and `super()` cannot appear together in the same constructor.
 
