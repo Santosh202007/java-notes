@@ -1,4 +1,4 @@
-] # 1. What is a String?
+ # 1. What is a String?
 
 A **String** is a sequence of characters.
 
