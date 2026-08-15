@@ -6538,4 +6538,4 @@ If **yes** → JVM uses the actual object's implementation.
 If **no** → normal compile-time/reference-based resolution applies.
 
 #### ⭐ Core rule to remember
-####
+In Java runtime polymorphism, the reference type determines what members can be accessed, while the actual object determines which overridden instance method executes.
