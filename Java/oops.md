@@ -5525,13 +5525,17 @@ class Dog extends Animal {
 }
 ```
 
-``
+```
+Animal a = new Dog();
+a.eat();   // ✅
+a.bark();  // ❌
+```
 
 Even though the actual object is a `Dog`, the reference is `Animal`.
 
 ---
 
-#### 5. But overridden methods behave differently
+#### e) But overridden methods behave differently
 
 This is where **runtime polymorphism** comes in.
 
@@ -5545,8 +5549,6 @@ class Animal {
 
 }
 
-  
-
 class Dog extends Animal {
 
     @Override
@@ -5554,27 +5556,21 @@ class Dog extends Animal {
     void sound() {
 
         System.out.println("Dog sound");
-
     }
-
 }
 
+```
 Animal a = new Dog();
-
-  
-
 a.sound();
+```
 
 Output:
-
 Dog sound
 
 Why?
-
 Because:
 
 Reference type → Animal
-
 Actual object  → Dog
 
 For an **overridden instance method**, Java chooses the implementation based on the **actual object at runtime**.
