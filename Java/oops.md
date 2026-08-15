@@ -6087,3 +6087,70 @@ Payment made using UPI**
 ```
 
 #### 5.10 Accessing variables
+
+This is an important trap.
+
+Methods and variables behave differently.
+
+```
+class Animal {
+    String name = "Animal";
+}
+class Dog extends Animal {
+    String name = "Dog";
+}
+```
+
+Now:
+
+```
+Animal a = new Dog()
+System.out.println(a.name);
+```
+What happens?
+
+Output:
+
+```
+Animal
+```
+
+Not:
+
+- [x] Dog
+
+Why?
+
+Because **instance variables are not dynamically dispatched**.
+
+Variables are resolved based on the **reference type**.
+
+a.name
+
+ ↓
+
+reference type = Animal
+
+ ↓
+
+Animal.name
+
+But methods:
+
+a.sound()
+
+are dynamically dispatched when overridden:
+
+actual object = Dog
+
+ ↓
+
+Dog.sound()
+
+### Remember:
+
+> **Methods → runtime dispatch**
+> 
+> **Fields → reference-type resolution**
+
+This is a classic interview trap.
