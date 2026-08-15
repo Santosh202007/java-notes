@@ -792,10 +792,9 @@ or
 |`5e-2`|5 × 10⁻²|0.05|
 |`12e10`|12 × 10¹⁰|120000000000|
 
-### Type conversion and casting
-# Type Conversion vs Type Casting in Java
+## Type Conversion vs Type Casting in Java
 
-## What is Type Conversion?
+###  Type Conversion
 
 **Type Conversion (Implicit/Widening Conversion)** is when Java **automatically converts** a smaller data type into a larger one.
 
@@ -820,7 +819,7 @@ Java automatically converts `int` → `double`.
 
 ---
 
-## Widening Conversion Order
+#### Widening Conversion Order
 
 Java performs these conversions automatically:
 
@@ -864,7 +863,7 @@ Everything happens automatically.
 
 ---
 
-## Why is it Safe?
+#### Why is it Safe?
 
 Because the larger type can store every value of the smaller type.
 
@@ -885,7 +884,7 @@ Nothing is lost.
 
 ---
 
-# Type Casting
+### Type Casting
 
 **Type Casting (Explicit/Narrowing Conversion)** is when **you manually convert** a larger data type into a smaller one.
 
