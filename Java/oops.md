@@ -5624,7 +5624,7 @@ This is one of the foundations of **polymorphism**.
 
 ---
 
-### 8. Important limitation
+#### h) Important limitation
 
 Suppose:
 
@@ -5642,8 +5642,6 @@ To access it, you need **downcasting**:
 Dog d = (Dog) a;
 d.bark();
 ```
-
-d.bark();
 
 So the relationship is:
 ```
