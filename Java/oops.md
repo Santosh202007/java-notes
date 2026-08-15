@@ -4685,7 +4685,7 @@ new Cat()
 Java chooses the method based on the **actual object at runtime**.
 
 That's runtime polymorphism.
-## 6. But Which Overridden Method Executes?
+## 5.1 But Which Overridden Method Executes?
 
 Now:
 
