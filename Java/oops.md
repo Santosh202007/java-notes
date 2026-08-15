@@ -5513,39 +5513,25 @@ Therefore, you can directly access only members available through `Animal`.
 class Animal {
 
     void eat() {
-
         System.out.println("Eating");
-
     }
-
 }
-
-  
 
 class Dog extends Animal {
 
     void bark() {
-
         System.out.println("Barking");
-
     }
-
 }
-
 ```
-Animal a = new Dog();
 
-  
-
-a.eat();   // ✅
-
-a.bark();  // ❌
+``
 
 Even though the actual object is a `Dog`, the reference is `Animal`.
 
 ---
 
-### 5. But overridden methods behave differently
+#### 5. But overridden methods behave differently
 
 This is where **runtime polymorphism** comes in.
 
