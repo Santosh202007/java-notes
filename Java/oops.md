@@ -4804,7 +4804,7 @@ and says:
 
 This is extremely important.
 
-### Why Can't We Access `bark()`?
+#### Why Can't We Access `bark()`?
 
 ```
 Animal a = new Dog();
@@ -4833,6 +4833,7 @@ a.bark();
 ```
 
 is invalid because `Animal` doesn't declare `bark()`.
+
 ### 5.3 The Most Important Concept: Reference Type vs Object Type
 
 This is where you need to be extremely clear.
