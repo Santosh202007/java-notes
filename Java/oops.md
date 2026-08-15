@@ -6459,8 +6459,7 @@ class Dog extends Animal {
     Dog() {
         System.out.println("Dog constructor");
     }
-
-    @Override
+    
     void sound() {
         System.out.println("Dog");
     }
