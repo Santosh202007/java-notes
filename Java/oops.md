@@ -6225,13 +6225,13 @@ Static method
 ```
 
 
-# Private and Final Methods in Polymorphism
+### Private and Final Methods in Polymorphism
 
-## 1. Private Methods
+#### 1. Private Methods
 
 A `private` method **cannot be overridden**.
 
-### Why?
+##### Why?
 
 Because a `private` method is **not inherited** by the child class.
 
@@ -6276,7 +6276,7 @@ Therefore:
 - `private` methods **cannot be overridden**
 - They do **not participate in runtime polymorphism**
 
-### Important Example
+##### Important Example
 ```
 class Animal {
 
@@ -6340,6 +6340,13 @@ class Dog extends Animal {
 }
 
 ```
-```
 
 ```
+Animal a = new Dog();
+a.sound();   // ❌ Compile-time error
+```
+The important point is:
+
+> `a.sound()` looks for an accessible `sound()` method based on the **reference type `Animal`**. But `Animal.sound()` is private, so it cannot be accessed.
+
+And the `Dog.sound()` method **does not override** `Animal.sound()` — it is a completely separate method.
