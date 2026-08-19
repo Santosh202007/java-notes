@@ -6621,6 +6621,14 @@ Therefore:
 
 This is a VERY important interview concept.
 
+### Without `final`
+
+```
+Student d = new Student();
+d = new Student();  // ✅ Allowed
+```
+
+`d` is a **reference variable**, and you can make it refer to another `Student` object.
 ## `final` Method
 
 Now we're getting into **inheritance**.
