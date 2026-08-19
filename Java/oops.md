@@ -6677,3 +6677,35 @@ A `final` class **cannot be inherited**.
 final class Animal {
 }
 ```
+
+```
+class Dog extends Animal {   // ❌ ERROR
+}
+```
+Because `Animal` is final.
+
+It's basically saying:
+
+> "This class is the end of the inheritance chain.
+
+# Now Connect All Three
+
+This is the easiest way to remember:
+
+### `final` variable
+
+final int x = 10;
+
+➡️ **Cannot change the variable's value/reference.**
+
+### `final` method
+
+final void sound () {}
+
+➡️ **Cannot override the method.**
+
+### `final` class
+
+final class Animal {}
+
+➡️ **Cannot extend the class.**
