@@ -6740,3 +6740,53 @@ Why?
 Because constructors are **not inherited or overridden** in the first place.
 
 `final` on a constructor would therefore make no sense.
+
+# One More Important Trap: `final` + `static`
+
+You will frequently see:
+
+```
+static final int MAX = 100;
+```
+
+This means:
+
+- `static` → one copy belongs to the class
+- `final` → cannot be reassigned
+
+So:
+
+class Config {
+
+```
+    static final int MAX_USERS = 100;
+```
+}
+
+Access it as:
+
+```
+Config.MAX_USERS
+```
+
+These are commonly called **constants**.
+
+By convention:
+
+```
+static final int MAX_USERS = 100;
+```
+
+uses uppercase letters with underscores.
+
+# `final` vs `finally` vs `finalize`
+
+Don't confuse these.
+
+|Keyword|Meaning|
+|---|---|
+|`final`|Prevents change/inheritance/overriding|
+|`finally`|Block used with exception handling|
+|`finalize()`|Old GC-related method; deprecated and should not be used|
+
+They're completely different concepts.
