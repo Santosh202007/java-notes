@@ -6805,5 +6805,27 @@ They're completely different concepts.
 
 ->method overloading works wit the final keyword
 ```
+package build;
 
+class Animal {
+
+    final int aa(int num) {
+        return num;
+    }
+
+    final int aa(int y, int x) {
+        return x + y;
+    }
+}
+
+public class finalll {
+
+    public static void main(String args[]) {
+
+        Animal a = new Animal();
+
+        System.out.println(a.aa(10));
+        System.out.println(a.aa(10, 11));
+    }
+}
 ```
