@@ -6585,3 +6585,16 @@ Can you do:
 ```
 s = new Student();  // ❌
 ```
+No.
+
+But can you modify the object?
+```
+s.name = "Santosh";  // ✅
+```
+
+Yes!
+
+Why?
+
+Because `final` prevents the **reference from changing**, not necessarily the object.
+Think:
