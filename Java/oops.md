@@ -6798,3 +6798,7 @@ Don't confuse these.
 |`finalize()`|Old GC-related method; deprecated and should not be used|
 
 They're completely different concepts.
+
+## General Note
+
+A method name can be the same as its class name
