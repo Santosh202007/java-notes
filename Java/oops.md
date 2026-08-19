@@ -6801,4 +6801,9 @@ They're completely different concepts.
 
 ## General Note
 
-A method name can be the same as its class name
+->A method name can be the same as its class name
+
+->method overloading works wit the final keyword
+```
+
+```
