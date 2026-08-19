@@ -6621,7 +6621,7 @@ Therefore:
 
 This is a VERY important interview concept.
 
-# `final` Method
+## `final` Method
 
 Now we're getting into **inheritance**.
 
@@ -6654,7 +6654,7 @@ Meaning:
 
 > "Child classes are not allowed to change my implementation."
 
-## Why would we use a final method?
+### Why would we use a final method?
 
 Suppose a parent class has some critical behavior that must remain unchanged.
 
@@ -6668,7 +6668,7 @@ class Bank {
 ```
 You don't want subclasses to override that logic.
 
-# `final` Class
+## `final` Class
 
 This is the third major use.
 
@@ -6688,7 +6688,7 @@ It's basically saying:
 
 > "This class is the end of the inheritance chain.
 
-# Now Connect All Three
+## Now Connect All Three
 
 This is the easiest way to remember:
 
@@ -6723,7 +6723,7 @@ final class Animal {}
 ```
 
 
-# One Important Trap: Constructors
+## One Important Trap: Constructors
 
 Can a constructor be `final`?
 ```
@@ -6741,7 +6741,7 @@ Because constructors are **not inherited or overridden** in the first place.
 
 `final` on a constructor would therefore make no sense.
 
-# One More Important Trap: `final` + `static`
+## One More Important Trap: `final` + `static`
 
 You will frequently see:
 
@@ -6779,7 +6779,7 @@ static final int MAX_USERS = 100;
 
 uses uppercase letters with underscores.
 
-# `final` vs `finally` vs `finalize`
+## `final` vs `finally` vs `finalize`
 
 Don't confuse these.
 
