@@ -6643,3 +6643,37 @@ class Dog extends Animal {
     }
 }
 ```
+
+Why?
+
+Because the parent said:
+```
+final void sound()
+```
+Meaning:
+
+> "Child classes are not allowed to change my implementation."
+
+## Why would we use a final method?
+
+Suppose a parent class has some critical behavior that must remain unchanged.
+
+```
+class Bank {
+
+    final void calculateInterest() {
+        // important logic
+    }
+}
+```
+You don't want subclasses to override that logic.
+
+# `final` Class
+
+This is the third major use.
+
+A `final` class **cannot be inherited**.
+```
+final class Animal {
+}
+```
