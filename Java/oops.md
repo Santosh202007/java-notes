@@ -6578,6 +6578,10 @@ final double PI = 3.14159;
 
 ## `final` Reference Variable
 
-f```
-`inal Student s = new Student();`
+```
+final Student s = new Student();
+```
+Can you do:
+```
+s = new Student();  // ❌
 ```
