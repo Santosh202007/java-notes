@@ -6614,8 +6614,32 @@ You cannot make `s` point somewhere else:
 s ─────X────> another Student
 ```
 But you can modify the existing object's fields.
-### Therefore:
+
+Therefore:
 
 > **`final` reference ≠ immutable object**
 
 This is a VERY important interview concept.
+
+# `final` Method
+
+Now we're getting into **inheritance**.
+
+A `final` method **cannot be overridden by a child class**.
+```
+class Animal {
+
+    final void sound() {
+        System.out.println("Animal sound");
+    }
+}
+```
+Now:
+```
+class Dog extends Animal {
+
+    void sound() {       // ❌ ERROR
+        System.out.println("Dog sound");
+    }
+}
+```
