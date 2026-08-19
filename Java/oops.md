@@ -6709,3 +6709,34 @@ final void sound () {}
 final class Animal {}
 
 ➡️ **Cannot extend the class.**
+
+`final` + Inheritance
+```
+                    final
+                      │
+          ┌───────────┼───────────┐
+          ↓           ↓           ↓
+       variable      method      class
+          │           │           │
+      cannot       cannot       cannot
+      reassign     override     inherit
+```
+
+
+# One Important Trap: Constructors
+
+Can a constructor be `final`?
+```
+final Animal() {
+}
+```
+
+❌ **No.**
+
+Constructors cannot be `final`.
+
+Why?
+
+Because constructors are **not inherited or overridden** in the first place.
+
+`final` on a constructor would therefore make no sense.
