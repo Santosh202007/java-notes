@@ -6565,6 +6565,15 @@ A `final` variable **cannot be reassigned after it gets a value**.
 final int x = 10;
 
 x = 20;   // ❌ ERROR
-
-
 ```
+
+Once `x` becomes `10`, you cannot make it `20`.
+
+### Why use it?
+
+When you want a value to remain constant.
+```
+final double PI = 3.14159;
+```
+
+`final` Reference Variable
