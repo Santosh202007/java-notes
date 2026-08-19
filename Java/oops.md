@@ -6557,7 +6557,7 @@ final
  └── final class
 ```
 
-# `final` Variable
+## `final` Variable
 
 A `final` variable **cannot be reassigned after it gets a value**.
 
@@ -6576,4 +6576,8 @@ When you want a value to remain constant.
 final double PI = 3.14159;
 ```
 
-`final` Reference Variable
+## `final` Reference Variable
+
+f```
+`inal Student s = new Student();`
+```
