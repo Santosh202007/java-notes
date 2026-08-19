@@ -6597,4 +6597,25 @@ Yes!
 Why?
 
 Because `final` prevents the **reference from changing**, not necessarily the object.
+
 Think:
+```
+s
+│
+│ final reference
+▼
+┌───────────────┐
+│ Student       │
+│ name = null   │
+└───────────────┘
+```
+You cannot make `s` point somewhere else:
+```
+s ─────X────> another Student
+```
+But you can modify the existing object's fields.
+### Therefore:
+
+> **`final` reference ≠ immutable object**
+
+This is a VERY important interview concept.
