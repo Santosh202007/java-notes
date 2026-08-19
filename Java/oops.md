@@ -6542,3 +6542,29 @@ If **no** → normal compile-time/reference-based resolution applies.
 In Java runtime polymorphism, the reference type determines what members can be accessed, while the actual object determines which overridden instance method executes.
 
 # Final Keyword
+
+The basic idea is:
+
+> **`final` means "this cannot be changed further."**
+
+But _what_ cannot be changed depends on where you use it.
+
+There are 3 major uses:
+```
+final
+ ├── final variable
+ ├── final method
+ └── final class
+```
+
+# `final` Variable
+
+A `final` variable **cannot be reassigned after it gets a value**.
+
+```
+final int x = 10;
+
+x = 20;   // ❌ ERROR
+
+
+```
