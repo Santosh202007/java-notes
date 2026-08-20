@@ -1422,7 +1422,6 @@ Object s2
 ---------
 name
 ```
-
 There is **only one `college` variable**, shared by every object.
 
 If you do
