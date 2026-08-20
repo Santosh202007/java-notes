@@ -139,7 +139,7 @@ Think of it like the design of a calculator. It defines what a calculator can do
 
 ---
 
-## Step 2: Defining a Method
+### Step 2: Defining a Method
 
 ```
 public int add(int n1, int n2)
@@ -158,7 +158,7 @@ Breaking it down:
 
 ---
 
-# Step 3: Method Body
+## Step 3: Method Body
 
 ```
 int r = n1 + n2;
@@ -188,7 +188,7 @@ returns `9`.
 
 ---
 
-# Step 4: The Main Method
+## Step 4: The Main Method
 
 ```
 public static void main(String args[])
@@ -200,7 +200,7 @@ Execution starts here.
 
 ---
 
-# Step 5: Declaring Variables
+## Step 5: Declaring Variables
 
 ```
 int num1 = 4;
@@ -218,7 +218,7 @@ num2 → 5
 
 ---
 
-# Step 6: Creating an Object
+## Step 6: Creating an Object
 
 ```
 Calculator calc = new Calculator();
@@ -282,7 +282,7 @@ result → 9
 
 ---
 
-# Step 8: Printing the Result
+## Step 8: Printing the Result
 
 ```
 System.out.println(result);
