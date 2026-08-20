@@ -1637,7 +1637,7 @@ Both `count` and `display()` belong to the class.
 
 ---
 
-# Why Java Doesn't Allow Direct Access
+## Why Java Doesn't Allow Direct Access
 
 ```
 class Student {
@@ -1821,7 +1821,7 @@ Notice something:
 ---
 
 
-# What exactly does the Class Loader do?
+## What exactly does the Class Loader do?
 
 It:
 
@@ -1834,7 +1834,7 @@ Without the Class Loader, the JVM doesn't even know your class exists.
 
 ---    
 
-# Types of Class Loaders
+## Types of Class Loaders
 
 There are **three main class loaders**.
 
@@ -1953,7 +1953,7 @@ It **does not execute your Java code.**
 - Run static initialization.
 - Call `main()`.
 - Execute every Java statement.
-# Static Class (Nested Class)
+## Static Class (Nested Class)
 
 Only **nested classes** can be static.
 
@@ -1971,7 +1971,7 @@ A top-level class cannot be declared `static`.
 
 ---
 
-# When should you use `static`?
+## When should you use `static`?
 
 Use it when something is **common to every object**.
 
@@ -2006,7 +2006,7 @@ Examples:
 |---|---|---|
 |**Static context**|✅|❌ (directly)|
 |**Non-static context**|✅|✅|
-# 1. Static Context → Static Variable ✅
+## 1. Static Context → Static Variable ✅
 
 ```
 class Demo {
@@ -2026,7 +2026,7 @@ class Demo {
 
 ---
 
-# 2. Static Context → Non-static Variable ❌ (Directly)
+## 2. Static Context → Non-static Variable ❌ (Directly)
 
 ```
 class Demo {
@@ -2046,7 +2046,7 @@ non-static variable roll cannot be referenced from a static context
 
 ---
 
-# 3. Static Context → Non-static Variable ✅ (Using an object)
+## 3. Static Context → Non-static Variable ✅ (Using an object)
 
 ```
 class Demo {
