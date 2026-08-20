@@ -1306,7 +1306,7 @@ public class demo
 }
 ```
 
-### Parametrized constructor
+## Parametrized constructor
 ```
 class Human
 {
@@ -1344,7 +1344,7 @@ public class demo
 
 ##### Note
 A constructor is automatically called when you create a object even if you don't mention it.
-#### Constructor chaining
+## Constructor chaining
 ```
 class Stud {
     String name;
