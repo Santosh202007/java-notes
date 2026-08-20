@@ -1439,8 +1439,7 @@ s2.college -> IIT
 
 Both see the updated value because they're sharing the same variable.
 
-#### Static variables
-# Static Variables
+## Static Variables
 
 ```
 class Student {
@@ -1468,7 +1467,7 @@ Output:
 
 Every constructor increments the **same** variable.
 
-# Static Methods
+## Static Methods
 
 A method can also belong to the class.
 
@@ -1509,7 +1508,7 @@ You can use static variables inside static methods, but you cannot directly use 
 
 
 
-# Static Methods and Non-Static Variables
+## Static Methods and Non-Static Variables
 
 ### Rule
 
