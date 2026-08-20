@@ -1234,7 +1234,7 @@ public class Demo {
 
 # this keyword
 
-##
+## Why use this keyword
 
 Because it's much cleaner and easier to read.
 this keyword refers to the current object.it is primarily used to distinguish between the instance variables and the method parameters when they have the  same name
@@ -1386,6 +1386,7 @@ public class Constructor {
 ```
 now all the initialization  happens at a single place
 Constructor chaining is used to avoid code duplication and centralize object initialization. It does not create multiple objects; it only invokes another constructor on the same object using `this()`.
+
 
 # Static Keyword
 Static means it  belongs to the class not to an individual object.
