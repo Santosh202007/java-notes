@@ -101,7 +101,7 @@ Methods (Behavior)
 - The four pillars of OOP are **Encapsulation, Inheritance, Polymorphism, and Abstraction**.
 - Java is an object-oriented language built around these principles.
 
-# tracking the code 
+basic code
 ```
 class Calculator
 {
@@ -158,7 +158,7 @@ Breaking it down:
 
 ---
 
-## Step 3: Method Body
+# Step 3: Method Body
 
 ```
 int r = n1 + n2;
@@ -188,7 +188,7 @@ returns `9`.
 
 ---
 
-## Step 4: The Main Method
+# Step 4: The Main Method
 
 ```
 public static void main(String args[])
@@ -200,7 +200,7 @@ Execution starts here.
 
 ---
 
-## Step 5: Declaring Variables
+# Step 5: Declaring Variables
 
 ```
 int num1 = 4;
@@ -218,7 +218,7 @@ num2 → 5
 
 ---
 
-## Step 6: Creating an Object
+# Step 6: Creating an Object
 
 ```
 Calculator calc = new Calculator();
@@ -258,7 +258,7 @@ The variable `calc` does **not** store the object itself. It stores a **referenc
 
 ---
 
-## Step 7: Calling a Method
+# Step 7: Calling a Method
 
 ```
 int result = calc.add(num1, num2);
@@ -282,7 +282,7 @@ result → 9
 
 ---
 
-## Step 8: Printing the Result
+# Step 8: Printing the Result
 
 ```
 System.out.println(result);
@@ -331,7 +331,7 @@ public class Demo {
     }
 }
 ```
-## Output
+### Output
 `Name : Santosh`
 `Age  : 19`
 
@@ -371,7 +371,7 @@ s2 ------------------------->  Student Object #2
 - Every object has its **own copy** of instance variables (`name`, `age`).
 - Multiple objects can be created from the same class.
 - Methods (`display()`) define the behavior of the object.
-#  Method Overloading
+### What is Method Overloading?
 
 **Method overloading** means **having multiple methods with the same name in the same class, but with different parameter lists.**
 
@@ -382,7 +382,7 @@ The parameter list can differ by:
 - Number of parameters
 - Type of parameters
 - Order of parameters
-## Code
+### Code
 ```  
 class Calc
 {
@@ -419,7 +419,6 @@ public class d
 }
 ```
 
-# Instance and local Variables
 ## Instance Variables
 
 An **instance variable** is declared **inside a class but outside any method, constructor, or block**.
@@ -457,7 +456,7 @@ public class Demo
     }
 }
 ```
-##  Local Variables
+## . Local Variables
 
 A **local variable** is declared **inside a method, constructor, or block**.
 
@@ -1734,7 +1733,7 @@ Static blocks execute only **once** when the class is loaded.
 ### Note
 the class is loaded when you are creating an object, and the static block is only called once because it only gets called when the class is loaded and when you create an object that particular class is loaded, there is something called as the class loader
 
-# Class Loader
+Class Loader
 The **Class Loader** is another very important Java concept. It is **not directly part of OOP**, but it's part of how the **JVM works**.
 
 Think of it like this:
@@ -1822,7 +1821,193 @@ Notice something:
 
 ---
 
-## 1. Static Context → Static Variable ✅
+# Class Loader
+## What exactly does the Class Loader do?
+
+It:
+
+- Finds the `.class` file.
+- Reads the bytecode.
+- Loads it into JVM memory.
+- Makes it available for execution.
+
+Without the Class Loader, the JVM doesn't even know your class exists.
+
+---    
+
+# Types of Class Loaders
+
+There are **three main class loaders**.
+
+### 1. Bootstrap Class Loader
+
+Loads Java's core classes.
+
+Examples:
+
+```
+String
+Object
+Math
+System
+ArrayList
+```
+
+These come from the JDK itself.
+
+---
+
+### 2. Platform (Extension) Class Loader
+
+Loads platform libraries.
+
+Examples:
+
+```
+java.sql
+java.xml
+javax.*
+```
+
+---
+
+### 3. Application (System) Class Loader
+
+Loads **your own classes**.
+
+Example:
+
+```
+Student
+Employee
+Main
+Bank
+```
+
+Anything you write is usually loaded by the Application Class Loader.
+
+---
+
+---
+
+## Why does `static` come before `main()`?
+
+Suppose you have:
+
+```
+class Demo {
+
+    static {
+        System.out.println("Static Block");
+    }
+
+    public static void main(String[] args) {
+        System.out.println("Main");
+    }
+}
+```
+
+Output:
+
+```
+Static Block
+Main
+```
+
+Why?
+
+When the **Class Loader loads the class**, the JVM initializes it. During initialization, **static variables and static blocks are executed once**. Only after that does the JVM invoke the `main()` method.
+ 
+---
+
+## Interview question
+
+**Q: Who loads `String.class`?**
+
+**Answer:** Bootstrap Class Loader.
+
+---
+
+**Q: Who loads your `Student.class`?**
+
+**Answer:** Application (System) Class Loader.
+
+---
+
+## One-line definition
+
+> **A Class Loader is a JVM component responsible for loading `.class` files (bytecode) into memory before the JVM executes them.**
+### So who does what?
+
+**Class Loader's job:**
+
+- Find the `.class` file.
+- Read the bytecode.
+- Load it into JVM memory.
+
+It **does not execute your Java code.**
+
+**JVM's job:**
+
+- Verify the loaded class.
+- Allocate memory.
+- Run static initialization.
+- Call `main()`.
+- Execute every Java statement.
+# Static Class (Nested Class)
+
+Only **nested classes** can be static.
+
+```
+class Outer {
+
+    static class Inner {
+
+    }
+
+}
+```
+
+A top-level class cannot be declared `static`.
+
+---
+
+# When should you use `static`?
+
+Use it when something is **common to every object**.
+
+Examples:
+
+- `Math.PI`
+- `Math.sqrt()`
+- Student college name
+- Object counter
+- Utility methods
+- `main()`
+
+## Quick Summary
+
+| Member            | Belongs To | Copies                      |
+| ----------------- | ---------- | --------------------------- |
+| Instance variable | Object     | One per object              |
+| `static` variable | Class      | One shared copy             |
+| Instance method   | Object     | Called using an object      |
+| `static` method   | Class      | Called using the class name |
+
+### Variables
+
+|Context|Static Variable|Non-static Variable|
+|---|---|---|
+|**Static context**|✅|❌ (directly)|
+|**Non-static context**|✅|✅|
+
+### Methods
+
+|Context|Static Method|Non-static Method|
+|---|---|---|
+|**Static context**|✅|❌ (directly)|
+|**Non-static context**|✅|✅|
+# 1. Static Context → Static Variable ✅
 
 ```
 class Demo {
@@ -1842,7 +2027,7 @@ class Demo {
 
 ---
 
-## 2. Static Context → Non-static Variable ❌ (Directly)
+# 2. Static Context → Non-static Variable ❌ (Directly)
 
 ```
 class Demo {
@@ -1862,7 +2047,7 @@ non-static variable roll cannot be referenced from a static context
 
 ---
 
-## 3. Static Context → Non-static Variable ✅ (Using an object)
+# 3. Static Context → Non-static Variable ✅ (Using an object)
 
 ```
 class Demo {
@@ -1883,7 +2068,7 @@ class Demo {
 
 ---
 
-## 4. Non-static Context → Static Variable ✅
+# 4. Non-static Context → Static Variable ✅
 
 ```
 class Demo {
@@ -1903,7 +2088,7 @@ class Demo {
 
 ---
 
-## 5. Non-static Context → Non-static Variable ✅
+# 5. Non-static Context → Non-static Variable ✅
 
 ```
 class Demo {
@@ -1923,7 +2108,7 @@ class Demo {
 
 ---
 
-## 6. Static Context → Static Method ✅
+# 6. Static Context → Static Method ✅
 
 ```
 class Demo {
@@ -1946,7 +2131,7 @@ Hello
 
 ---
 
-## 7. Static Context → Non-static Method ❌ (Directly)
+# 7. Static Context → Non-static Method ❌ (Directly)
 
 ```
 class Demo {
@@ -1969,7 +2154,7 @@ non-static method hello() cannot be referenced from a static context
 
 ---
 
-## 8. Static Context → Non-static Method ✅ (Using an object)
+# 8. Static Context → Non-static Method ✅ (Using an object)
 
 ```
 class Demo {
@@ -1993,7 +2178,7 @@ Hello
 
 ---
 
-## 9. Non-static Context → Static Method ✅
+# 9. Non-static Context → Static Method ✅
 
 ```
 class Demo {
@@ -2016,7 +2201,7 @@ Hello
 
 ---
 
-## 10. Non-static Context → Non-static Method ✅
+# 10. Non-static Context → Non-static Method ✅
 
 ```
 class Demo {
@@ -2036,7 +2221,7 @@ class Demo {
 That single rule covers both **variables** and **methods**.
 
 
-# Naming conventions
+### Naming conventions
 
 **Naming conventions** are **standard rules for naming classes, variables, methods, packages, constants, etc.** They are not enforced by Java, but every Java developer follows them to make code readable.
 
