@@ -2668,7 +2668,7 @@ some rooms are open to everyone.
 some are only for family
 some are only for you
 
-### Private
+## Private
 The most restrictive modifier
 only same class can access it
 ```
@@ -2683,7 +2683,7 @@ class Student {
 }
 ```
 works  because display () is inside the main class
-### Default(Package-private)
+## Default(Package-private)
 If you don't write anything  it will  be considered as default.
 ```
 class Student {
@@ -2702,12 +2702,12 @@ college
 ```
 so here a variable in the student class can be accessed by the class test.
 
-### Public
+## Public
 Everyone can access it
 any package and any class ,it is made public when it useful for everyone.
 
-### Protected
-## Definition
+## Protected
+### Definition
 
 A `protected` member can be accessed:
 
@@ -2749,7 +2749,7 @@ The actual rule is:
 | **Same package non-subclass**      |      ✗      |       ✓       |     ✓      |      ✓      |
 | **Different package subclass**     |      ✗      |       ✓       |     ✓      |      ✗      |
 | **Different package non-subclass** |      ✗      |       ✗       |     ✓      |      ✗      |
-### Note
+## Note
 ### 1)In java a top level class can only be public or default(package-private)
 - ✅ `public`
 - ✅ _default_ (package-private, i.e., no modifier)
