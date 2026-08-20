@@ -1681,7 +1681,7 @@ Since `display()` has **no object (`this`)**, Java cannot decide. Therefore, it 
 
 ---
 
-# Interview Note
+## Interview Note
 
 > **A static method cannot directly access non-static variables because static methods belong to the class, whereas non-static variables belong to objects. Since a static method has no object (`this`), Java doesn't know which object's variable to access. However, it can access non-static variables indirectly through an object reference.**
 
@@ -2224,7 +2224,7 @@ That single rule covers both **variables** and **methods**.
 
 **Naming conventions** are **standard rules for naming classes, variables, methods, packages, constants, etc.** They are not enforced by Java, but every Java developer follows them to make code readable.
 
-# 1. Class Names → Pascal Case
+## 1. Class Names → Pascal Case
 
 - First letter of every word is capitalized.
 
@@ -2246,7 +2246,7 @@ class employee_details { }
 
 ---
 
-# 2. Method Names → camelCase
+## 2. Method Names → camelCase
 
 - First word starts with lowercase.
 - Every next word starts with uppercase.
@@ -2269,7 +2269,7 @@ DisplayStudent()
 
 ---
 
-# 3. Variable Names → camelCase
+## 3. Variable Names → camelCase
 
 ✅ Good
 
@@ -2288,7 +2288,7 @@ String First_Name;
 
 ---
 
-# 4. Constants (`static final`) → UPPER_CASE
+## 4. Constants (`static final`) → UPPER_CASE
 
 ```
 static final double PI = 3.14159;
@@ -2298,7 +2298,7 @@ static final String COLLEGE_NAME = "KLU";
 
 ---
 
-# 5. Package Names → all lowercase
+## 5. Package Names → all lowercase
 
 ```
 com.amazon.payment
@@ -2316,7 +2316,7 @@ Java.Util
 
 ---
 
-# 6. Interface Names → PascalCase
+## 6. Interface Names → PascalCase
 
 ```
 interface Animal { }
@@ -2328,7 +2328,7 @@ interface Printable { }
 
 ---
 
-# 7. Enum Names → PascalCase
+## 7. Enum Names → PascalCase
 
 ```
 enum Day {
@@ -2342,7 +2342,7 @@ The **enum name** is PascalCase, while the **enum constants** are uppercase.
 
 ---
 
-# 8. Object Names → camelCase
+## 8. Object Names → camelCase
 
 ```
 Student student1 = new Student();
@@ -2353,7 +2353,7 @@ Scanner sc = new Scanner(System.in);
 
 ---
 
-# 9. File Name
+## 9. File Name
 
 The file name must match the **public class name**.
 
