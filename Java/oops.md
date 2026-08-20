@@ -1385,7 +1385,7 @@ public class Constructor {
 now all the initialization  happens at a single place
 Constructor chaining is used to avoid code duplication and centralize object initialization. It does not create multiple objects; it only invokes another constructor on the same object using `this()`.
 
-## Static Keyword
+# Static Keyword
 Static means it  belongs to the class not to an individual object.
 Avoid calling the static variables with objects ,the static variables should be accessed in a static way so access them with Class name.
 Static variables are shared by different objects and the value is same for all.
@@ -1440,7 +1440,7 @@ s2.college -> IIT
 Both see the updated value because they're sharing the same variable.
 
 #### Static variables
-# Static Variables
+## Static Variables
 
 ```
 class Student {
@@ -1468,7 +1468,7 @@ Output:
 
 Every constructor increments the **same** variable.
 
-# Static Methods
+## Static Methods
 
 A method can also belong to the class.
 
@@ -1509,7 +1509,7 @@ You can use static variables inside static methods, but you cannot directly use 
 
 
 
-# Static Methods and Non-Static Variables
+## Static Methods and Non-Static Variables
 
 ### Rule
 
@@ -1638,7 +1638,7 @@ Both `count` and `display()` belong to the class.
 
 ---
 
-# Why Java Doesn't Allow Direct Access
+## Why Java Doesn't Allow Direct Access
 
 ```
 class Student {
