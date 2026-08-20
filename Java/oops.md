@@ -1111,7 +1111,7 @@ s --------------------+
 
 This example is one of the best ways to visualize the difference between **instance variables (heap)** and **local variables (stack)**.
 
-### Encapsulation 
+#  Encapsulation 
 Bundling variables and methods that operate on that data into a single unit(class),while restricting direct access to the data
 
 Hide the data and give controlled access to it
