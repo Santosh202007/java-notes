@@ -371,7 +371,7 @@ s2 ------------------------->  Student Object #2
 - Every object has its **own copy** of instance variables (`name`, `age`).
 - Multiple objects can be created from the same class.
 - Methods (`display()`) define the behavior of the object.
-### What is Method Overloading?
+#  Method Overloading
 
 **Method overloading** means **having multiple methods with the same name in the same class, but with different parameter lists.**
 
@@ -382,7 +382,7 @@ The parameter list can differ by:
 - Number of parameters
 - Type of parameters
 - Order of parameters
-### Code
+## Code
 ```  
 class Calc
 {
@@ -419,6 +419,7 @@ public class d
 }
 ```
 
+# Instance and local Variables
 ## Instance Variables
 
 An **instance variable** is declared **inside a class but outside any method, constructor, or block**.
@@ -456,7 +457,7 @@ public class Demo
     }
 }
 ```
-## . Local Variables
+##  Local Variables
 
 A **local variable** is declared **inside a method, constructor, or block**.
 
