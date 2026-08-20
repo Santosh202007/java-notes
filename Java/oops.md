@@ -1519,7 +1519,7 @@ You can use static variables inside static methods, but you cannot directly use 
 
 ---
 
-## Example 1: Direct Access (❌ Not Allowed)
+### Example 1: Direct Access (❌ Not Allowed)
 
 ```
 class Student {
@@ -1557,7 +1557,7 @@ class Student {
 
 ---
 
-## Example 2: Indirect Access Using an Object (✅ Allowed)
+### Example 2: Indirect Access Using an Object (✅ Allowed)
 
 ```
 class Student {
@@ -1585,7 +1585,7 @@ Here Java knows to access the `age` variable of object `s`.
 
 ---
 
-## Example 3: Passing an Object (✅ Allowed)
+### Example 3: Passing an Object (✅ Allowed)
 
 ```
 class Student {
@@ -1610,7 +1610,7 @@ class Student {
 
 ---
 
-## Example 4: Static Variable in Static Method (✅ Allowed)
+### Example 4: Static Variable in Static Method (✅ Allowed)
 
 ```
 class Student {
