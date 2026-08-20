@@ -2370,7 +2370,7 @@ Student.java
 
 ---
 
-# Summary Table
+## Summary Table
 
 |Element|Convention|Example|
 |---|---|---|
@@ -2383,7 +2383,7 @@ Student.java
 |Package|lowercase|`java.util`, `com.company.app`|
 |Constant (`static final`)|UPPER_CASE|`MAX_SIZE`, `PI`|
 # Packages
-# Packages in Java
+## Packages in Java
 
 A **package** is a way of **grouping related classes, interfaces, enums, and sub-packages together**.
 
@@ -2393,7 +2393,7 @@ Just as folders organize files, **packages organize Java classes**.
 
 ---
 
-# Why are Packages Used?
+## Why are Packages Used?
 
 Packages help to:
 
@@ -2405,7 +2405,7 @@ Packages help to:
 
 ---
 
-# Real-Life Analogy
+## Real-Life Analogy
 
 Imagine your computer:
 
@@ -2441,7 +2441,7 @@ Each folder is a **package**.
 
 ---
 
-# Without Packages
+## Without Packages
 
 Suppose you have:
 
@@ -2457,7 +2457,7 @@ Java wouldn't know.
 
 ---
 
-# With Packages
+## With Packages
 
 ```
 college.student.Student
@@ -2467,7 +2467,7 @@ company.student.Student
 
 Now every class has a unique name.
 
-# Declaring a Package
+## Declaring a Package
 
 The **first line** of the Java file declares the package.
 
@@ -2484,7 +2484,7 @@ This means the `Employee` class belongs to the package:
 ```
 com.company.employee
 ```
-# Importing a Package
+## Importing a Package
 
 Suppose:
 
@@ -2503,7 +2503,7 @@ Now you can write:
 ```
 Employee e = new Employee();
 ```
-# Without Import
+## Without Import
 
 You must write the complete name.
 
@@ -2512,7 +2512,7 @@ com.company.employee.Employee e =
 new com.company.employee.Employee();
 ```
 
-# Built-in Packages
+## Built-in Packages
 
 Java already provides many packages.
 
@@ -2529,7 +2529,7 @@ Some common ones are:
 
 ---
 
-# Example
+## Example
 
 ```
 import java.util.Scanner;
@@ -2543,9 +2543,9 @@ Here
 
 ---
 
-# Types of Packages
+## Types of Packages
 
-## 1. Built-in Packages
+### 1. Built-in Packages
 
 Provided by Java.
 
@@ -2558,7 +2558,7 @@ Examples:
 
 ---
 
-## 2. User-defined Packages
+### 2. User-defined Packages
 
 Created by programmers.
 
@@ -2570,7 +2570,7 @@ package college.student;
 
 ---
 
-# Package Naming Convention
+## Package Naming Convention
 
 Packages are usually written in **lowercase**.
 
@@ -2585,7 +2585,7 @@ org.apache
 
 ---
 
-# Relationship Between Packages and Classes
+## Relationship Between Packages and Classes
 
 ```
 Package
@@ -2605,7 +2605,7 @@ A package can contain:
 
 ---
 
-# Default Package
+## Default Package
 
 If you don't write a package statement:
 
@@ -2621,7 +2621,7 @@ It has no package name.
 
 ---
 
-# Common Imports
+## Common Imports
 
 ```
 import java.util.*;
@@ -2641,7 +2641,7 @@ Example:
 
 ---
 
-# Fully Qualified Name (FQN)
+## Fully Qualified Name (FQN)
 
 Every Java class has a complete name.
 
