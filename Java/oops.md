@@ -1128,7 +1128,7 @@ public class Main {
         Student s = new Student();
 
         s.name = "Santosh";
-        s.age = -5;    // Invalid age!
+        s.age = 100;    // Invalid age!
     }
 }
 ```
