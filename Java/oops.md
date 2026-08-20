@@ -1682,7 +1682,7 @@ Since `display()` has **no object (`this`)**, Java cannot decide. Therefore, it 
 
 ---
 
-# Interview Note
+## Interview Note
 
 > **A static method cannot directly access non-static variables because static methods belong to the class, whereas non-static variables belong to objects. Since a static method has no object (`this`), Java doesn't know which object's variable to access. However, it can access non-static variables indirectly through an object reference.**
 
@@ -1693,7 +1693,7 @@ Since `display()` has **no object (`this`)**, Java cannot decide. Therefore, it 
 - **No object = No direct access**
 - **Object available = Indirect access allowed**
 
-# Why is `main()` static?
+## Why is `main()` static?
 
 ```
 public static void main(String[] args)
@@ -1705,7 +1705,7 @@ Since there is no object yet, the JVM needs a method it can call directly.
 
 That's why `main()` is `static`.
 
-# Static Block
+## Static Block
 
 ```
 class Demo {
@@ -1821,8 +1821,8 @@ Notice something:
 
 ---
 
-
-# What exactly does the Class Loader do?
+# Class Loader
+## What exactly does the Class Loader do?
 
 It:
 
@@ -1835,7 +1835,7 @@ Without the Class Loader, the JVM doesn't even know your class exists.
 
 ---    
 
-# Types of Class Loaders
+## Types of Class Loaders
 
 There are **three main class loaders**.
 
