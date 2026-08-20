@@ -1232,12 +1232,14 @@ public class Demo {
 }
 ```
 
-## Why use this keyword 
+# this keyword
+
+##
 
 Because it's much cleaner and easier to read.
 this keyword refers to the current object.it is primarily used to distinguish between the instance variables and the method parameters when they have the  same name
 
-### To initialize  default values when you are creating an object
+## To initialize  default values when you are creating an object
 ### method 1
 ```
 class Human
@@ -1268,7 +1270,7 @@ public class demo
 }
 ```
 
-## method 2(A default constructor)
+### method 2(A default constructor)
 A constructor is automatically called when you create a object.
 A constructor has the same name as a class name
 ```
@@ -1342,7 +1344,7 @@ public class demo
 }
 ```
 
-##### Note
+## Note
 A constructor is automatically called when you create a object even if you don't mention it.
 ## Constructor chaining
 ```
