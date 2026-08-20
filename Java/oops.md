@@ -1440,7 +1440,7 @@ s2.college -> IIT
 Both see the updated value because they're sharing the same variable.
 
 #### Static variables
-## Static Variables
+# Static Variables
 
 ```
 class Student {
@@ -1468,7 +1468,7 @@ Output:
 
 Every constructor increments the **same** variable.
 
-## Static Methods
+# Static Methods
 
 A method can also belong to the class.
 
@@ -1509,7 +1509,7 @@ You can use static variables inside static methods, but you cannot directly use 
 
 
 
-## Static Methods and Non-Static Variables
+# Static Methods and Non-Static Variables
 
 ### Rule
 
@@ -1638,7 +1638,7 @@ Both `count` and `display()` belong to the class.
 
 ---
 
-## Why Java Doesn't Allow Direct Access
+# Why Java Doesn't Allow Direct Access
 
 ```
 class Student {
@@ -1682,7 +1682,7 @@ Since `display()` has **no object (`this`)**, Java cannot decide. Therefore, it 
 
 ---
 
-## Interview Note
+# Interview Note
 
 > **A static method cannot directly access non-static variables because static methods belong to the class, whereas non-static variables belong to objects. Since a static method has no object (`this`), Java doesn't know which object's variable to access. However, it can access non-static variables indirectly through an object reference.**
 
@@ -1693,7 +1693,7 @@ Since `display()` has **no object (`this`)**, Java cannot decide. Therefore, it 
 - **No object = No direct access**
 - **Object available = Indirect access allowed**
 
-## Why is `main()` static?
+# Why is `main()` static?
 
 ```
 public static void main(String[] args)
@@ -1705,7 +1705,7 @@ Since there is no object yet, the JVM needs a method it can call directly.
 
 That's why `main()` is `static`.
 
-## Static Block
+# Static Block
 
 ```
 class Demo {
@@ -1733,7 +1733,7 @@ Static blocks execute only **once** when the class is loaded.
 ### Note
 the class is loaded when you are creating an object, and the static block is only called once because it only gets called when the class is loaded and when you create an object that particular class is loaded, there is something called as the class loader
 
-Class Loader
+#### Class Loader
 The **Class Loader** is another very important Java concept. It is **not directly part of OOP**, but it's part of how the **JVM works**.
 
 Think of it like this:
@@ -1821,8 +1821,8 @@ Notice something:
 
 ---
 
-# Class Loader
-## What exactly does the Class Loader do?
+
+# What exactly does the Class Loader do?
 
 It:
 
