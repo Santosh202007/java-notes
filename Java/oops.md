@@ -1954,7 +1954,7 @@ It **does not execute your Java code.**
 - Run static initialization.
 - Call `main()`.
 - Execute every Java statement.
-# Static Class (Nested Class)
+## Static Class (Nested Class)
 
 Only **nested classes** can be static.
 
@@ -1972,7 +1972,7 @@ A top-level class cannot be declared `static`.
 
 ---
 
-# When should you use `static`?
+## When should you use `static`?
 
 Use it when something is **common to every object**.
 
@@ -2007,7 +2007,7 @@ Examples:
 |---|---|---|
 |**Static context**|✅|❌ (directly)|
 |**Non-static context**|✅|✅|
-# 1. Static Context → Static Variable ✅
+## 1. Static Context → Static Variable ✅
 
 ```
 class Demo {
@@ -2027,7 +2027,7 @@ class Demo {
 
 ---
 
-# 2. Static Context → Non-static Variable ❌ (Directly)
+## 2. Static Context → Non-static Variable ❌ (Directly)
 
 ```
 class Demo {
@@ -2047,7 +2047,7 @@ non-static variable roll cannot be referenced from a static context
 
 ---
 
-# 3. Static Context → Non-static Variable ✅ (Using an object)
+## 3. Static Context → Non-static Variable ✅ (Using an object)
 
 ```
 class Demo {
@@ -2068,7 +2068,7 @@ class Demo {
 
 ---
 
-# 4. Non-static Context → Static Variable ✅
+## 4. Non-static Context → Static Variable ✅
 
 ```
 class Demo {
@@ -2088,7 +2088,7 @@ class Demo {
 
 ---
 
-# 5. Non-static Context → Non-static Variable ✅
+## 5. Non-static Context → Non-static Variable ✅
 
 ```
 class Demo {
@@ -2108,7 +2108,7 @@ class Demo {
 
 ---
 
-# 6. Static Context → Static Method ✅
+## 6. Static Context → Static Method ✅
 
 ```
 class Demo {
@@ -2131,7 +2131,7 @@ Hello
 
 ---
 
-# 7. Static Context → Non-static Method ❌ (Directly)
+## 7. Static Context → Non-static Method ❌ (Directly)
 
 ```
 class Demo {
@@ -2154,7 +2154,7 @@ non-static method hello() cannot be referenced from a static context
 
 ---
 
-# 8. Static Context → Non-static Method ✅ (Using an object)
+## 8. Static Context → Non-static Method ✅ (Using an object)
 
 ```
 class Demo {
@@ -2178,7 +2178,7 @@ Hello
 
 ---
 
-# 9. Non-static Context → Static Method ✅
+## 9. Non-static Context → Static Method ✅
 
 ```
 class Demo {
@@ -2201,7 +2201,7 @@ Hello
 
 ---
 
-# 10. Non-static Context → Non-static Method ✅
+## 10. Non-static Context → Non-static Method ✅
 
 ```
 class Demo {
@@ -2221,7 +2221,7 @@ class Demo {
 That single rule covers both **variables** and **methods**.
 
 
-### Naming conventions
+# Naming conventions
 
 **Naming conventions** are **standard rules for naming classes, variables, methods, packages, constants, etc.** They are not enforced by Java, but every Java developer follows them to make code readable.
 
