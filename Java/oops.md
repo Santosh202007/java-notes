@@ -101,7 +101,7 @@ Methods (Behavior)
 - The four pillars of OOP are **Encapsulation, Inheritance, Polymorphism, and Abstraction**.
 - Java is an object-oriented language built around these principles.
 
-basic code
+# tracking the code 
 ```
 class Calculator
 {
@@ -139,7 +139,7 @@ Think of it like the design of a calculator. It defines what a calculator can do
 
 ---
 
-### Step 2: Defining a Method
+## Step 2: Defining a Method
 
 ```
 public int add(int n1, int n2)
@@ -258,7 +258,7 @@ The variable `calc` does **not** store the object itself. It stores a **referenc
 
 ---
 
-# Step 7: Calling a Method
+## Step 7: Calling a Method
 
 ```
 int result = calc.add(num1, num2);
@@ -331,7 +331,7 @@ public class Demo {
     }
 }
 ```
-### Output
+## Output
 `Name : Santosh`
 `Age  : 19`
 
