@@ -1232,13 +1232,13 @@ public class Demo {
 }
 ```
 
-#### Why use this keyword 
+## Why use this keyword 
 
 Because it's much cleaner and easier to read.
 this keyword refers to the current object.it is primarily used to distinguish between the instance variables and the method parameters when they have the  same name
 
-##### To initialize  default values when you are creating an object
-## method 1
+### To initialize  default values when you are creating an object
+### method 1
 ```
 class Human
 {
