@@ -127,7 +127,7 @@ System.out.println(result);
 ```
 
 ->example explanation
-# Step 1: Creating a Class
+## Step 1: Creating a Class
 
 ```
 class Calculator
@@ -139,7 +139,7 @@ Think of it like the design of a calculator. It defines what a calculator can do
 
 ---
 
-# Step 2: Defining a Method
+## Step 2: Defining a Method
 
 ```
 public int add(int n1, int n2)
