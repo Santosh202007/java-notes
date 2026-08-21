@@ -6909,6 +6909,11 @@ Java can perform boxing automatically
 
 Instead of:
 ```
-
+int x = 10;
+Integer y = Integer.valueOf(x);
 ```
 you can simply write
+```
+int x=10;
+Integer y=x;
+```
