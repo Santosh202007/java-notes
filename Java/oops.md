@@ -7220,7 +7220,8 @@ Integer
 
 ```
 int a = Integer.parseInt("123");
-Integer b = Integer.valueOf("123");`
+Integer b = Integer.valueOf("123");
 ```
 
-##
+## Why Do Generics Need Wrappers?
+Because generics work with **reference types**, not primitive types.
