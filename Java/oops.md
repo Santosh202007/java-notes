@@ -7047,41 +7047,44 @@ Consider:
 ```
 Integer a = 100;
 Integer b = 100;
-```
-
-```
 System.out.println(a == b);
 ```
 
 You might expect:
-
+```
 false
-
+```
 because they're objects.
 
 But the result is typically:
 
+```
 true
-
+```
 Why?
 
+```
 Java caches certain `Integer` values, commonly **-128 through 127**.
+```
 
 So:
-
+```
 Integer a = 100;
 
 Integer b = 100;
+```
 
 can refer to the same cached object.
 
 Conceptually:
 
+```
        ┌─────────────┐
 
 a ────►│ Integer 100 │◄──── b
 
        └─────────────┘
+```
 
 Therefore:
 
