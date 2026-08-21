@@ -6831,4 +6831,11 @@ public class finalll {
 }
 ```
 
-# Wrapper Class 
+# Wrapper Class
+
+## Why do wrapper classes exist
+
+Java has 8 primitive types
+```
+
+```
