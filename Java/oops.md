@@ -3968,7 +3968,7 @@ Every constructor reaches its parent through `super()`.
 
 # Note(Variable hiding)
 How that internals work if two classes have same variable names and they use inheritance ,how the usage of this and super works
-# Example 1
+## Example 1
 ```
 package test;
 
@@ -7227,3 +7227,4 @@ Integer b = Integer.valueOf("123");
 Because generics work with **reference types**, not primitive types.
 
 # Abstract Keyword
+
