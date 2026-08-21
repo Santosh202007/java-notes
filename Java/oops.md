@@ -6949,4 +6949,42 @@ Integer x = 10;
 int y = x;
 ```
 
-## 
+##  Autoboxing in Collections
+This is where you'll see it constantly.
+```
+ArrayList<Integer> list = new ArrayList<>();
+
+list.add(10);
+list.add(20);
+list.add(30);
+```
+
+`add()` expects:
+```
+Integer
+```
+
+But you're giving:
+```
+int
+```
+
+Java automatically boxes them:
+
+10
+
+ ↓
+
+Integer.valueOf(10)
+
+ ↓
+
+ArrayList
+
+So this:
+
+list.add(10);
+
+is conceptually similar to:
+
+list.add(Integer.valueOf(10));
