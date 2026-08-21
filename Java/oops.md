@@ -6996,3 +6996,22 @@ list.add(10);
 
 int x = list.get(0);
 ```
+
+`list.get(0)` returns:
+```
+Integer
+```
+But `x` requires:
+```
+int
+```
+So Java automatically unboxes:
+```
+Integer
+ ↓
+int
+```
+Conceptually:
+```
+int x = list.get(0).intValue();
+```
