@@ -7044,12 +7044,14 @@ This is where wrapper classes become tricky.
 
 Consider:
 
+```
 Integer a = 100;
 Integer b = 100;
+```
 
-  
-
+```
 System.out.println(a == b);
+```
 
 You might expect:
 
