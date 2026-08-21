@@ -6889,9 +6889,11 @@ The mapping is
 ```
 int x=10;
 ```
-here x is a variable whose tupe isprimitive type
+here x is a variable whose type is primitive 
 
 ```
 Integer x=10;
 ```
 here x is a reference variable whose type is Integer.
+
+## Boxing
