@@ -7037,3 +7037,80 @@ x = 20;
 you're effectively making `x` refer to another `Integer` value/object.
 
 This is similar to `String` being immutable.
+
+# 16. Very Important: `==` with Wrappers
+
+This is where wrapper classes become tricky.
+
+Consider:
+
+Integer a = 100;
+Integer b = 100;
+
+  
+
+System.out.println(a == b);
+
+You might expect:
+
+false
+
+because they're objects.
+
+But the result is typically:
+
+true
+
+Why?
+
+Java caches certain `Integer` values, commonly **-128 through 127**.
+
+So:
+
+Integer a = 100;
+
+Integer b = 100;
+
+can refer to the same cached object.
+
+Conceptually:
+
+       ┌─────────────┐
+
+a ────►│ Integer 100 │◄──── b
+
+       └─────────────┘
+
+Therefore:
+
+a == b
+
+can be `true`.
+
+---
+
+# 17. But Look at This
+
+Integer a = 200;
+
+Integer b = 200;
+
+  
+
+System.out.println(a == b);
+
+This can produce:
+
+false
+
+because those values aren't guaranteed to come from the same cached object.
+
+Therefore:
+
+> **Never use `==` to compare wrapper values when you mean value equality.**
+
+Use:
+
+a.equals(b)
+
+instead.
