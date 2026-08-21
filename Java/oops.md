@@ -6901,5 +6901,5 @@ Boxing means converting s primitive value into its corresponding wrapper object.
 
 ```
 int x= 10;
-
+Integer y=new Integer(x);
 ```
