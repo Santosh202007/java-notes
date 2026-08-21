@@ -6869,4 +6869,8 @@ why?
 Because the <> in generics expects a reference type, not a primitive type.
 so java provides wrapper classes
 
-##
+## What are wrapper classes
+
+A wrapper class is a class that represents a primitive value as an object.
+The mapping is
+
