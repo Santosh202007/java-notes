@@ -7190,3 +7190,5 @@ Integer x = null;
 A wrapper reference can represent **absence of a value**.
 
 This is one reason wrapper types are useful when working with databases and frameworks.
+
+## `parseInt()` vs `valueOf()`
