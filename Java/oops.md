@@ -7142,4 +7142,26 @@ You can do:
 Integer x = null;
 ```
 But you cannot do:
-``
+```
+int x = null;   // ❌
+```
+Now:
+```
+Integer x = null;
+int y = x;
+```
+What happens?
+
+Java tries to unbox `x`.
+
+But `x` is `null`.
+
+So you get:
+
+```
+NullPointerException
+```
+Conceptually:
+```
+int y = x.intValue();
+```
