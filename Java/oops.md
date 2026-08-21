@@ -6971,20 +6971,20 @@ int
 
 Java automatically boxes them:
 
+```
 10
-
  ↓
-
 Integer.valueOf(10)
-
- ↓
-
-ArrayList
+```
 
 So this:
 
+```
 list.add(10);
+```
 
 is conceptually similar to:
 
+```
 list.add(Integer.valueOf(10));
+```
