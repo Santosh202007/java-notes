@@ -6988,3 +6988,11 @@ is conceptually similar to:
 ```
 list.add(Integer.valueOf(10));
 ```
+## Unboxing from Collections
+```
+ArrayList<Integer> list = new ArrayList<>();
+
+list.add(10);
+
+int x = list.get(0);
+```
