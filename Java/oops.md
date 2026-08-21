@@ -6886,7 +6886,12 @@ The mapping is
 |`boolean`|`Boolean`|
 ## Primitive vs Wrapper
 
+```
 int x=10;
-here x is primitive
+```
+here x is a variable whose tupe isprimitive type
 
+```
 Integer x=10;
+```
+here x is a reference variable whose type is Integer.
