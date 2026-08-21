@@ -7165,3 +7165,28 @@ Conceptually:
 ```
 int y = x.intValue();
 ```
+
+But you can't call a method on `null`.
+
+So:
+
+> **Auto unboxing a null wrapper causes `NullPointerException`.**
+
+This is a very common interview question.
+### Note
+
+```
+int x = 0;
+```
+
+A primitive has a value.
+
+But:
+
+```
+Integer x = null;
+```
+
+A wrapper reference can represent **absence of a value**.
+
+This is one reason wrapper types are useful when working with databases and frameworks.
