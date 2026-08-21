@@ -7134,3 +7134,12 @@ Boolean    → true / false
 Float      → no standard cache
 Double     → no standard cache
 ```
+
+## Wrapper class and null
+
+You can do:
+```
+Integer x = null;
+```
+But you cannot do:
+``
