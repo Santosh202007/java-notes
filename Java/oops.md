@@ -6934,3 +6934,9 @@ Imagine putting a value inside a box.
 The wrapper object is essentially the "box" around the primitive value.
 
 ## Unboxing
+Unboxing means converting a wrapper object into a primitive.
+```
+Integer x = 10;
+
+int y = x.intValue();
+```
