@@ -7015,3 +7015,5 @@ Conceptually:
 ```
 int x = list.get(0).intValue();
 ```
+
+## Wrapper Classes are Immutable
