@@ -6846,13 +6846,13 @@ double
 char
 boolean
 ```
-these are not objects they are primitive types
+these are not objects they are primitive types.
 
 For example 
 ```
 int x = 10;
 ```
-`x `directly holds a primitive `int` value
+`x `directly holds a primitive `int` value.
 
 But java also has many APIs that work with objects ,not primitives.
 
@@ -6866,4 +6866,7 @@ But you cannot do
 ArrayList<int> list=new ArrayList<>();
 ```
 why?
-Because <>
+Because the <> in generics expects a reference type, not a primitive type.
+so java provides wrapper classes
+
+##
