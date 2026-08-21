@@ -6921,6 +6921,16 @@ Integer y=x;
 ## Why is it called boxing
 Imagine putting a value inside a box.
 ```
+ Primitive:
+  10
 
+ ↓ boxing
+
+┌──────────────┐
+│ Integer      │
+│     10       │
+└──────────────┘
 ```
 The wrapper object is essentially the "box" around the primitive value.
+
+## Unboxing
