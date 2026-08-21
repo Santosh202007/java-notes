@@ -7102,7 +7102,9 @@ System.out.println(a == b);
 
 This can produce:
 
+```
 false
+```
 
 because those values aren't guaranteed to come from the same cached object.
 
@@ -7112,6 +7114,10 @@ Therefore:
 
 Use:
 
+```
 a.equals(b)
+```
 
 instead.
+
+## Java  wrapped classes guaranteed cached range
