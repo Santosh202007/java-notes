@@ -6896,8 +6896,8 @@ Integer x=10;
 ```
 here x is a reference variable whose type is Integer.
 
-Box
-## Boxing
+## Box
+### Boxing
 Boxing means converting a primitive value into its corresponding wrapper object.
 
 ```
@@ -6905,7 +6905,7 @@ int x= 10;
 Integer y=new Integer(x);
 ```
 
-## Auto boxing
+### Auto boxing
 Java can perform boxing automatically
 
 Instead of:
@@ -6919,7 +6919,7 @@ int x=10;
 Integer y=x;
 ```
 
-## Why is it called boxing
+### Why is it called boxing
 Imagine putting a value inside a box.
 ```
  Primitive:
@@ -6934,7 +6934,8 @@ Imagine putting a value inside a box.
 ```
 The wrapper object is essentially the "box" around the primitive value.
 
-## Manual/Explicit Unboxing
+## Unbox
+### Manual/Explicit Unboxing
 Unboxing means converting a wrapper object into a primitive.
 
 ```
@@ -6942,7 +6943,7 @@ Integer x = 10;
 
 int y = x.intValue();
 ```
-## Automatic Unboxing
+### Automatic Unboxing
 ```
 Integer x = 10;
 int y = x;
