@@ -6859,5 +6859,11 @@ But java also has many APIs that work with objects ,not primitives.
 The biggest example is the Collections Framework:
 
 ```
-ArrayList<Integer> list=
+ArrayList<Integer> list=new ArrayList<>();
 ```
+But you cannot do
+```
+ArrayList<int> list=new ArrayList<>();
+```
+why?
+Because <>
