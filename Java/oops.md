@@ -6917,3 +6917,10 @@ you can simply write
 int x=10;
 Integer y=x;
 ```
+
+## Why is it called boxing
+Imagine putting a value inside a box.
+```
+
+```
+The wrapper object is essentially the "box" around the primitive value.
