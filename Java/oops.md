@@ -7192,3 +7192,35 @@ A wrapper reference can represent **absence of a value**.
 This is one reason wrapper types are useful when working with databases and frameworks.
 
 ## `parseInt()` vs `valueOf()`
+
+`Very important distinction.
+
+```
+Integer.parseInt("123");
+```
+
+returns:
+
+```
+int
+```
+
+while:
+
+```
+Integer.valueOf("123");
+```
+
+returns:
+```
+Integer
+```
+
+`So:
+
+```
+int a = Integer.parseInt("123");
+Integer b = Integer.valueOf("123");`
+```
+
+##
