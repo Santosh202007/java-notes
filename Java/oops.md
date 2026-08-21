@@ -6962,3 +6962,11 @@ Integer y = Integer.valueOf(x);
 ### Autoboxing
 
 Java does it automatically:
+
+```
+int x = 10;
+
+Integer y = x;
+```
+
+##
