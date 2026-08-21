@@ -7017,3 +7017,23 @@ int x = list.get(0).intValue();
 ```
 
 ## Wrapper Classes are Immutable
+
+This is important.
+
+Suppose:
+
+```
+Integer x = 10;
+```
+
+You can't modify the existing `Integer` object from 10 to 20.
+
+When you do:
+
+```
+x = 20;
+```
+
+you're effectively making `x` refer to another `Integer` value/object.
+
+This is similar to `String` being immutable.
