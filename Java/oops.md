@@ -6837,5 +6837,19 @@ public class finalll {
 
 Java has 8 primitive types
 ```
-
+byte
+short
+int
+long
+float
+double
+char
+boolean
 ```
+these are not objects they are primitive types
+
+For example 
+```
+int x = 10;
+```
+x directly holds a primitive int value
