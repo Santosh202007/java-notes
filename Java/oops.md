@@ -7038,7 +7038,7 @@ you're effectively making `x` refer to another `Integer` value/object.
 
 This is similar to `String` being immutable.
 
-# 16. Very Important: `==` with Wrappers
+##  Very Important: `==` with Wrappers
 
 This is where wrapper classes become tricky.
 
@@ -7080,29 +7080,25 @@ Conceptually:
 
 ```
        ┌─────────────┐
-
 a ────►│ Integer 100 │◄──── b
-
        └─────────────┘
 ```
 
 Therefore:
 
+```
 a == b
+```
 
 can be `true`.
 
 ---
-
-# 17. But Look at This
-
-Integer a = 200;
-
+ But Look at This
+```
+Integer a = 200
 Integer b = 200;
-
-  
-
 System.out.println(a == b);
+```
 
 This can produce:
 
