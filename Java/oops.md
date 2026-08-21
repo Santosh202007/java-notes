@@ -6904,4 +6904,11 @@ int x= 10;
 Integer y=new Integer(x);
 ```
 
-##Auto boxing
+## Auto boxing
+Java can perform boxing automatically
+
+Instead of:
+```
+
+```
+you can simply write
