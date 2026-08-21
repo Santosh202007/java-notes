@@ -6874,3 +6874,19 @@ so java provides wrapper classes
 A wrapper class is a class that represents a primitive value as an object.
 The mapping is
 
+|Primitive|Wrapper|
+|---|---|
+|`byte`|`Byte`|
+|`short`|`Short`|
+|`int`|`Integer`|
+|`long`|`Long`|
+|`float`|`Float`|
+|`double`|`Double`|
+|`char`|`Character`|
+|`boolean`|`Boolean`|
+## Primitive vs Wrapper
+
+int x=10;
+here x is primitive
+
+Integer x=10;
