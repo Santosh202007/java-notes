@@ -7225,3 +7225,5 @@ Integer b = Integer.valueOf("123");
 
 ## Why Do Generics Need Wrappers?
 Because generics work with **reference types**, not primitive types.
+
+# Abstract Keyword
