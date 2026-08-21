@@ -6897,3 +6897,4 @@ Integer x=10;
 here x is a reference variable whose type is Integer.
 
 ## Boxing
+Boxing means converting s primitive value into its corresponding wrapper object.
