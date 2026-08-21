@@ -6947,26 +6947,3 @@ int y = x.intValue();
 Integer x = 10;
 int y = x;
 ```
-
-## Boxing vs Autoboxing
-
-### Boxing
-
-You explicitly convert:
-```
-int x = 10;
-
-Integer y = Integer.valueOf(x);
-```
-
-### Autoboxing
-
-Java does it automatically:
-
-```
-int x = 10;
-
-Integer y = x;
-```
-
-##
