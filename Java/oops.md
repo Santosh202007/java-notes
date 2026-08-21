@@ -6948,4 +6948,17 @@ Integer x = 10;
 int y = x;
 ```
 
-## Boxing vs Auto
+## Boxing vs Autoboxing
+
+### Boxing
+
+You explicitly convert:
+```
+int x = 10;
+
+Integer y = Integer.valueOf(x);
+```
+
+### Autoboxing
+
+Java does it automatically:
