@@ -7121,3 +7121,16 @@ a.equals(b)
 instead.
 
 ## Java  wrapped classes guaranteed cached range
+range where both refer to same object
+```
+Byte       → -128 to 127
+Short      → -128 to 127
+Integer    → -128 to 127
+Long       → -128 to 127
+
+Character  → 0 to 127
+Boolean    → true / false
+
+Float      → no standard cache
+Double     → no standard cache
+```
