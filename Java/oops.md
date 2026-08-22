@@ -7600,7 +7600,7 @@ Conflict.
 
 No.
 ```
-abstract private void sound();  // ❌
+ private abstract void sound();  // ❌
 ```
 why?
 A private method isn't accessible to subclasses and therefore cannot be overridden.
@@ -7611,8 +7611,88 @@ But an abstract method needs to be implemented by a subclass.
 ### Public,protected,default
 Yes.
 ```
+public abstract void sound();
+protected abstract void sound();
+abstract void sound();    // package-private
+```
+
+
+## Can a abstract class be?
+
+### Access modifiers
+An abstract class **can be**:
 
 ```
+public abstract class Animal
+```
+
+✅ `public`
+
+```
+abstract class Animal
+```
+
+✅ default/package-private
+
+But:
+
+```
+private abstract class Animal
+```
+
+❌ **Top-level class cannot be `private`**
+
+```
+protected abstract class Animal
+```
+
+❌ **Top-level class cannot be `protected`**
+
+However, if the abstract class is an **inner/nested class**, `private` and `protected` are allowed.
+
+---
+
+### 2. `static`
+
+A **top-level abstract class cannot be `static`**:
+
+```
+static abstract class Animal
+```
+
+❌
+
+But a **nested abstract class can be static**:
+
+```
+class Outer {
+    static abstract class Animal {
+    }
+}
+```
+
+✅
+
+---
+
+### 3. `final`
+
+```
+abstract final class Animal
+```
+
+❌
+
+Because:
+
+- `abstract` → class **must be inherited**
+- `final` → class **cannot be inherited**
+
+They contradict each other.
+
+
+
+
 
 
 
