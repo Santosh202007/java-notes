@@ -456,7 +456,7 @@ public class Demo
     }
 }
 ```
-## . Local Variables
+##  Local Variables
 
 A **local variable** is declared **inside a method, constructor, or block**.
 
