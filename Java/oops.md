@@ -7742,6 +7742,168 @@ class Dog extends Animal {
 Dog d = new Dog();       // ✅
 ```
 
+## Abstract class vs Normal class
+| Feature          | Normal Class | Abstract Class |
+| ---------------- | ------------ | -------------- |
+| Object creation  | ✅            | ❌              |
+| Abstract methods | ❌            | ✅              |
+| Concrete methods | ✅            | ✅              |
+| Constructor      | ✅            | ✅              |
+| Variables        | ✅            | ✅              |
+| Static methods   | ✅            | ✅              |
+| Final methods    | ✅            | ✅              |
+| Can be inherited | ✅            | ✅              |
 
+## When to use abstract class
 
+Use an abstract class when subclasses share:
 
+### Common state
+
+```
+String name;
+int age;
+```
+
+### Common behavior
+
+```
+void eat() { }
+```
+
+### But some behavior differs
+
+```
+abstract void sound();
+```
+
+For example:
+
+```
+                 Animal
+              /          \
+           Dog            Cat
+            |              |
+          Bark            Meow
+```
+
+Common:
+
+```
+name
+eat()
+sleep()
+```
+
+Different:
+
+```
+sound()
+```
+
+That's a perfect use case for an abstract class.
+
+## Real World example
+Imagine a payment system:
+
+```
+abstract class Payment {
+
+    abstract void pay(double amount);
+
+    void receipt() {
+        System.out.println("Receipt generated");
+    }
+}
+```
+
+Different payment types:
+
+```
+class CreditCardPayment extends Payment {
+
+    @Override
+    void pay(double amount) {
+        System.out.println("Paid using credit card");
+    }
+}
+```
+
+```
+class UPIPayment extends Payment {
+
+    @Override
+    void pay(double amount) {
+        System.out.println("Paid using UPI");
+    }
+}
+```
+
+Now:
+
+```
+Payment p = new UPIPayment();
+
+p.pay(500);
+p.receipt();
+```
+
+The parent defines the **contract**, while the child defines the **specific implementation**.
+
+## Abstract + Polymorphism
+
+```
+abstract class Animal {
+
+    abstract void sound();
+}
+```
+
+```
+class Dog extends Animal {
+
+    @Override
+    void sound() {
+        System.out.println("Bark");
+    }
+}
+```
+
+```
+class Cat extends Animal {
+
+    @Override
+    void sound() {
+        System.out.println("Meow");
+    }
+}
+```
+
+Then:
+
+```
+Animal a;
+
+a = new Dog();
+a.sound();       // Bark
+
+a = new Cat();
+a.sound();       // Meow
+```
+
+The reference is:
+
+```
+Animal
+```
+
+but the actual object changes:
+
+```
+Dog
+Cat
+```
+
+That's **runtime polymorphism using an abstract superclass**.
+
+## Interview  questions
