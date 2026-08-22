@@ -7265,7 +7265,9 @@ class Cat extends Animal{
  ```
  abstarct class Animal
  {
- abstract void 
+ abstract void sound();
  }
  ```
+The parent says 
+"Every Animal must "
 
