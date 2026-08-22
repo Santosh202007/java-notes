@@ -2818,7 +2818,7 @@ class Child extends Parent {
 
 The keyword **`extends`** is used to inherit a class.
 
-### Why is Inheritance Used?
+## Why is Inheritance Used?
 reuse existing code
 avoid code duplication
 improve maintainability
@@ -2841,7 +2841,7 @@ class Animal {
 
 Here, `Animal` is the parent class.
 
-# Child Class (Subclass)
+## Child Class (Subclass)
 
 A **Child Class** (also called a **Subclass** or **Derived Class**) inherits the members of the parent class and can also have its own members.
 
@@ -2862,7 +2862,7 @@ Here:
 - `Dog` is the child class.
 - `Dog` automatically gets access to the `eat()` method.
 
-# Code Reusability
+## Code Reusability
 
 Without inheritance:
 
@@ -2901,7 +2901,7 @@ With inheritance:
 The common code is written only once.
 
 
-# Real-World Examples
+## Real-World Examples
 
 ### Example 1
 
@@ -2988,7 +2988,7 @@ Lion
 
 - Roar
 
-### NOTE
+## NOTE
 - Inheritance allows one class to inherit the members of another class.
 - The `extends` keyword is used for inheritance.
 - Parent class = Superclass = Base class.
@@ -2997,16 +2997,14 @@ Lion
 - Java supports **single inheritance** for classes (one parent class per child class).
 - Inherited members include accessible fields and methods, but **constructors are not inherited** (though a child constructor can call a parent constructor using `super()`
 
-   ### What gets inherited
-   Knowing exactly what a child receives
+### What gets inherited
    
-  #### Inherited
   Public variables and public methods
   Protected variables and methods
   Package-private Variables and methods
   Static variables and  methods are inherited
 
-#### Not inherited
+### Not inherited
 Private variables and private methods
 Static blocks and constructors
 
@@ -3252,7 +3250,7 @@ Because hybrid inheritance includes **multiple inheritance**, which Java does no
 
 ---
 
-# Can Hybrid Inheritance Be Achieved?
+## Can Hybrid Inheritance Be Achieved?
 
 Yes.
 Java achieves multiple inheritance through **interfaces**. so then hybrid can be acheived
@@ -3260,7 +3258,7 @@ Java achieves multiple inheritance through **interfaces**. so then hybrid can be
 
 
 
-# 5. Constructors in Inheritance
+## 5. Constructors in Inheritance
 
 Constructors play a special role in inheritance. Although **constructors are not inherited**, whenever a child object is created, the **parent constructor always executes first**, followed by the child constructor.
 
@@ -7907,3 +7905,82 @@ Cat
 That's **runtime polymorphism using an abstract superclass**.
 
 ## Interview  questions
+
+### What is an abstract class in Java?
+An abstract class is a class declared with the `abstract` keyword that cannot be instantiated directly. It can contain both abstract methods, which have no implementation and must be implemented by concrete subclasses, and concrete methods containing shared behavior. It is commonly used when multiple subclasses share common state or behavior but need different implementations for certain operations.
+
+### Why do we need abstract classes?
+They allow us to define a common base with shared implementation while forcing subclasses to provide implementations for behavior that the parent cannot meaningfully define.
+
+
+### Can we create an object of an abstract class?
+
+❌ No.
+
+```
+Animal a = new Animal(); // ERROR
+```
+
+### Can an abstract class have a constructor?
+
+✅ Yes.
+
+### Can an abstract class have concrete methods?
+
+✅ Yes.
+
+### Can an abstract class have zero abstract methods?
+
+✅ Yes.
+
+### Can an abstract class have static methods?
+
+✅ Yes.
+
+### Can an abstract class have final methods?
+
+✅ Yes.
+
+### Can an abstract method be final?
+
+❌ No.
+
+### Can an abstract method be static?
+
+❌ No.
+
+### Can an abstract method be private?
+
+❌ No.
+
+### Can an abstract class be final?
+
+❌ No.
+
+### Can a concrete class extend an abstract class?
+
+✅ Yes, but it must implement all inherited abstract methods.
+
+## Core model
+
+```
+                    ABSTRACT CLASS
+                          │
+              ┌───────────┴───────────┐
+              │                       │
+        Common stuff             Incomplete stuff
+              │                       │
+        variables                 abstract methods
+        constructors                    │
+        normal methods                  │
+              │                         │
+              └──────────┬──────────────┘
+                         ↓
+                  Child implements
+                  missing behavior
+```
+
+The **abstract class provides what is common**.
+
+The **subclass provides what is specific**.
+
