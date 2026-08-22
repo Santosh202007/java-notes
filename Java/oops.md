@@ -7339,3 +7339,50 @@ Abstract classes can have normal methods
  - Instance methods
  - Static variables
  - Initializers blocks
+
+## Example
+```
+abstract class Animal {
+
+    String name;
+
+    Animal(String name) {
+        this.name = name;
+    }
+
+    abstract void sound();
+
+    void eat() {
+        System.out.println(name + " is eating");
+    }
+}
+```
+child:
+```
+class Dog extends Animal {
+
+    Dog(String name) {
+        super(name);
+    }
+
+    @Override
+    void sound() {
+        System.out.println("Bark");
+    }
+}
+```
+Then
+```
+Dog d = new Dog("Bruno");
+
+d.sound();
+d.eat();
+```
+output
+```
+Bark
+Bruno is eating
+```
+
+## Constructors in abstract classes
+If i can'tcreate a object or class then why
