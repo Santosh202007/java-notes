@@ -7385,4 +7385,49 @@ Bruno is eating
 ```
 
 ## Constructors in abstract classes
-If i can'tcreate a object or class then why
+If i can't create a object or class then why does it need a constructor
+Because the abstract class portion of a child object still needs to be initialized.
+Consider:
+```
+abstract class Animal {
+
+    Animal() {
+        System.out.println("Animal constructor");
+    }
+}
+
+class Dog extends Animal {
+
+    Dog() {
+        System.out.println("Dog constructor");
+    }
+}
+```
+
+```
+Dog d = new Dog();
+```
+
+```
+Animal constructor
+Dog constructor
+```
+The Dog object contains the inherited/parent portion associated with `Animal` and the super class constructor initializes that part.
+
+## Abstract Class Reference
+```
+
+```
+
+
+
+
+
+You cannot
+```
+Animal a = new Animal();  // ❌
+```
+But you can
+```
+Animal a = new Dog();     // ✅
+```
