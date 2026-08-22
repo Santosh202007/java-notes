@@ -7539,7 +7539,7 @@ class Dog extends Mammal {
 ```
 So here the responsibility can be passes down the inheritance chain.
 
-## Abstract methods can have final methods
+## Abstract methods can have final and static methods
 ```
 abstract class Animal {
 
@@ -7547,6 +7547,11 @@ abstract class Animal {
 
     final void breathe() {
         System.out.println("Breathing");
+        
+        static void eat()
+        {
+        System.out.println("Animal eating");
+        }
     }
 }
 ```
