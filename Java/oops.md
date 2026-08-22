@@ -7242,7 +7242,7 @@ abstract void sound();
 }
 ```
 
-Here Animal 
+Here ``Animal ``is an abstract class and ``sound ``is an abstract method.
 
 
 
