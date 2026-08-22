@@ -7260,5 +7260,12 @@ class Cat extends Animal{
 }
 ```
  
- Every animal has some kind of sound but the `Animal` 
+ Every animal has some kind of sound but the `Animal` class doesn't know exactly what sound every animal should make.
+ So we can say
+ ```
+ abstarct class Animal
+ {
+ abstract void 
+ }
+ ```
 
