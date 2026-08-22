@@ -7330,4 +7330,12 @@ Abstract classes can have normal methods
 }
  ```
 ### Abstract classes contain
-
+ - Abstract methods
+ - Concrete methods
+ - Variables
+ - Constructors
+ - Static methods
+ - Final methods
+ - Instance methods
+ - Static variables
+ - Initializers blocks
