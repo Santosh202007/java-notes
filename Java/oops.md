@@ -7712,7 +7712,35 @@ Because:
 They contradict each other.
 
 
+## Abstract class can have no abstract methods
 
+ This is perfectly legal
+
+```
+abstract class Animal {
+
+    void eat() {
+        System.out.println("Eating");
+    }
+}
+```
+
+There is no abstract method.
+
+Why make it abstract then?
+
+You might want to **prevent direct instantiation** while still providing common functionality for subclasses.
+
+```
+Animal a = new Animal(); // ❌
+```
+but:
+```
+class Dog extends Animal {
+}
+
+Dog d = new Dog();       // ✅
+```
 
 
 
