@@ -7272,4 +7272,14 @@ The parent says
 "Every Animal must have a sound ,but i won't decide what it is"
  That's abstraction.
 ## Abstract Method
-
+Abstract method has no implementation or body.
+```
+abstract void sound();
+```
+Notice:
+```
+void sound() {
+    // implementation
+}
+```
+is diffe from
