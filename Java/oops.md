@@ -7598,3 +7598,21 @@ Conflict.
 
 ### Private
 
+No.
+```
+abstract private void sound();  // ❌
+```
+why?
+A private method isn't accessible to subclasses and therefore cannot be overridden.
+
+But an abstract method needs to be implemented by a subclass.
+
+
+### Public,protected,default
+Yes.
+```
+
+```
+
+
+
