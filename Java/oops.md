@@ -7232,11 +7232,17 @@ Because generics work with **reference types**, not primitive types.
 The word abstract essentially means Incomplete/hiding implementation details and leaving 
 certain behavior to subclasses.
 
-In java , abstarct can be used with classes and methods.
+In java , abstract can be used with classes and methods.
 
+```
+abstract class Animal{
 
+abstract void sound();
 
+}
+```
 
+Here Animal 
 
 
 
