@@ -7510,4 +7510,9 @@ abstract class Dog extends Animal {
 }
 ```
 now Dog doesn't have to implement sound() yet.
-the next 
+
+the next subclass which inherits Animal Or Dog should implement the sound method
+
+> A concrete subclass must implement all inherited abstracted methods.
+
+## Multilevel Abstract Inheritance
