@@ -4470,6 +4470,8 @@ super.sound();
 
 → explicitly calls the parent version.
 
+## Table 1
+
 | Rule                                  | Method Overriding                                            |
 | ------------------------------------- | ------------------------------------------------------------ |
 | **Inheritance required?**             | ✅ Yes                                                        |
@@ -4491,9 +4493,7 @@ super.sound();
 | Can throw unchecked exception?        | ✅ Yes                                                        |
 | `@Override` annotation                | Not mandatory, but **strongly recommended**                  |
 | Binding                               | Overridden instance methods use **runtime/dynamic dispatch** |
-
-
-
+## Table 2
 
 | `final/static`?       | Can it be overridden?                       |
 | --------------------- | ------------------------------------------- |
@@ -8014,4 +8014,8 @@ Animal a = new Animal(); // ERROR
 The **abstract class provides what is common**.
 
 The **subclass provides what is specific**.
+
+# Inner class
+
+## Anonymous Inner class
 
