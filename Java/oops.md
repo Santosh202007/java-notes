@@ -3964,9 +3964,10 @@ Every constructor reaches its parent through `super()`.
 
 
 
-## Note(Variable hiding)
+# Variable hiding
+
 How that internals work if two classes have same variable names and they use inheritance ,how the usage of this and super works
-### Example 1
+## Example 1
 ```
 package test;
 
@@ -4009,7 +4010,7 @@ public class ex2 {
     }
 }
 ```
-## Step 1
+### Step 1
 
 ```
 Vehicle v = new Vehicle("Porchse");
@@ -4037,7 +4038,7 @@ Vehicle.name = "Porchse"
 
 ---
 
-## Step 2
+### Step 2
 
 ```
 Car c = new Car("911");
@@ -4072,7 +4073,7 @@ Car(String name)
 
 ---
 
-### First
+#### First
 
 ```
 super();
@@ -4094,7 +4095,7 @@ Vehicle.name = null  (Car's object)
 
 ---
 
-### Then
+#### Then
 
 ```
 this.name = name;
@@ -4128,7 +4129,7 @@ Car.name = "911"
 
 ---
 
-## Step 3
+### Step 3
 
 ```
 c.display();
@@ -4140,7 +4141,7 @@ Runs
 Car.display()
 ```
 
-### First
+#### First
 
 ```
 System.out.println(this.name);
@@ -4166,7 +4167,7 @@ Output
 
 ---
 
-### Next
+#### Next
 
 ```
 System.out.println(super.name);
@@ -4194,7 +4195,7 @@ null
 
 ---
 
-### Next
+#### Next
 
 ```
 super.display();
@@ -4250,7 +4251,7 @@ null
 
 ---
 
-## Finally
+#### Finally
 
 ```
 v.display();
@@ -4272,7 +4273,7 @@ Porchse
 
 ---
 
-# Final Output
+### Final Output
 
 ```
 911
@@ -4333,13 +4334,13 @@ null
 porchse
 ```
 
-### here this refers to the class whose object was created even though if you access super and in that parent constructor if you initialize the values using this keyword it initializes the variable in the child's object which were inherited for the parent class.
 
-### better phrasing -`this` always refers to the **current object**, which is the object that was created (even if it's a child object). When a child object is created, the parent constructor runs first. Inside the parent constructor, `this` still refers to the **same child object**, not a separate parent object. Therefore, if the parent constructor initializes an inherited field using `this`, it initializes the parent part of that child object.
+## conclusion
+`this` always refers to the **current object**, which is the object that was created (even if it's a child object). When a child object is created, the parent constructor runs first. Inside the parent constructor, `this` still refers to the **same child object**, not a separate parent object. Therefore, if the parent constructor initializes an inherited field using `this`, it initializes the parent part of that child object.
 
 
 
-### final conclusion
+## final conclusion
 `this` always refers to the current object, which is the object that was created (even if it's a child object). When a child object is created, the parent constructor runs first. Inside the parent constructor, `this` still refers to the same child object, not a separate parent object. Therefore, if the parent constructor initializes a field using `this`, it initializes the parent field that exists inside that child object. When multiple classes in the inheritance hierarchy have fields with the same name, the executing class determines which field `this.field` refers to.
 
 # Method overriding
