@@ -7306,4 +7306,14 @@ You cannot do:
 ```
 Animal a=new Animal();
 ```
-Why because 
+Why because Animal is incomplete.
+It says:
+```
+Animal
+  ↓
+sound() → ????
+```
+There's no implementation of sound().
+
+### Note
+Abstarct 
