@@ -7329,4 +7329,5 @@ Abstract classes can have normal methods
     }
 }
  ```
- 
+
+### Abstract classes contain
