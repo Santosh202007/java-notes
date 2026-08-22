@@ -7493,7 +7493,7 @@ sound()
 
 There are only two choices:
 
-Option 1: Implement it
+### Option 1: Implement it
 ```
 class Dog extends Animal {
 
@@ -7504,7 +7504,7 @@ class Dog extends Animal {
 }
 ```
 
-Option 2:Make Dog abstract
+### Option 2:Make Dog abstract
 ```
 abstract class Dog extends Animal {
 }
@@ -7516,3 +7516,49 @@ the next subclass which inherits Animal Or Dog should implement the sound method
 > A concrete subclass must implement all inherited abstracted methods.
 
 ## Multilevel Abstract Inheritance
+You can have
+```
+abstract class Animal {
+    abstract void sound();
+}
+```
+
+```
+abstract class Mammal extends Animal {
+}
+```
+
+```
+class Dog extends Mammal {
+
+    @Override
+    void sound() {
+        System.out.println("Bark");
+    }
+}
+```
+So here the responsibility can be passes down the inheritance chain.
+
+## Abstract methods can have final methods
+```
+abstract class Animal {
+
+    abstract void sound();
+
+    final void breathe() {
+        System.out.println("Breathing");
+    }
+}
+```
+breathe () cannot be overridden.
+
+```
+abstract method
+→ must be implemented
+
+final method
+→ cannot be overridden
+```
+Completely different concepts.
+
+## Can a abstract method be?
