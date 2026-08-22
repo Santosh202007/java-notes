@@ -7562,3 +7562,39 @@ final method
 Completely different concepts.
 
 ## Can a abstract method be?
+
+### Final
+
+No.
+```
+abstract final void sound();  // ❌
+```
+Because:
+
+- `abstract` says: **"Subclass MUST override this."**
+- `final` says: **"Subclass CANNOT override this."**
+
+They contradict each other.
+
+### Static
+
+No.
+```
+abstract static void sound();  // ❌
+```
+Why?
+
+An abstract method requires subclass implementation/overriding.
+
+But static methods belong to the **class**, and static methods are **hidden**, not overridden
+So:
+
+```
+abstract → requires overriding
+static   → doesn't participate in overriding
+```
+
+Conflict.
+
+### Private
+
