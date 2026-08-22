@@ -7295,4 +7295,15 @@ An abstraction method
 - must be implemented by a concrete subclass
 
 ## Abstract class
- A class containing abstract method must itself be abstract
+ A class containing abstract method must itself be abstract.
+```
+abstract class Animal
+{
+abstract void sound();
+}
+```
+You cannot do:
+```
+Animal a=new Animal();
+```
+Why because 
