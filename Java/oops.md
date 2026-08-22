@@ -7269,5 +7269,7 @@ class Cat extends Animal{
  }
  ```
 The parent says 
-"Every Animal must "
+"Every Animal must have a sound ,but i won't decide what it is"
+ That's abstraction.
+## Abstract Method
 
