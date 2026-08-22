@@ -7316,4 +7316,17 @@ sound() → ????
 There's no implementation of sound().
 
 ### Note
-Abstarct 
+Abstract classes can have normal methods
+ An abstract class does not mean every class must be abstract.
+ You can have
+ ```
+ abstract class Animal {
+
+    abstract void sound();
+
+    void eat() {
+        System.out.println("Animal eats");
+    }
+}
+ ```
+ 
