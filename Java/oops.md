@@ -1151,7 +1151,7 @@ The ATM controls what operations are allowed.
 
 That's encapsulation.
  
-### Note
+### Access
 so thing with the encapsulation is that you should use methods to access and modify data
 
 ```
@@ -1232,15 +1232,17 @@ public class Demo {
 }
 ```
 
-# this keyword
+# Constructors
 
-## Why use this keyword
+## this keyword
+
+### Why use this keyword
 
 Because it's much cleaner and easier to read.
 this keyword refers to the current object.it is primarily used to distinguish between the instance variables and the method parameters when they have the  same name
 
-## To initialize  default values when you are creating an object
-### method 1
+### To initialize  default values when you are creating an object
+#### method 1
 ```
 class Human
 {
@@ -1270,7 +1272,7 @@ public class demo
 }
 ```
 
-### method 2(A default constructor)
+####  default constructor
 A constructor is automatically called when you create a object.
 A constructor has the same name as a class name
 ```
@@ -1308,7 +1310,7 @@ public class demo
 }
 ```
 
-## Parametrized constructor
+####  Parametrized constructor
 ```
 class Human
 {
@@ -1344,7 +1346,7 @@ public class demo
 }
 ```
 
-## Note
+### Note
 A constructor is automatically called when you create a object even if you don't mention it.
 ## Constructor chaining
 ```
@@ -1386,6 +1388,8 @@ public class Constructor {
 ```
 now all the initialization  happens at a single place
 Constructor chaining is used to avoid code duplication and centralize object initialization. It does not create multiple objects; it only invokes another constructor on the same object using `this()`.
+
+Super keywoard is explained in detail in the Inheritance 
 
 
 # Static Keyword
