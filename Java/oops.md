@@ -7282,4 +7282,14 @@ void sound() {
     // implementation
 }
 ```
-is diffe from
+is different from
+```
+abstract void sound();
+```
+An abstract method ends with `;`
+
+Rules
+An abstraction method 
+- has `abstract`
+- has no body
+- must be implemented by a concrete subclass
