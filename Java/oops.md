@@ -6542,6 +6542,22 @@ If **no** → normal compile-time/reference-based resolution applies.
 #### ⭐ Core rule to remember
 In Java runtime polymorphism, the reference type determines what members can be accessed, while the actual object determines which overridden instance method executes.
 
+| Member                                        | Resolved based on               |
+| --------------------------------------------- | ------------------------------- |
+| **Instance variables/fields**                 | Reference type                  |
+| **Static variables**                          | Reference type                  |
+| **Static methods**                            | Reference type                  |
+| **Which methods can be called**               | Reference type                  |
+| **Overridden instance method implementation** | Actual object type              |
+| **Overloaded method selection**               | Reference/compile-time types    |
+| **Constructors**                              | Actual class being instantiated |
+### ⭐The golden rule:
+
+> **Compile time → reference type**  
+> **Runtime → actual object type**
+
+But remember that **static methods and fields don't participate in runtime polymorphism**.
+
 # Final Keyword
 
 The basic idea is:
@@ -7657,7 +7673,7 @@ However, if the abstract class is an **inner/nested class**, `private` and `prot
 
 ---
 
-### 2. `static`
+####  `static`
 
 A **top-level abstract class cannot be `static`**:
 
@@ -7680,7 +7696,7 @@ class Outer {
 
 ---
 
-### 3. `final`
+####  `final`
 
 ```
 abstract final class Animal
