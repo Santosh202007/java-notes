@@ -7244,5 +7244,11 @@ abstract void sound();
 
 Here ``Animal ``is an abstract class and ``sound ``is an abstract method.
 
-
+## Why do we need abstraction 
+ Suppose we have:
+ class Dog
+ {
+ vio
+ }
+ 
 
