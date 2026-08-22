@@ -7416,11 +7416,28 @@ The Dog object contains the inherited/parent portion associated with `Animal` an
 
 ## Abstract Class Reference
 ```
+abstract class Animal {
 
+    abstract void sound();
+
+}
+
+class Dog extends Animal {
+
+    void sound() {
+        System.out.println("Barks");
+    }
+}
+
+public class code1 {
+
+    public static void main(String args[]) {
+
+        Animal a = new Dog();
+
+    }
+}
 ```
-
-
-
 
 
 You cannot
@@ -7431,3 +7448,66 @@ But you can
 ```
 Animal a = new Dog();     // ✅
 ```
+This is Upcasting.
+
+Now:
+
+```
+a.sound();
+```
+
+calls:
+
+```
+Dog.sound()
+```
+
+because of **runtime polymorphism**.
+
+So abstraction and polymorphism often work together.
+
+## Abstract method must be implemented
+```
+abstract class Animal {
+
+    abstract void sound();
+}
+```
+
+Then:
+```
+class Dog extends Animal {
+
+}
+```
+
+This gives an error.
+
+Why?
+
+`Dog` hasn't implemented:
+
+```
+sound()
+```
+
+There are only two choices:
+
+Option 1: Implement it
+```
+class Dog extends Animal {
+
+    @Override
+    void sound() {
+        System.out.println("Bark");
+    }
+}
+```
+
+Option 2:Make Dog abstract
+```
+abstract class Dog extends Animal {
+}
+```
+now Dog doesn't have to implement sound() yet.
+the next 
