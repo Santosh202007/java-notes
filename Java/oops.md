@@ -1389,7 +1389,7 @@ public class Constructor {
 now all the initialization  happens at a single place
 Constructor chaining is used to avoid code duplication and centralize object initialization. It does not create multiple objects; it only invokes another constructor on the same object using `this()`.
 
-Super keywoard is explained in detail in the Inheritance 
+Super keyword is explained in detail in the Inheritance block.
 
 
 # Static Keyword
