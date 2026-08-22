@@ -4470,7 +4470,37 @@ super.sound();
 
 → explicitly calls the parent version.
 
+| Rule                                  | Method Overriding                                            |
+| ------------------------------------- | ------------------------------------------------------------ |
+| **Inheritance required?**             | ✅ Yes                                                        |
+| **Same method name?**                 | ✅ Yes                                                        |
+| **Same parameter list?**              | ✅ Yes                                                        |
+| **Return type**                       | Same, or **covariant return type**                           |
+| **Access modifier**                   | Cannot be **more restrictive**                               |
+| `public` → `protected`                | ❌ Not allowed                                                |
+| `protected` → `public`                | ✅ Allowed                                                    |
+| `default` → `protected`               | ✅ Allowed                                                    |
+| `protected` → `default`               | ❌ Not allowed                                                |
+| `private` method                      | ❌ Cannot be overridden                                       |
+| `static` method                       | ❌ Cannot be overridden; **method hiding**                    |
+| `final` method                        | ❌ Cannot be overridden                                       |
+| Constructor                           | ❌ Cannot be overridden                                       |
+| `abstract` method                     | ✅ Must be overridden by concrete subclass                    |
+| `throws` clause                       | Cannot throw a **broader checked exception**                 |
+| Can throw narrower checked exception? | ✅ Yes                                                        |
+| Can throw unchecked exception?        | ✅ Yes                                                        |
+| `@Override` annotation                | Not mandatory, but **strongly recommended**                  |
+| Binding                               | Overridden instance methods use **runtime/dynamic dispatch** |
 
+
+
+
+| `final/static`?       | Can it be overridden?                       |
+| --------------------- | ------------------------------------------- |
+| `final class`         | ❌ No inheritance → no overriding            |
+| `final method`        | ❌ No                                        |
+| `static method`       | ❌ No → hidden                               |
+| `static nested class` | ❌ Not applicable; classes aren't overridden |
 #  Polymorphism
 
 ## 1.Definition
