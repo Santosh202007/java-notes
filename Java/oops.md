@@ -7293,3 +7293,6 @@ An abstraction method
 - has `abstract`
 - has no body
 - must be implemented by a concrete subclass
+
+## Abstract class
+ A class containing abstract method must itself be abstract
