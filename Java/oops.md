@@ -3010,14 +3010,14 @@ Static blocks and constructors
 
  Constructors are not inherited because they are used only to initialize the class when they are declared.
 
-# 4. Types of Inheritance
+##  Types of Inheritance
 
 Inheritance can be classified into different types based on how classes are related.
 
 Java supports **Single**, **Multilevel**, and **Hierarchical** inheritance using classes.
 
 Java **does not support Multiple and Hybrid inheritance using classes**.  
-# 1. Single Inheritance
+### 1. Single Inheritance
 
 A child class inherits from only one parent class.
 
@@ -3030,7 +3030,7 @@ B
 - `A` → Parent Class
 - `B` → Child Class
 
-### Example
+#### Example
 
 ```
 class Animal {
@@ -3054,7 +3054,7 @@ Here,
 
 - Dog inherits from Animal.
 - Dog can access the inherited `eat()` method and its own `bark()` method.
-# 2. Multilevel Inheritance
+### 2. Multilevel Inheritance
 
 A class inherits from another child class.
 
@@ -3070,7 +3070,7 @@ C
 - `B` → Parent
 - `C` → Child
 
-### Example
+#### Example
 
 ```
 class Animal {
@@ -3104,7 +3104,7 @@ The `Puppy` class inherits:
 - `bark()` from `Dog`
 - `eat()` from `Animal`
 
-# 3. Hierarchical Inheritance
+### 3. Hierarchical Inheritance
 
 Multiple child classes inherit from the same parent.
 
@@ -3114,7 +3114,7 @@ Multiple child classes inherit from the same parent.
    B  C  D
 ```
 
-### Example
+#### Example
 
 ```
 class Animal {
@@ -3144,7 +3144,7 @@ Every child inherits:
 
 Each child may also have its own properties
 
-# Multiple Inheritance (Not Supported Using Classes)
+### 4.Multiple Inheritance (Not Supported Using Classes)
 ```
 A      B
  \    /
@@ -3166,7 +3166,7 @@ class C extends A, B {   // ❌ Compile-time Error
 
 ```
 
-## Why doesn't  java support multiple inheritance?
+#### Why doesn't  java support multiple inheritance?
 
 The primary reason is the diamond pattern
 ```
@@ -3192,7 +3192,7 @@ class D extends B, C {   // Assume Java allowed this
 }
 ```
 
-### What would happen if Java allowed this?
+#### What would happen if Java allowed this?
 
 If you wrote:
 
@@ -3219,7 +3219,7 @@ Both B and C have display()
 
 The compiler has no rule to decide automatically.
 
-# 5. Hybrid Inheritance
+### 5. Hybrid Inheritance
 
 Hybrid inheritance is a combination of two or more inheritance types.
 
@@ -3240,7 +3240,7 @@ This combines:
 
 ---
 
-# Is Hybrid Inheritance Supported?
+#### Is Hybrid Inheritance Supported?
 
 Using **classes**,
 
@@ -3250,15 +3250,15 @@ Because hybrid inheritance includes **multiple inheritance**, which Java does no
 
 ---
 
-## Can Hybrid Inheritance Be Achieved?
+#### Can Hybrid Inheritance Be Achieved?
 
 Yes.
-Java achieves multiple inheritance through **interfaces**. so then hybrid can be acheived
+Java achieves multiple inheritance through **interfaces**. so then hybrid can be achieved
 
 
 
 
-## 5. Constructors in Inheritance
+##  Constructors in Inheritance
 
 Constructors play a special role in inheritance. Although **constructors are not inherited**, whenever a child object is created, the **parent constructor always executes first**, followed by the child constructor.
 
@@ -3267,7 +3267,7 @@ This process is known as **constructor chaining**.
 
 ---
 
-# Constructor Chaining
+### Constructor Chaining
 
 **Constructor chaining** is the process where constructors are executed from the **topmost parent class down to the child class** during object creation.
 
@@ -3275,7 +3275,7 @@ Every constructor calls another constructor until the topmost parent constructor
 
 Java achieves this using the **`super()`** keyword.
 
-# Why Constructor Chaining?
+### Why Constructor Chaining?
 
 A child object contains both:
 
@@ -3291,7 +3291,7 @@ Therefore,
 **Child Constructor**
 
 
-# Parent Constructor
+### Parent Constructor
 
 The constructor of the parent class is always executed before the child's constructor.
 
@@ -3322,7 +3322,7 @@ Parent Constructor
 Child Constructor
 ```
 
-# Child Constructor
+### Child Constructor
 
 The child constructor executes **only after** the parent constructor has finished.
 
@@ -3345,7 +3345,7 @@ Reference Assigned
 ```
 
 
-# Parameterized Constructor
+### Parameterized Constructor
 
 Suppose the parent has only a parameterized constructor.
 
@@ -3397,7 +3397,7 @@ class Child extends Parent {
 }
 ```
 
-# Constructor Execution Order
+### Constructor Execution Order
 
 Suppose Multiple level inheritance 
 
@@ -3439,7 +3439,7 @@ C()
 Reference Assigned
 ```
 
-# Constructor Chaining with this()
+### Constructor Chaining with this()
 
 Example:
 
@@ -3478,7 +3478,7 @@ Parent()
 Eventually,
 
 every constructor chain reaches a parent constructor.
-# Rules of Constructor Chaining
+### Rules of Constructor Chaining
 
 ### Rule 1
 
@@ -3515,7 +3515,7 @@ Child() {
 }
 ```
 
-# Why Parent Constructor Executes First
+### Why Parent Constructor Executes First
 
 A child object consists of:
 
@@ -3539,7 +3539,7 @@ Child Constructor
 
 ---
 
-# Constructors are NOT Inherited
+### Constructors are NOT Inherited
 
 ```
 class Parent {
@@ -3567,7 +3567,7 @@ super();
 
 ---
 
-# Complete Execution Flow
+### Complete Execution Flow
 
 ```
 Child obj = new Child();
@@ -3595,7 +3595,7 @@ Reference Assigned
 
 ---
 
-# Summary Table
+### Summary Table
 
 | Situation                                           | Result                                        |
 | --------------------------------------------------- | --------------------------------------------- |
@@ -3607,7 +3607,7 @@ Reference Assigned
 | `super()` first statement                           | ✅ Mandatory                                   |
 | `this()` and `super()` together in same constructor | ❌ Not Allowed                                 |
 | Parent has only parameterized constructor           | Child must explicitly call `super(arguments)` |
-# 6. `super` Keyword
+### `super` Keyword
 
 The **`super`** keyword is a reference variable used inside a child class to refer to the **immediate parent class**.
 
@@ -3619,7 +3619,7 @@ It is mainly used for:
 
 ---
 
-# What is `super`?
+#### What is `super`?
 
 `super` refers to the **immediate parent class** of the current object.
 
@@ -3638,14 +3638,14 @@ Inside `Child`:
 
 > **Important:** `super` does **not** refer to a separate parent object. It refers to the **parent portion of the current child object**.
 
-# Uses of `super`
+#### Uses of `super`
 
 1. Calling the parent constructor.
 2. Calling a parameterized parent constructor.
 3. Accessing parent variables.
 4. Calling parent methods.
 
-# 1. Calling Parent Constructor
+#### 1. Calling Parent Constructor
 
 Syntax
 
@@ -3688,13 +3688,13 @@ Child Constructor
 
 ---
 
-## Important Rules
+#### Important Rules
 
 - `super()` must always be the **first statement**.
 - If you don't write it, Java inserts it automatically.
 - It can only be used inside a constructor.
 
-# 2. Calling Parameterized Parent Constructor
+#### 2. Calling Parameterized Parent Constructor
 
 Syntax
 
@@ -3750,7 +3750,7 @@ super();
 
 Compile-time Error.
 
-# 3. Accessing Parent Variables
+#### 3. Accessing Parent Variables
 
 Suppose both parent and child contain the same variable.
 
@@ -3792,7 +3792,7 @@ Output
 10
 ```
 
-# Can `super` Access Static Members?
+#### Can `super` Access Static Members?
 
 Yes.
 
@@ -3820,7 +3820,7 @@ because static members belong to the class.
 
 ---
 
-# Can `super` Be Used in Static Methods?
+#### Can `super` Be Used in Static Methods?
 
 ❌ No.
 
@@ -3842,7 +3842,7 @@ Static methods have no current object (`this`), therefore there is no parent ref
 
 ---
 
-# Can `super()` Be Used in Methods?
+#### Can `super()` Be Used in Methods?
 
 ❌ No.
 
@@ -3860,7 +3860,7 @@ Compile-time Error.
 
 ---
 
-# Can `super()` and `this()` Be Together?
+#### Can `super()` and `this()` Be Together?
 
 ❌ No.
 
@@ -3882,7 +3882,7 @@ Both must be the **first statement**.
 
 ---
 
-# Constructor Chaining Using `super`
+#### Constructor Chaining Using `super`
 
 Suppose
 
@@ -3924,7 +3924,7 @@ C()
 
 Every constructor reaches its parent through `super()`.
 
-# `this` vs `super`
+#### `this` vs `super`
 
 | `this`                                               | `super`                                                      |
 | ---------------------------------------------------- | ------------------------------------------------------------ |
@@ -3938,7 +3938,7 @@ Every constructor reaches its parent through `super()`.
 
 ---
 
-# `this()` vs `super()`
+#### `this()` vs `super()`
 
 |`this()`|`super()`|
 |---|---|
@@ -3949,7 +3949,7 @@ Every constructor reaches its parent through `super()`.
 
 ---
 
-# Summary Table
+### Summary Table
 
 | Use                              | Syntax                                                        |
 | -------------------------------- | ------------------------------------------------------------- |
@@ -3964,9 +3964,9 @@ Every constructor reaches its parent through `super()`.
 
 
 
-# Note(Variable hiding)
+## Note(Variable hiding)
 How that internals work if two classes have same variable names and they use inheritance ,how the usage of this and super works
-## Example 1
+### Example 1
 ```
 package test;
 
