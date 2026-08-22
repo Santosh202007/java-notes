@@ -7247,17 +7247,18 @@ Here ``Animal ``is an abstract class and ``sound ``is an abstract method.
 ## Why do we need abstraction 
  Suppose we have:
 ```
-class Dog {
+class Dog extends Animal {
     void sound() {
         System.out.println("Bark");
     }
 }
 
-class Cat {
+class Cat extends Animal{
     void sound() {
         System.out.println("Meow");
     }
 }
 ```
- Eve
+ 
+ Every animal has some kind of sound but the `Animal` 
 
