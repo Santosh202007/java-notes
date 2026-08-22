@@ -7229,7 +7229,7 @@ Because generics work with **reference types**, not primitive types.
 # Abstract Keyword 
 
 ## Abstract means
-The word abstract es
+The word abstract essentially means Incomplete/hiding implementation details and leaving 
 
 
 
