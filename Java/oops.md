@@ -8188,7 +8188,7 @@ Outer.Inner i=new Outer.Inner();
 i.display();
 ```
 
-#### 
+####  Static Nested Class
 ### Member Inner Class
  This is a normal inner class
  
