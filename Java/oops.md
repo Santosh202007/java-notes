@@ -8278,7 +8278,7 @@ Outer.Inner inner = outer.new Inner();
 Because a normal inner class has an connection to an instance of outer class.
 
 ### Local Inner Class
-A class can than can be declared inside a method, constructor or block.
+A local inner class is a non-static nested class declared inside a method, constructor, or block. Its scope is limited to that method, constructor, or block.
 ```
 class Outer {
 
@@ -8394,4 +8394,70 @@ Output:
 
 The local inner class can access the outer class's instance variable.
 
+#### Local Variable Rule
+
+A local Inner  class can also access a local  variable of the enclosing method 
+if that variable is final or effectively final.
+
+```
+class Outer {
+
+    void display() {
+
+        int x = 10;
+
+        class Inner {
+
+            void show() {
+                System.out.println(x);
+            }
+        }
+
+        Inner i = new Inner();
+        i.show();
+    }
+
+    public static void main(String[] args) {
+
+        Outer obj = new Outer();
+        obj.display();
+    }
+}
+```
+This works because x is never changed.
+
+But :
+```
+class Outer {
+
+    void display() {
+
+        int x = 10;
+             x=20;
+        class Inner {
+
+            void show() {
+                System.out.println(x);
+            }
+        }
+
+        Inner i = new Inner();
+        i.show();
+    }
+
+    public static void main(String[] args) {
+
+        Outer obj = new Outer();
+        obj.display();
+    }
+}
+```
+This causes  a compilation error because you are modifying . 
+
+
+
+
+The **biggest thing to remember**:
+
+> **If the class is declared inside a method, it is a local inner class, and you can use it only within that method/block.**
 
