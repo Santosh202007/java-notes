@@ -8167,8 +8167,28 @@ static class Inner
 is a static nested class , not technically an inner class.
 ### Static Nested Class
 
+```
+class Outer {
 
+    static class Inner {
 
+        void display() {
+            System.out.println("Hello");
+        }
+    }
+}
+```
+This is a **static nested class**.
+
+You don't need an `Outer` object.
+
+You can directly do:
+```
+Outer.Inner i=new Outer.Inner();
+i.display();
+```
+
+#### 
 ### Member Inner Class
  This is a normal inner class
  
@@ -8194,4 +8214,7 @@ Outer.Inner inner = outer.new Inner();
 
 #### have to create an outer object
 
-Because a normal inne
+Because a normal inner class has an connection to an instance of outer class.
+
+
+
