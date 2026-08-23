@@ -8140,9 +8140,9 @@ Outer
       │
       └── can access x
 ```
-They are closely connected
+They are closely connected ,same for the inner class as well if it has a private variable the outer class can access it.
 
-
+> You cannot access a  method  which is inside a inner class(non-static inner) 
 ## Type of nested class
 
 Java has several forms of classes declared inside another class.
