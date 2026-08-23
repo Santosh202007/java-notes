@@ -8509,8 +8509,6 @@ System.out.println(x);
 
 Java gives a compilation error.
 
-### But WHY does Java impose this rule?
-
 The key idea is **capturing**.
 
 When you create the local inner class object:
@@ -8542,17 +8540,18 @@ That's why:
 ```
 int x = 10;       // ✅ effectively final
 ```
+works
 
-works, while:
+while:
 
 ```
 int x = 10;
 x = 20;           // ❌ no longer effectively final
 ```
-
 doesn't.
 
-You can explicitly make it final as well:
+
+##### You can explicitly make it final as well:
 Code Snippet:
 ```
 final int x = 10;
@@ -8564,9 +8563,9 @@ class Inner {
 }
 ```
 
-
-
 The **biggest thing to remember**:
 
 > **If the class is declared inside a method, it is a local inner class, and you can use it only within that method/block.**
+
+### Anonymous Inner Class
 
