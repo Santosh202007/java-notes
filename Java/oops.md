@@ -8323,4 +8323,75 @@ Hello
 
 A local inner class can **only be accessed inside the method/block where it is declared**.
 
+For example:
+```
+class Outer {
+
+    void display() {
+
+        class Inner {
+            void show() {
+                System.out.println("Hello");
+            }
+        }
+
+        Inner i = new Inner();
+        i.show();
+    }
+
+    public static void main(String[] args) {
+
+        Outer obj = new Outer();
+        obj.display();
+
+        // Inner i = new Inner(); ❌
+    }
+}
+```
+
+This won't work
+```
+Inner i = new Inner();
+```
+
+inside `main()` because `Inner` is **local to `display()`**.
+
+`main()` has no access to that local class.
+
+#### Local inner Class accessing outer variables
+
+```
+class Outer {
+
+    int x = 10;
+
+    void display() {
+
+        class Inner {
+
+            void show() {
+                System.out.println(x);
+            }
+        }
+
+        Inner i = new Inner();
+        i.show();
+    }
+
+    public static void main(String[] args) {
+
+        Outer obj = new Outer();
+        obj.display();
+    }
+}
+```
+
+Output:
+
+```
+10
+```
+
+The local inner class can access the outer class's instance variable.
+
 
