@@ -8054,5 +8054,74 @@ why would you put a class inside another class?
 
 ## Basic Example
 ```
-class Outer
+ class Outer {
+
+    int x = 10;
+
+    class Inner {
+
+        void display() {
+            System.out.println(x);
+        }
+    }
+}
 ```
+Now:
+```
+public class Main {
+
+    public static void main(String[] args) {
+
+        Outer outer = new Outer();
+
+        Outer.Inner inner = outer.new Inner();
+
+        inner.display();
+    }
+}
+```
+Output:
+```
+10
+```
+Notice the slightly unusual Syntax:
+
+```
+Outer.Inner inner = outer.new Inner();
+```
+Why?
+Because a normal inner class is associated with an instance of the outer class.
+
+## Inner class  has access to outer class
+
+Look at:
+```
+class Outer {
+
+    private int x = 100;
+
+    class Inner {
+
+        void show() {
+            System.out.println(x);
+        }
+    }
+}
+```
+Even though x is:
+```
+private
+```
+the inner class can access it.
+```
+Outer o = new Outer();
+Outer.Inner i = o.new Inner();
+
+i.show();
+```
+Output:
+```
+100
+```
+
+So
