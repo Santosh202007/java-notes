@@ -8030,6 +8030,19 @@ class Outer {
     }
 }
 ```
+An inner class is used when a class is closely related to another class and doesn't need to exist independently.
 
+## Why
+why would you put a class inside another class?
+ Imagine a Car class.
+ A car has an Engine.
+ ```
+ class Car {
 
+    class Engine {
+
+    }
+}
+ ```
+An  ~~
 
