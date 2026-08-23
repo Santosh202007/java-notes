@@ -8144,4 +8144,39 @@ They are closely connected
 
 ## Type of nested class
 
-Java has several forms of classes 
+Java has several forms of classes declared inside another class.
+
+```
+Nested Classes
+│
+├── Static Nested Class
+│
+└── Inner Classes
+     │
+     ├── Member Inner Class
+     ├── Local Inner Class
+     └── Anonymous Inner Class
+```
+
+Technically , "Inner class" specifically refers to non static nested classes.
+
+so 
+```
+static class Inner
+```
+is a static nested class , not technically an inner class.
+
+### Member Inner Class
+ This is a normal inner class
+ 
+ ```
+ class Outer {
+
+    class Inner {
+
+        void display() {
+            System.out.println("Hello");
+        }
+    }
+}
+ ```
