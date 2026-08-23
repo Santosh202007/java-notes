@@ -8223,7 +8223,29 @@ class Outer {
     }
 }
 ```
-This doesn't work because x  be
+This doesn't work because x  is non static and a static nested class cannot directly 
+access a non-static member.
+
+Instead you can do this
+```
+class Outer {
+    int x = 10;
+
+    static class Inner {
+        void display(Outer obj) {
+            System.out.println(obj.x);
+        }
+    }
+
+    public static void main(String[] args) {
+        Outer outer = new Outer();
+
+        Outer.Inner inner = new Outer.Inner();
+
+        inner.display(outer);
+    }
+}
+```
 
 ### Member Inner Class
  This is a normal inner class
