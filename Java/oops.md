@@ -8044,5 +8044,15 @@ why would you put a class inside another class?
     }
 }
  ```
-An  ~~
+ An  Engine in this particular design is strongly associated with a Car.
 
+  You could create:
+  ```
+  Car c=new Car();
+  Car.Engine e=c.new Engine();
+  ```
+
+## Basic Example
+```
+
+```
