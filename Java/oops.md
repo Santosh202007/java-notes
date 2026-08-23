@@ -8030,5 +8030,6 @@ class Outer {
     }
 }
 ```
-## Anonymous Inner class
+
+
 
