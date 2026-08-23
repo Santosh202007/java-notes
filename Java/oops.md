@@ -8180,3 +8180,9 @@ is a static nested class , not technically an inner class.
     }
 }
  ```
+The `Inner` class is a member of `Outer`
+
+To create it
+```
+
+```
