@@ -8054,5 +8054,5 @@ why would you put a class inside another class?
 
 ## Basic Example
 ```
-
+class Outer
 ```
