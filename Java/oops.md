@@ -8454,6 +8454,115 @@ class Outer {
 ```
 This causes  a compilation error because you are modifying . 
 
+##### But WHY does Java impose this rule?
+
+Because local inner classes capture local variables, and Java requires captured local variables to have a stable value. Therefore, the variable must be final or effectively final.
+
+In your first example:
+
+```
+int x = 10;
+
+class Inner {
+    void show() {
+        System.out.println(x);
+    }
+}
+```
+
+`x` is **effectively final** because after:
+
+```
+int x = 10;
+```
+
+you never change it.
+
+So Java allows `Inner` to use `x`.
+
+---
+
+But here in Example 2:
+
+```
+int x = 10;
+x = 20;
+```
+
+you have **changed `x` after initialization**.
+
+Therefore:
+
+```
+x = 10
+   ↓
+x = 20
+   ↓
+x is NOT effectively final
+```
+
+And because `Inner` tries to access `x`:
+
+```
+System.out.println(x);
+```
+
+Java gives a compilation error.
+
+### But WHY does Java impose this rule?
+
+The key idea is **capturing**.
+
+When you create the local inner class object:
+
+```
+Inner i = new Inner();
+```
+
+the inner class needs to remember the value of the local variable `x`.
+
+Conceptually, Java treats it somewhat like:
+
+```
+method()
+ ├── x = 10
+ │
+ └── Inner object
+       └── captured x = 10
+```
+
+The local variable `x` belongs to the method's local scope. Java doesn't let the inner class freely capture a variable whose value can keep changing.
+
+So Java says:
+
+> **If you're going to capture a local variable, its value must not change.**
+
+That's why:
+
+```
+int x = 10;       // ✅ effectively final
+```
+
+works, while:
+
+```
+int x = 10;
+x = 20;           // ❌ no longer effectively final
+```
+
+doesn't.
+
+You can explicitly make it final as well:
+Code Snippet:
+```
+final int x = 10;
+
+class Inner {
+    void display() {
+        System.out.println(x); // ✅
+    }
+}
+```
 
 
 
