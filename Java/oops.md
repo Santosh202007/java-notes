@@ -8278,22 +8278,49 @@ Outer.Inner inner = outer.new Inner();
 Because a normal inner class has an connection to an instance of outer class.
 
 ### Local Inner Class
-A class can tha
+A class can than can be declared inside a method, constructor or block.
 ```
 class Outer {
 
     void display() {
 
         class Inner {
-
             void show() {
                 System.out.println("Hello");
             }
         }
 
+        // Inner class object
         Inner i = new Inner();
-
         i.show();
+    }
+
+    public static void main(String[] args) {
+        Outer obj = new Outer();
+        obj.display();
     }
 }
 ```
+
+So the execution is:
+```
+main()
+  ↓
+create Outer object
+  ↓
+obj.display()
+  ↓
+Inner class is available inside display()
+  ↓
+create Inner object
+  ↓
+i.show()
+  ↓
+Hello
+```
+
+#### Important Rule 🔥
+
+A local inner class can **only be accessed inside the method/block where it is declared**.
+
+
