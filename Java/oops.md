@@ -8124,4 +8124,21 @@ Output:
 100
 ```
 
-So
+So:
+
+> An inner class can access the members of its enclosing outer class, including private members.
+
+It can access private members because the inner class is considered a part of the outer class's implementation.
+
+Think of:
+```
+Outer
+│
+├── private x
+│
+└── Inner
+      │
+      └── can access x
+```
+They are closely connected
+
