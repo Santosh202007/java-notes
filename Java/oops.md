@@ -8189,21 +8189,6 @@ Outer.Inner i=new Outer.Inner();
 i.display();
 ```
 
-Compare:
-
-#### Normal inner class
-
-```
-Outer o = new Outer();
-Outer.Inner i = o.new Inner();
-```
-
-#### Static nested class
-
-```
-Outer.Inner i = new Outer.Inner();
-```
-That's a major difference.
 
 #### Static Nested class and Outer Instance Variables
  
@@ -8240,12 +8225,30 @@ class Outer {
     public static void main(String[] args) {
         Outer outer = new Outer();
 
-        Outer.Inner inner = new Outer.Inner();
+        Outer.Inner i = new Outer.Inner();
 
-        inner.display(outer);
+        i.display(outer);
     }
 }
 ```
+
+#### Static Nested class and Outer Static Variables
+This works
+```
+class Outer {
+
+    static int x = 10;
+
+    static class Inner {
+
+        void display() {
+            System.out.println(x); // ✅
+        }
+    }
+}
+```
+
+
 
 ### Member Inner Class
  This is a normal inner class
@@ -8274,5 +8277,23 @@ Outer.Inner inner = outer.new Inner();
 
 Because a normal inner class has an connection to an instance of outer class.
 
+### Local Inner Class
+A class can tha
+```
+class Outer {
 
+    void display() {
 
+        class Inner {
+
+            void show() {
+                System.out.println("Hello");
+            }
+        }
+
+        Inner i = new Inner();
+
+        i.show();
+    }
+}
+```
