@@ -8144,4 +8144,4 @@ They are closely connected
 
 ## Type of nested class
 
-
+Java has several forms of classes 
