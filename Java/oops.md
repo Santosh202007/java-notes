@@ -8021,5 +8021,15 @@ The **subclass provides what is specific**.
 
 # Inner class
 
+An inner class is a class defined inside another class.
+```
+class Outer
+{
+class Inner
+{
+
+}
+}
+```
 ## Anonymous Inner class
 
