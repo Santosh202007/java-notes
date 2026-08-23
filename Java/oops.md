@@ -8165,6 +8165,9 @@ so
 static class Inner
 ```
 is a static nested class , not technically an inner class.
+### Static Nested Class
+
+
 
 ### Member Inner Class
  This is a normal inner class
@@ -8184,5 +8187,11 @@ The `Inner` class is a member of `Outer`
 
 To create it
 ```
+Outer outer = new Outer();
 
+Outer.Inner inner = outer.new Inner();
 ```
+
+#### have to create an outer object
+
+Because a normal inne
