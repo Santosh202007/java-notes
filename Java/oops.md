@@ -8201,10 +8201,29 @@ Outer.Inner i = o.new Inner();
 #### Static nested class
 
 ```
-Outer.Inner inner = new Outer.Inner();
+Outer.Inner i = new Outer.Inner();
 ```
-
 That's a major difference.
+
+#### Static Nested class and Outer Instance Variables
+ 
+A static nested class doesn't automatically have an outer object reference.
+
+Therefore:
+```
+class Outer {
+
+    int x = 10;
+
+    static class Inner {
+
+        void display() {
+            System.out.println(x); // ❌
+        }
+    }
+}
+```
+This doesn't work because x  be
 
 ### Member Inner Class
  This is a normal inner class
