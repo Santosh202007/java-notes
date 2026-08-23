@@ -8142,3 +8142,6 @@ Outer
 ```
 They are closely connected
 
+## Type of nested class
+
+
