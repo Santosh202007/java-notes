@@ -8142,7 +8142,7 @@ Outer
 ```
 They are closely connected ,same for the inner class as well if it has a private variable the outer class can access it.
 
-> You cannot access a  method  which is inside a inner class(non-static inner) 
+> You cannot access a non-static method or non-static variable inside a non-static inner class without creating an **Inner class object**. Creating only the Outer class object is not enough. You first create the Outer object, then use it to create the Inner object, and finally access the Inner class's members through that Inner object.
 ## Type of nested class
 
 Java has several forms of classes declared inside another class.
@@ -8190,6 +8190,11 @@ i.display();
 ```
 
 ####  Static Nested Class
+
+```
+
+```
+
 ### Member Inner Class
  This is a normal inner class
  
