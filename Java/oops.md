@@ -8189,11 +8189,22 @@ Outer.Inner i=new Outer.Inner();
 i.display();
 ```
 
-####  Static Nested Class
+Compare:
+
+#### Normal inner class
 
 ```
+Outer o = new Outer();
+Outer.Inner i = o.new Inner();
+```
+
+#### Static nested class
 
 ```
+Outer.Inner inner = new Outer.Inner();
+```
+
+That's a major difference.
 
 ### Member Inner Class
  This is a normal inner class
