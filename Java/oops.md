@@ -93,17 +93,15 @@ Methods (Behavior)
 - E-commerce Platforms
 - Enterprise Software
 
-## Key Takeaways
-
+## Key Points
 - OOP organizes programs using **objects**.
 - Objects combine **data**(Attributes) and **behavior**(Methods).
 - A **class** is a blueprint; an **object** is an instance of that blueprint.
 - The four pillars of OOP are **Encapsulation, Inheritance, Polymorphism, and Abstraction**.
 - Java is an object-oriented language built around these principles.
 
-  ## basic code
-  
-  ### Example 1
+
+## Basic Code
 ```
 class Calculator
 {
@@ -202,7 +200,7 @@ Execution starts here.
 
 ---
 
-### Step 5: Declaring Variables
+#### Step 5: Declaring Variables
 
 ```
 int num1 = 4;
@@ -220,7 +218,7 @@ num2 → 5
 
 ---
 
-### Step 6: Creating an Object
+#### Step 6: Creating an Object
 
 ```
 Calculator calc = new Calculator();
@@ -260,7 +258,7 @@ The variable `calc` does **not** store the object itself. It stores a **referenc
 
 ---
 
-### Step 7: Calling a Method
+#### Step 7: Calling a Method
 
 ```
 int result = calc.add(num1, num2);
@@ -284,7 +282,7 @@ result → 9
 
 ---
 
-### Step 8: Printing the Result
+#### Step 8: Printing the Result
 
 ```
 System.out.println(result);
@@ -333,14 +331,14 @@ public class Demo {
     }
 }
 ```
-### Output
+#### Output
 `Name : Santosh`
 `Age  : 19`
 
 `Name : Rahul`
 `Age  : 20`
 
-### What happens at the back
+#### What happens at the back
 ```
 Class (Loaded Once)
 
@@ -364,7 +362,7 @@ s2 ------------------------->  Student Object #2
                                age = 20
 ```
 
-### Key Points
+#### Key Points
 
 - A **class** is a blueprint.
 - `Student` is the class.
@@ -384,7 +382,7 @@ The parameter list can differ by:
 - Number of parameters
 - Type of parameters
 - Order of parameters
-### Code
+## Code
 ```  
 class Calc
 {
@@ -421,6 +419,8 @@ public class d
 }
 ```
 
+
+# Variables
 ## Instance Variables
 
 An **instance variable** is declared **inside a class but outside any method, constructor, or block**.
@@ -533,7 +533,7 @@ class Demo
 }
 ```
 
-### Before execution
+#### Before execution
 
 ```
 Method Area
@@ -546,7 +546,7 @@ The code for `main()` and `add()` is stored here.
 
 ---
 
-### When `main()` starts
+#### When `main()` starts
 
 ```
 Thread Stack
@@ -559,7 +559,7 @@ A **stack frame** is created for `main()`.
 
 ---
 
-### When `main()` calls `add()`
+#### When `main()` calls `add()`
 
 ```
 Thread Stack
@@ -578,7 +578,7 @@ The `add()` frame contains:
 
 ---
 
-### After `add()` finishes
+#### After `add()` finishes
 
 The `add()` frame is popped off the stack.
 
@@ -593,7 +593,7 @@ When `main()` finishes, its frame is also removed.
 
 ---
 
-## Where everything is stored
+### Where everything is stored
 
 |Memory Area|Stores|
 |---|---|
@@ -608,8 +608,7 @@ When `main()` finishes, its frame is also removed.
 - ✅ **Each time a method is called, the JVM creates a stack frame for it on the thread's stack.**
 
 This distinction is fundamental to understanding Java memory management.
-### Note1
-If the stack frames are created for then where exactly is the stack
+# Code For JVM INTERNALS
 
 Let's use your code.
 
@@ -635,7 +634,7 @@ class Demo
 
 ---
 
-# JVM Memory
+## JVM Memory
 
 When this program runs, the JVM mainly uses these memory areas:
 
