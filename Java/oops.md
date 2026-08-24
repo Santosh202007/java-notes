@@ -1012,6 +1012,26 @@ class Car
 
 ---
 
+## 3.Static reference variable
+```
+class Student {
+    String name;
+
+    Student(String name) {
+        this.name = name;
+    }
+}
+
+class Test {
+    static Student s = new Student("Santosh");
+
+    public static void main(String[] args) {
+        System.out.println(s.name); // ✅ Works 
+        System.out.println(Test.s.name); // ✅ Also works
+    }
+}
+```
+
 ## Simple Rule
 A variable has **two properties**:
 
@@ -1105,7 +1125,7 @@ s --------------------+
                       |
                       |
                       v
-                Student Object
+                Student Object(inside heap)
 ```
 
 #### Observe carefully:
