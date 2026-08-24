@@ -101,7 +101,9 @@ Methods (Behavior)
 - The four pillars of OOP are **Encapsulation, Inheritance, Polymorphism, and Abstraction**.
 - Java is an object-oriented language built around these principles.
 
-basic code
+  ## basic code
+  
+  ### Example 1
 ```
 class Calculator
 {
@@ -127,7 +129,7 @@ System.out.println(result);
 ```
 
 ->example explanation
-## Step 1: Creating a Class
+#### Step 1: Creating a Class
 
 ```
 class Calculator
@@ -139,7 +141,7 @@ Think of it like the design of a calculator. It defines what a calculator can do
 
 ---
 
-## Step 2: Defining a Method
+#### Step 2: Defining a Method
 
 ```
 public int add(int n1, int n2)
@@ -158,7 +160,7 @@ Breaking it down:
 
 ---
 
-# Step 3: Method Body
+#### Step 3: Method Body
 
 ```
 int r = n1 + n2;
@@ -188,7 +190,7 @@ returns `9`.
 
 ---
 
-# Step 4: The Main Method
+#### Step 4: The Main Method
 
 ```
 public static void main(String args[])
@@ -200,7 +202,7 @@ Execution starts here.
 
 ---
 
-# Step 5: Declaring Variables
+### Step 5: Declaring Variables
 
 ```
 int num1 = 4;
@@ -218,7 +220,7 @@ num2 → 5
 
 ---
 
-# Step 6: Creating an Object
+### Step 6: Creating an Object
 
 ```
 Calculator calc = new Calculator();
@@ -258,7 +260,7 @@ The variable `calc` does **not** store the object itself. It stores a **referenc
 
 ---
 
-# Step 7: Calling a Method
+### Step 7: Calling a Method
 
 ```
 int result = calc.add(num1, num2);
@@ -282,7 +284,7 @@ result → 9
 
 ---
 
-# Step 8: Printing the Result
+### Step 8: Printing the Result
 
 ```
 System.out.println(result);
@@ -338,7 +340,7 @@ public class Demo {
 `Name : Rahul`
 `Age  : 20`
 
-## What happens at the back
+### What happens at the back
 ```
 Class (Loaded Once)
 
@@ -371,7 +373,7 @@ s2 ------------------------->  Student Object #2
 - Every object has its **own copy** of instance variables (`name`, `age`).
 - Multiple objects can be created from the same class.
 - Methods (`display()`) define the behavior of the object.
-### What is Method Overloading?
+# Method Overloading
 
 **Method overloading** means **having multiple methods with the same name in the same class, but with different parameter lists.**
 
