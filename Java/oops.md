@@ -8678,7 +8678,7 @@ You're essentially saying:
 
 ---
 
-# Example
+#### Example
 
 ```
 class Animal {
@@ -8711,7 +8711,7 @@ Output:
 Dog barks
 ```
 
-### What happened?
+##### What happened?
 
 This:
 
@@ -8835,4 +8835,22 @@ Animal a
 and `Animal` doesn't have a `run()` method.
 
 
+## Inner class and `this` keyword
 
+```
+class Outer {
+
+    int x = 10;
+
+    class Inner {
+
+        int x = 20;
+
+        void display() {
+            System.out.println(x);
+            System.out.println(this.x);
+            System.out.println(Outer.this.x);
+        }
+    }
+}
+```
