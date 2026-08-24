@@ -8594,5 +8594,13 @@ The **biggest thing to remember**:
 
 ### Anonymous Inner Class
 
+An anonymous inner class is an inner class that
+- has no name
+- is declared and instantiated at the same time
+- is useful when you need a class only once
+
+```
+
+```
 
 
