@@ -8854,3 +8854,114 @@ class Outer {
     }
 }
 ```
+
+Output:
+
+```
+20
+20
+10
+```
+
+Why?
+
+```
+x
+```
+
+means the nearest `x`.
+
+```
+this.x
+```
+
+means the **Inner object's** `x`.
+
+```
+Outer.this.x
+```
+
+means the **Outer object's** `x`.
+
+## Inner class and static
+A normal inner class cannot generally declare static members, with some modern Java exceptions for constant/static declarations and newer language rules. For interview fundamentals, remember:
+
+```
+class Outer {
+
+    class Inner {
+
+        static int x; // traditionally ❌
+    }
+}
+```
+
+The important reason is that a normal inner class is associated with an **instance of the outer class**.
+
+A static nested class doesn't have that restriction:
+
+```
+class Outer {
+
+    static class Inner {
+
+        static int x = 10; // ✅
+    }
+}
+```
+
+## Access modifiers
+Nested/member inner classes can use:
+
+```
+public
+protected
+private
+default
+```
+
+For example:
+
+```
+class Outer {
+
+    private class Inner {
+
+    }
+}
+```
+
+That's valid.
+
+A top-level class cannot be private, but a member class can be private.
+
+## Inner Class vs Inheritance
+
+Don't confuse these concepts.
+
+### Inheritance
+
+```
+Dog IS-A Animal
+```
+
+```
+class Dog extends Animal
+```
+
+### Inner class
+
+```
+Car HAS-A/contains Engine
+```
+
+```
+class Car {
+    class Engine {
+    }
+}
+```
+
+An inner class isn't automatically inheritance.
+
+# Interfaces
