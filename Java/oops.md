@@ -8600,7 +8600,147 @@ An anonymous inner class is an inner class that
 - is useful when you need a class only once
 
 ```
+class Outer {
+
+    public static void main(String[] args) {
+
+        Outer obj = new Outer() {
+
+            void show() {
+                System.out.println("Hello");
+            }
+
+        };
+
+        obj.show();
+    }
+}
+```
+
+Here:
+```
+new Outer() {
+
+    void show() {
+        System.out.println("Hello");
+    }
+
+};
+```
+creates an anonymous subclass of Outer.
+There is no class name.
+
+####  The important idea
+
+Look at this:
 
 ```
+class A {
+    void show() {
+        System.out.println("A");
+    }
+}
+```
+
+Normally:
+
+```
+class B extends A {
+    void show() {
+        System.out.println("B");
+    }
+}
+```
+
+Then:
+
+```
+A obj = new B();
+```
+
+But if you only need `B` once, you can avoid creating `B`:
+
+```
+A obj = new A() {
+
+    void show() {
+        System.out.println("B");
+    }
+
+};
+```
+
+That's an **anonymous inner class**.
+
+You're essentially saying:
+
+> "Create a subclass of `A` right here, override `show()`, but I don't need to give this subclass a name."
+
+---
+
+# Example
+
+```
+class Animal {
+
+    void sound() {
+        System.out.println("Animal sound");
+    }
+}
+
+class Test {
+
+    public static void main(String[] args) {
+
+        Animal a = new Animal() {
+
+            void sound() {
+                System.out.println("Dog barks");
+            }
+
+        };
+
+        a.sound();
+    }
+}
+```
+
+Output:
+
+```
+Dog barks
+```
+
+### What happened?
+
+This:
+
+```
+Animal a = new Animal() {
+
+    void sound() {
+        System.out.println("Dog barks");
+    }
+
+};
+```
+
+creates an unnamed class that **extends `Animal`**.
+
+Conceptually, Java treats it somewhat like:
+
+```
+class SomeAnonymousClass extends Animal {
+
+    void sound() {
+        System.out.println("Dog barks");
+    }
+}
+```
+
+But you never write `SomeAnonymousClass`.
+
+
+#### Anonymous class can override methods
 
 
