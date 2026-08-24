@@ -420,7 +420,7 @@ public class d
 ```
 
 
-# Variables
+# Variable Types
 ## Instance Variables
 
 An **instance variable** is declared **inside a class but outside any method, constructor, or block**.
@@ -608,6 +608,10 @@ When `main()` finishes, its frame is also removed.
 - ✅ **Each time a method is called, the JVM creates a stack frame for it on the thread's stack.**
 
 This distinction is fundamental to understanding Java memory management.
+
+## Static Variables
+ Refer the Static section.
+
 # Code For JVM INTERNALS
 
 Let's use your code.
@@ -666,7 +670,7 @@ Notice that **the stack is not inside the object or inside the class**. It is a 
 
 ---
 
-# Step 1 : Class is Loaded
+### Step 1 : Class is Loaded
 
 When you run
 
@@ -690,7 +694,7 @@ No stack frame for `add()` exists.
 
 ---
 
-# Step 2 : main() Starts
+### Step 2 : main() Starts
 
 The JVM begins execution with
 
@@ -723,7 +727,7 @@ d = null
 
 ---
 
-# Step 3 : Object Creation
+### Step 3 : Object Creation
 
 Now
 
@@ -762,7 +766,7 @@ Demo Object
 
 ---
 
-# Step 4 : d.add()
+### Step 4 : d.add()
 
 Now
 
@@ -822,7 +826,7 @@ d --------+
 
 ---
 
-# Step 5 : add() Finishes
+### Step 5 : add() Finishes
 
 When execution reaches
 
@@ -854,7 +858,7 @@ are completely destroyed.
 
 ---
 
-# Step 6 : main() Ends
+### Step 6 : main() Ends
 
 After
 
@@ -876,7 +880,7 @@ The object on the heap becomes unreachable because nothing references it anymore
 
 ---
 
-# Final Memory Picture While `add()` Is Running
+### Final Memory Picture While `add()` Is Running
 
 ```
                     JVM MEMORY
@@ -911,7 +915,7 @@ The object on the heap becomes unreachable because nothing references it anymore
                              Demo Object
 ```
 
-## The key idea
+### The key idea
 
 Many beginners imagine that **each method has its own permanent stack**. That's **not** how it works.
 
@@ -923,10 +927,10 @@ So there is **one stack per thread**, and **each method call pushes a new frame 
 
 
 
-### Note2
+# Note
 a reference variable can be **either local, instance, or static**.
 
-### 1. Local Reference Variable
+## 1. Local Reference Variable
 
 Declared inside a method.
 
@@ -957,7 +961,7 @@ s -------------------> Student Object
 
 ---
 
-### 2. Instance Reference Variable
+## 2. Instance Reference Variable
 
 Declared inside a class but outside methods.
 
@@ -989,7 +993,7 @@ Student Object
 
 ---
 
-### Another Example
+## Another Example
 
 ```
 class Car
@@ -1032,7 +1036,7 @@ Student s = new Student();
 
 This distinction is asked very often in Java interviews, so it's worth remembering.
 
-### Note
+## Note
 local variable is part of the stack and instance variable is part of the heap
 
 ### Here's a simple example that declares both **instance variables** and **local variables**, then prints them from `main()`
@@ -1063,7 +1067,7 @@ class Student
 }
 ```
 
-### Output
+#### Output
 
 ```
 Age: 19
@@ -1074,7 +1078,7 @@ City: Hyderabad
 
 ---
 
-## Memory Layout
+#### Memory Layout
 
 ```
                  JVM MEMORY
@@ -1104,7 +1108,7 @@ s --------------------+
                 Student Object
 ```
 
-### Observe carefully:
+#### Observe carefully:
 
 - `age` and `name` are **instance variables**, so they are stored **inside the object on the heap**.
 - `x`, `city`, and `s` are **local variables**, so they are stored **in the `main()` stack frame**.
