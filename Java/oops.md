@@ -8743,4 +8743,96 @@ But you never write `SomeAnonymousClass`.
 
 #### Anonymous class can override methods
 
+```
+class Animal {
+
+    void sound() {
+        System.out.println("Animal sound");
+    }
+
+    void eat() {
+        System.out.println("Animal eats");
+    }
+}
+
+class Test {
+
+    public static void main(String[] args) {
+
+        Animal a = new Animal() {
+
+            void sound() {
+                System.out.println("Dog barks");
+            }
+
+            void eat() {
+                System.out.println("Dog eats");
+            }
+
+        };
+
+        a.sound();
+        a.eat();
+    }
+}
+```
+
+Output:
+
+```
+Dog barks
+Dog eats
+```
+
+#### Anonymous class can have its own method
+
+```
+class Animal {
+    void sound() {
+        System.out.println("Animal sound");
+    }
+}
+
+class Test {
+
+    public static void main(String[] args) {
+
+        Animal a = new Animal() {
+
+            void sound() {
+                System.out.println("Dog barks");
+            }
+
+            void run() {
+                System.out.println("Dog runs");
+            }
+
+        };
+
+        a.sound();
+    }
+}
+```
+
+Output:
+
+```
+Dog barks
+```
+
+You **cannot** do:
+
+```
+a.run();
+```
+
+because the reference type is:
+
+```
+Animal a
+```
+
+and `Animal` doesn't have a `run()` method.
+
+
 
