@@ -8966,4 +8966,10 @@ An inner class isn't automatically inheritance.
 
 # Interfaces
 
-      
+An interface is a contact that specifies behavior implementing classes must provide.
+
+Basic Example:
+```
+
+```
+
