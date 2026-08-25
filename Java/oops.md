@@ -595,11 +595,11 @@ When `main()` finishes, its frame is also removed.
 
 ### Where everything is stored
 
-|Memory Area|Stores|
-|---|---|
-|**Method Area**|Class information, method bytecode, static variables|
-|**Heap**|Objects created using `new`|
-|**Stack**|One stack frame per method call (local variables, parameters, return address)|
+| Memory Area     | Stores                                                                        |
+| --------------- | ----------------------------------------------------------------------------- |
+| **Method Area** | Class information, method bytecode, static variables                          |
+| **Heap**        | Objects created using `new`                                                   |
+| **Stack**       | One stack frame per method call (local variables, parameters, return address) |
 
 ### Important interview point
 
