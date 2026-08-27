@@ -1810,6 +1810,88 @@ Every variable simply stores
 
 This saves enormous memory.
 
+# Java String Memory — Concatenation
+
+```
+String a = "pp";
+String b = "pp";
+a = a + b;
+```
+
+### Step 1: `String a = "pp";`
+
+- `"pp"` is created in the **String Pool**.
+- `a` stores a reference to `"pp"`.
+
+```
+String Pool
+┌─────────┐
+│  "pp"   │
+└─────────┘
+     ↑
+     a
+```
+
+### Step 2: `String b = "pp";`
+
+- `"pp"` already exists in the String Pool.
+- Java **reuses the same object**.
+- No second `"pp"` object is created.
+
+```
+String Pool
+┌─────────┐
+│  "pp"   │
+└─────────┘
+    ↑   ↑
+    a   b
+```
+
+### Step 3: `a = a + b;`
+
+```
+"pp" + "pp" → "pppp"
+```
+
+- Strings are **immutable**.
+- The original `"pp"` cannot be changed.
+- A **new String `"pppp"`** is created.
+- `a` is updated to point to `"pppp"`.
+- `b` still points to `"pp"`.
+
+```
+String Objects
+
+"pp"                  "pppp"
+ ↑                       ↑
+ b                       a
+```
+
+### Final state
+
+```
+a → "pppp"
+b → "pp"
+```
+
+### 🔥 Key points
+
+1. **String Pool** stores string literals.
+2. Same string literals can share the **same object**.
+3. `String` is **immutable**.
+4. Concatenation creates a **new String object**.
+5. Assignment changes the **reference**, not the existing String object.
+
+
+
+
+
+
+
+
+
+
+
 # Mutable vs Immutable Strings
 
 ## Immutable
