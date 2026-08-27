@@ -6298,6 +6298,7 @@ Because a `private` method is **not inherited** by the child class.
 > A method that is not inherited cannot be overridden.
 
 Example
+This causes a **compile-time error**.
 ```
 class Animal {
 
