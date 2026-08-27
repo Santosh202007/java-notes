@@ -419,6 +419,56 @@ public class d
 }
 ```
 
+##
+**Both `private` and `final` methods can be overloaded.** ✅
+
+Remember the key distinction:
+
+> **Overloading = same method name, different parameters.**  
+> **Overriding = same method signature in child class.**
+
+### 1. `private` methods can be overloaded ✅
+
+```
+class Animal {
+    private void sound() {
+        System.out.println("sound");
+    }
+
+    private void sound(int x) {
+        System.out.println("sound with int");
+    }
+}
+```
+
+This is valid because the parameter lists are different.
+
+```
+sound()
+sound(int)
+```
+
+### 2. `final` methods can be overloaded ✅
+
+```
+class Animal {
+    final void sound() {
+        System.out.println("sound");
+    }
+
+    final void sound(int x) {
+        System.out.println("sound with int");
+    }
+}
+```
+
+Also valid.
+
+`final` only prevents **overriding**, not overloading.
+
+
+
+
 
 # Variable Types
 ## Instance Variables
@@ -510,6 +560,7 @@ A **method is not stored as a stack**. Instead:
 - **The method's code** is stored once in the **Method Area** (part of the JVM memory).
 - **When the method is called**, the JVM creates a **stack frame** for that method on the **Thread Stack**.
 ---
+
 
 ### Example
 
