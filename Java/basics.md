@@ -1702,6 +1702,31 @@ Follow this order:
 
 This method works for every increment/decrement question.
 ```
+## Important interview point 🔥
+
+`System.exit(0)` **doesn't just exit a method or loop**.
+
+Compare:
+
+```
+return;
+```
+
+→ exits the **current method**
+
+```
+break;
+```
+
+→ exits the **current loop/switch**
+
+```
+System.exit(0);
+```
+
+→ terminates the **entire JVM/program**
+
+Also, `System.exit()` triggers JVM shutdown hooks before the JVM shuts down, but it does **not** behave like a normal return from `main()`.
 
 # Java Control Statements
 
