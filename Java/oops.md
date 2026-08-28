@@ -8096,6 +8096,8 @@ The **abstract class provides what is common**.
 
 The **subclass provides what is specific**.
 
+## Note
+If a class extends an abstract class which has an abstract method then it must and should implement the abstract method.
 # Inner class
 
 An inner class is a class defined inside another class.
