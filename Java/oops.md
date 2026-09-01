@@ -9020,10 +9020,39 @@ An inner class isn't automatically inheritance.
 
 # Interfaces
 
+## What is interface
+
 An interface is a contact that specifies behavior implementing classes must provide.
 
 Basic Example:
 ```
-
+interface Animal
+{
+void sound();
+}
 ```
+
+Then:
+```
+class Dog implements Animal {
+
+    @Override
+    public void sound() {
+        System.out.println("Bark");
+    }
+}
+```
+Here:
+```
+Animal
+  │
+  │ implements
+  ↓
+Dog
+```
+The interface says:
+"Any class that implements me must provide sound()."
+
+##
+
 
