@@ -9648,4 +9648,104 @@ Ambiguous.
 
 Java avoids this with classes.
 
-##
+### Java allows multiple interfaces
+
+#### Example 1
+```
+interface A {
+    void show();
+}
+```
+
+```
+interface B {
+    void display();
+}
+```
+
+```
+class C implements A, B {
+
+    public void show() {
+        System.out.println("Show");
+    }
+
+    public void display() {
+        System.out.println("Display");
+    }
+}
+```
+
+#### Example 2
+If **both interfaces have the same method**, the implementing class only needs **one implementation**`
+
+```
+interface A {
+    void show();
+}
+
+interface B {
+    void show();
+}
+
+class C implements A, B {
+
+    public void show() {
+        System.out.println("Hello");
+    }
+}
+```
+
+✅ This works.
+
+### Why?
+
+Both `A` and `B` are demanding the same thing:
+
+```
+A → show()
+B → show()
+```
+
+`C` provides one `show()` that satisfies **both contracts**.
+
+```
+A a = new C();
+a.show();       // Hello
+
+B b = new C();
+b.show();       // Hello
+
+C c = new C();
+c.show();       // Hello
+```
+
+All three call the **same `C.show()`**.
+
+#### What if they have the same method but different return types?
+```
+interface A {
+    int show();
+}
+
+interface B {
+    String show();
+}
+```
+
+```
+class C implements A, B {   // ❌ ERROR
+}
+```
+
+Java can't have:
+
+```
+int show()
+String show()
+```
+
+It provides an error
+
+#### If both interfaces have the **same `default` method**?
+
