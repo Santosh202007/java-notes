@@ -6668,6 +6668,117 @@ In Java runtime polymorphism, the reference type determines what members can be 
 
 But remember that **static methods and fields don't participate in runtime polymorphism**.
 
+
+## 6. Modifying the access
+
+### Parent → Child
+
+#### `public`
+
+```
+class Animal {
+    public void sound() {}
+}
+
+class Dog extends Animal {
+    public void sound() {}   // ✅
+}
+```
+
+---
+
+#### `protected → protected`
+
+```
+class Animal {
+    protected void sound() {}
+}
+
+class Dog extends Animal {
+    protected void sound() {}   // ✅
+}
+```
+
+#### `protected → public`
+
+```
+class Animal {
+    protected void sound() {}
+}
+
+class Dog extends Animal {
+    public void sound() {}     // ✅
+}
+```
+
+---
+
+#### `default → default`
+
+```
+class Animal {
+    void sound() {}
+}
+
+class Dog extends Animal {
+    void sound() {}            // ✅
+}
+```
+
+#### `default → protected`
+
+```
+class Animal {
+    void sound() {}
+}
+
+class Dog extends Animal {
+    protected void sound() {}  // ✅
+}
+```
+
+#### `default → public`
+
+```
+class Animal {
+    void sound() {}
+}
+
+class Dog extends Animal {
+    public void sound() {}     // ✅
+}
+```
+
+### So memorize only this:
+
+```
+Parent       Child
+
+public    → public       ✅
+
+protected → protected    ✅
+protected → public       ✅
+
+default   → default      ✅
+default   → protected    ✅
+default   → public       ✅
+```
+
+**Rule:** same access level or **increase** visibility.
+
+And for **interfaces**, a normal abstract/default interface method is `public`, so the only overriding implementation that works is:
+
+```
+interface Animal {
+    void sound();
+}
+
+class Dog implements Animal {
+    public void sound() {}     // ✅
+}
+```
+
+
 # Final Keyword
 
 The basic idea is:
