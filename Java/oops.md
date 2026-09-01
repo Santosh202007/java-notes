@@ -9113,3 +9113,36 @@ class Cat {
 ```
 Both have `sound()`, but they implement it differently.
 
+We can define a common contract:
+
+```
+interface Animal {
+
+    void sound();
+}
+```
+
+Then:
+
+```
+class Dog implements Animal {
+
+    public void sound() {
+        System.out.println("Bark");
+    }
+}
+```
+
+```
+class Cat implements Animal {
+
+    public void sound() {
+        System.out.println("Meow");
+    }
+}
+```
+
+Now we can say:
+
+> **Dog and Cat both promise to provide `sound()`**
+
