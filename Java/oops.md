@@ -9698,7 +9698,7 @@ class C implements A, B {
 
 ✅ This works.
 
-### Why?
+##### Why?
 
 Both `A` and `B` are demanding the same thing:
 
@@ -9722,7 +9722,7 @@ c.show();       // Hello
 
 All three call the **same `C.show()`**.
 
-#### What if they have the same method but different return types?
+##### What if they have the same method but different return types?
 ```
 interface A {
     int show();
@@ -9747,5 +9747,102 @@ String show()
 
 It provides an error
 
-#### If both interfaces have the **same `default` method**?
+##### If both interfaces have the **same `default` method**?
+```
+interface A {
+    default void show() {
+        System.out.println("A");
+    }
+}
+
+interface B {
+    default void show() {
+        System.out.println("B");
+    }
+}
+
+class C implements A, B {
+}
+```
+
+❌ **Compile-time error.**
+
+Why?
+
+Java doesn't know whether `C.show()` should come from `A` or `B`.
+
+```
+        A                 B
+        │                 │
+     show()            show()
+        │                 │
+        └───────┬─────────┘
+                ↓
+                C
+             ??????
+```
+
+So Java says:
+
+> **C must resolve the conflict.**
+
+##### C overrides it
+
+The easiest solution:
+
+```
+class C implements A, B {
+
+    public void show() {
+        System.out.println("C");
+    }
+}
+```
+
+Now there is no ambiguity.
+```
+C obj = new C();
+
+obj.show();     // C
+```
+
+#####  C can choose A's default
+
+You can specifically tell Java:
+
+> "I want A's version."
+
+```
+class C implements A, B {
+
+    public void show() {
+        A.super.show();
+    }
+}
+```
+
+Output:
+
+```
+A
+```
+
+Similarly:
+
+```
+class C implements A, B {
+
+    public void show() {
+        B.super.show();
+    }
+}
+```
+
+Output:
+
+```
+B
+```
+
+
 
