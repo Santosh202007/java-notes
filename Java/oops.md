@@ -2455,16 +2455,16 @@ Student.java
 
 ## Summary Table
 
-|Element|Convention|Example|
-|---|---|---|
-|Class|PascalCase|`Student`, `BankAccount`|
-|Interface|PascalCase|`Runnable`, `Printable`|
-|Enum|PascalCase|`Day`, `Color`|
-|Method|camelCase|`getName()`, `display()`|
-|Variable|camelCase|`firstName`, `studentAge`|
-|Object|camelCase|`student`, `scanner`|
-|Package|lowercase|`java.util`, `com.company.app`|
-|Constant (`static final`)|UPPER_CASE|`MAX_SIZE`, `PI`|
+| Element                   | Convention | Example                        |
+| ------------------------- | ---------- | ------------------------------ |
+| Class                     | PascalCase | `Student`, `BankAccount`       |
+| Interface                 | PascalCase | `Runnable`, `Printable`        |
+| Enum                      | PascalCase | `Day`, `Color`                 |
+| Method                    | camelCase  | `getName()`, `display()`       |
+| Variable                  | camelCase  | `firstName`, `studentAge`      |
+| Object                    | camelCase  | `student`, `scanner`           |
+| Package                   | lowercase  | `java.util`, `com.company.app` |
+| Constant (`static final`) | UPPER_CASE | `MAX_SIZE`, `PI`               |
 # Packages
 ## Packages in Java
 
@@ -9306,6 +9306,60 @@ public class Main {
     }
 }
 ```
+
+## Interface Reference
+
+This is extremely important.
+
+```
+interface Animal {
+
+    void sound();
+}
+```
+
+```
+class Dog implements Animal {
+
+    public void sound() {
+        System.out.println("Bark");
+    }
+}
+```
+
+Then:
+
+```
+Animal a = new Dog();
+
+a.sound();
+```
+
+Output:
+
+```
+Bark
+```
+
+The reference type is:
+
+```
+Animal
+```
+
+The actual object is:
+
+```
+Dog
+```
+
+At runtime, Java executes:
+
+```
+Dog.sound()
+```
+
+That's runtime polymorphism.
 
 ## interface methods
 
