@@ -9315,14 +9315,23 @@ This is extremely important.
 interface Animal {
 
     void sound();
+    void eat();
 }
 ```
 
 ```
 class Dog implements Animal {
 
-    public void sound() {
-        System.out.println("Bark");
+ public void sound() {
+        System.out.println("Dog barks");
+    }
+
+    public void eat() {
+        System.out.println("Dog eats");
+    }
+
+    public void run() {
+        System.out.println("Dog runs");
     }
 }
 ```
@@ -9330,9 +9339,9 @@ class Dog implements Animal {
 Then:
 
 ```
-Animal a = new Dog();
+Animal a1 = new Dog();
 
-a.sound();
+a1.sound();
 ```
 
 Output:
@@ -9436,3 +9445,29 @@ Java doesn't allow that when implementing an interface method.
 
 ## Interface variables
 
+```
+interface Animal {
+
+    int legs = 4;
+}
+```
+
+```
+public static final int legs = 4;
+```
+
+So:
+```
+Animal.legs
+```
+is valid
+
+But:
+```
+Animal.legs = 5;   // ❌
+```
+because its final
+
+> **All variables declared directly inside an interface are implicitly `public static final`.**
+
+They are constants.
