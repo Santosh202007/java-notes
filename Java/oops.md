@@ -9379,3 +9379,6 @@ public
 default
 ```
 Java doesn't allow that when implementing an interface method.
+
+## Interface variables
+
