@@ -9198,3 +9198,73 @@ public class Main {
 
 ## interface methods
 
+The traditional interface method:
+
+```
+interface Animal {
+
+    void sound();
+}
+```
+
+is implicitly:
+
+```
+public abstract void sound();
+```
+
+So:
+
+```
+void sound();
+```
+
+means:
+
+```
+public abstract void sound();
+```
+
+You don't have to write `public abstract`.
+
+## Implementing method must be `public`
+
+```
+interface Animal {
+
+    void sound();
+}
+```
+This method is implicitly
+```
+interface Animal {
+
+    void sound();
+}
+```
+so this is valid:
+```
+class Dog implements Animal {
+
+    public void sound() {
+        System.out.println("Bark");
+    }
+}
+```
+But this is not
+```
+class Dog implements Animal {
+
+    void sound() {       // ❌
+        System.out.println("Bark");
+    }
+}
+```
+
+why because you are reducing the access level from:
+```
+public
+ ↓
+default
+```
+Java doesn't allow that when implementing an interface method.
