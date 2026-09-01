@@ -9146,3 +9146,55 @@ Now we can say:
 
 > **Dog and Cat both promise to provide `sound()`**
 
+whole code:
+```
+interface Animal {
+    void sound();
+    void eat();
+}
+
+class Dog implements Animal {
+    public void sound() {
+        System.out.println("Dog barks");
+    }
+
+    public void eat() {
+        System.out.println("Dog eats");
+    }
+
+    public void run() {
+        System.out.println("Dog runs");
+    }
+}
+
+class Cat implements Animal {
+    public void sound() {
+        System.out.println("Cat meows");
+    }
+
+    public void eat() {
+        System.out.println("Cat eats");
+    }
+
+    public void climb() {
+        System.out.println("Cat climbs");
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+
+        Animal a1 = new Dog();
+        Animal a2 = new Cat();
+
+        a1.sound();   // Dog barks
+        a1.eat();     // Dog eats
+
+        a2.sound();   // Cat meows
+        a2.eat();     // Cat eats
+    }
+}
+```
+
+## interface methods
+
