@@ -9471,3 +9471,110 @@ because its final
 > **All variables declared directly inside an interface are implicitly `public static final`.**
 
 They are constants.
+
+###  interface Variables 
+
+Always:
+
+```
+public static final
+```
+
+You **cannot change** that.
+###  Interface methods
+
+It depends on the type of method.
+
+#### 1. Abstract method
+
+```
+interface Animal {
+    void sound();
+}
+```
+
+---
+This is:
+
+```
+public abstract void sound();
+```
+
+
+#### 2. `default` method
+
+```
+interface Animal {
+    default void eat() {
+        System.out.println("Eating");
+    }
+}
+```
+
+`default` means **the interface gives the method a body**.
+
+It is also implicitly `public`.
+
+```
+class Dog implements Animal {
+    public void eat() { }       // ✅
+}
+```
+
+---
+
+#### 3. `static` method
+
+```
+interface Animal {
+    static void info() {
+        System.out.println("Animal");
+    }
+}
+```
+
+It is implicitly `public`, but **you cannot override it**.
+
+```
+class Dog implements Animal {
+    // This does NOT override Animal.info()
+}
+```
+
+---
+
+#### 4. `private` method
+
+```
+interface Animal {
+    private void helper() {
+        System.out.println("Helper");
+    }
+}
+```
+
+This is allowed, but it is **actually private**.
+
+It is only usable inside the interface and cannot be overridden.
+
+### 🔥 Final picture
+
+```
+INTERFACE VARIABLES
+→ public static final
+→ cannot change
+
+INTERFACE METHODS
+
+abstract  → public abstract
+default   → public default
+static    → public static
+private   → private
+```
+
+And when you're talking specifically about **overriding/implementing**:
+
+```
+interface abstract/default → class implementation
+             public        → public only
+```
