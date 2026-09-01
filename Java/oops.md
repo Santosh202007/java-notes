@@ -9676,6 +9676,13 @@ class C implements A, B {
 }
 ```
 
+So:
+
+```
+Class → multiple interfaces
+```
+
+is allowed.
 #### Example 2
 If **both interfaces have the same method**, the implementing class only needs **one implementation**`
 
@@ -9786,7 +9793,7 @@ So Java says:
 
 > **C must resolve the conflict.**
 
-##### C overrides it
+###### C overrides it
 
 The easiest solution:
 
@@ -9806,7 +9813,7 @@ C obj = new C();
 obj.show();     // C
 ```
 
-#####  C can choose A's default
+######  C can choose A's default
 
 You can specifically tell Java:
 
@@ -9843,6 +9850,69 @@ Output:
 ```
 B
 ```
+
+
+### Usage
+```
+interface Camera {
+    void takePhoto();
+}
+
+interface GPS {
+    void navigate();
+}
+
+class Phone implements Camera, GPS {
+
+    public void takePhoto() {
+        System.out.println("Taking photo");
+    }
+
+    public void navigate() {
+        System.out.println("Navigating");
+    }
+}
+```
+
+### Interface can extend multiple inheritances
+This is allowed:
+
+```
+interface A {
+    void a();
+}
+
+interface B {
+    void b();
+}
+
+interface C extends A, B {
+    void c();
+}
+```
+
+Then:
+
+```
+class Test implements C {
+
+    public void a() {}
+    public void b() {}
+    public void c() {}
+}
+```
+
+This gives:
+
+```
+      A       B
+       \     /
+        \   /
+          C
+          |
+        Test
+```
+
 
 
 
