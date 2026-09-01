@@ -9481,7 +9481,7 @@ public static final
 ```
 
 You **cannot change** that.
-###  Interface methods
+###  Interface methods Keywords
 
 It depends on the type of method.
 
@@ -9578,3 +9578,74 @@ And when you're talking specifically about **overriding/implementing**:
 interface abstract/default → class implementation
              public        → public only
 ```
+
+## Interfaces cannot have instance variables
+You cannot have:
+
+```
+interface Animal {
+
+    int age;   // ❌
+}
+```
+
+because interface fields are constants and must be initialized.
+
+## Creating a interface object
+No.
+```
+Animal a = new Animal();   // ❌
+```
+
+An interface doesn't provide a concrete implementation by itself.
+
+But:
+
+```
+Animal a = new Dog();
+```
+
+is completely valid.
+
+This is **upcasting + polymorphism**.
+
+## Multiple Inheritance
+The big reason why interfaces exist
+
+Java does not allow:
+```
+class C extends A, B { }  // ❌
+```
+ A class cannot extend multiple classes.
+
+Why?
+
+The **Diamond Problem**.
+
+Imagine:
+
+```
+       A
+      / \
+     B   C
+      \ /
+       D
+```
+
+Suppose A has:
+
+```
+void show()
+```
+
+B and C both override it.
+
+Now D inherits from both.
+
+Which `show()` should D use?
+
+Ambiguous.
+
+Java avoids this with classes.
+
+##
