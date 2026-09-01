@@ -9053,6 +9053,63 @@ Dog
 The interface says:
 "Any class that implements me must provide sound()."
 
-##
+## Implements keyword
 
+For interfaces, a class uses:
+```
+implements
+```
+
+Example:
+```
+class Dog implements Animal {
+}
+```
+You don't write
+```
+class Dog extends Animal
+```
+When Animal is an interface.
+
+Remember:
+```
+Class → Class
+extends
+
+Class → Interface
+implements
+
+Interface → Interface
+extends
+```
+
+For example:
+```
+interface A {
+}
+
+interface B extends A {
+}
+
+class C implements B {
+}
+```
+
+## Why do we need interfaces
+
+Suppose:
+```
+class Dog {
+    void sound() {
+        System.out.println("Bark");
+    }
+}
+
+class Cat {
+    void sound() {
+        System.out.println("Meow");
+    }
+}
+```
+Both have `sound()`, but they implement it differently.
 
