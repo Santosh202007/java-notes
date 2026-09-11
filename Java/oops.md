@@ -9874,7 +9874,42 @@ class Phone implements Camera, GPS {
 }
 ```
 
-### Interface can extend multiple inheritances
+## Interface can extend an interface
+```
+interface Animal {
+    void eat();
+}
+```
+
+```
+interface Dog extends Animal {
+    void bark();
+}
+```
+
+Now:
+
+```
+class Labrador implements Dog {
+
+    public void eat() {
+        System.out.println("Eating");
+    }
+
+    public void bark() {
+        System.out.println("Bark");
+    }
+}
+```
+
+So:
+
+```
+Interface → Interface
+extends
+```
+
+## Interface can extend multiple inheritances
 This is allowed:
 
 ```
@@ -9913,6 +9948,6 @@ This gives:
         Test
 ```
 
-
+## Abstract class implementing an interface
 
 
