@@ -1194,7 +1194,7 @@ Hide the data and give controlled access to it
 ## Without Encapsulation ❌
 
 ```
-class Student {
+ class Student {
     public String name;
     public int age;
 }
@@ -1222,7 +1222,6 @@ Think of an **ATM**.
     - Withdraw
     - Deposit
     - Check Balance
-
 The ATM controls what operations are allowed.
 
 That's encapsulation.
@@ -1257,6 +1256,7 @@ class Human
     }
 }
 
+
 public class demo
 {
     public static void main(String args[])
@@ -1265,7 +1265,7 @@ public class demo
 
         h.setname("santosh");
         h.setage(19);
-
+        
         System.out.println(h.getname());
         System.out.println(h.getage());
     }
