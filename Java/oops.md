@@ -1393,10 +1393,10 @@ class Human
     private String name;
     private int age;
 
-    public Human(String name,int age) //Parametrized constructor
+    public Human(String o,int l) //Parametrized constructor
     {
-        this.name =name;
-        this.age = age;
+        this.name =o;
+        this.age = l;
     }
 
     public String getname()
