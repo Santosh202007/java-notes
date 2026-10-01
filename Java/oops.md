@@ -1357,7 +1357,7 @@ class Human
     private String name;
     private int age;
 
-    public Human()
+     Human()
     {
         name = "Santosh";
         age = 19;
