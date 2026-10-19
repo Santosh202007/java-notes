@@ -7496,6 +7496,7 @@ class Cat extends Animal{
     }
 }
 ```
+
  
  Every animal has some kind of sound but the `Animal` class doesn't know exactly what sound every animal should make.
  So we can say
@@ -9128,7 +9129,6 @@ class Car {
 ```
 
 An inner class isn't automatically inheritance.
-
 # Interfaces
 
 ## What is interface
@@ -10456,4 +10456,5 @@ class C extends A, B // ❌
 
 ### Default-method conflicts must be resolved
 
-## Abstraction + Polymorphsim
+
+
