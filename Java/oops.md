@@ -9591,24 +9591,6 @@ interface Animal {
 
 because interface fields are constants and must be initialized.
 
-## Creating a interface object
-No.
-```
-Animal a = new Animal();   // ❌
-```
-
-An interface doesn't provide a concrete implementation by itself.
-
-But:
-
-```
-Animal a = new Dog();
-```
-
-is completely valid.
-
-This is **upcasting + polymorphism**.
-
 ## Multiple Inheritance
 The big reason why interfaces exist
 
@@ -9647,6 +9629,24 @@ Which `show()` should D use?
 Ambiguous.
 
 Java avoids this with classes.
+
+## Creating a interface object
+No.
+```
+Animal a = new Animal();   // ❌
+```
+
+An interface doesn't provide a concrete implementation by itself.
+
+But:
+
+```
+Animal a = new Dog();
+```
+
+is completely valid.
+
+This is **upcasting + polymorphism**.
 
 ### Java allows multiple interfaces
 
@@ -9978,3 +9978,13 @@ class Labrador extends Dog {
 ```
 So the implementation responsibility can be passed down.
 
+
+## Interface + `default` methods
+
+Modern java allows default methods
+```
+interface Animal
+{
+
+}
+```
