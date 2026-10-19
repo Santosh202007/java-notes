@@ -10253,5 +10253,34 @@ class B implements A {
 
 This creates a completely separate static method in `B`; it does **not** override `A.show()`.
 
+Call:
+
+```
+A.show();
+B.show();
+```
+
+They are separate methods.
+
+## Private methods in interfaces
+
+```
+interface Animal {
+
+    default void eat() {
+        helper();
+    }
+
+    private void helper() {
+        System.out.println("Helper");
+    }
+}
+```
+
+The private method is used internally by the interface.
+
+It cannot be called from the implementing class.
+
+
 
 
