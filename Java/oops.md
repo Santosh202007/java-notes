@@ -10457,6 +10457,7 @@ class C extends A, B // ❌
 ### Default-method conflicts must be resolved
 
 
+# Enums
 
 
 
