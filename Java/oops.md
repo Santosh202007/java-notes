@@ -9985,6 +9985,33 @@ Modern java allows default methods
 ```
 interface Animal
 {
-
+default void eat()
+{
+System.out.println("Eating");
+}
 }
 ```
+Now a class doesn't have to implement eat().
+```
+class Dog implements Animal {
+}
+```
+Then:
+	
+```
+Dog d = new Dog();
+d.eat();
+```
+
+Output:
+```
+Eating
+```
+This was introduced in java 8.
+
+## Why were Default methods introduced?
+
+```
+
+```
+
