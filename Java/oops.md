@@ -10133,22 +10133,39 @@ How could Java add these methods to existing interfaces without forcing every co
 
 Default methods made this possible. Existing implementations could receive the new behavior while remaining compatible with older code.
 
+
+## Can a Class Override a Default Method?
+
+Yes.
+
+```
+interface Animal {
+
+    default void eat() {
+        System.out.println("Animal eats");
+    }
+}
+```
+
+```
+class Dog implements Animal {
+
+    @Override
+    public void eat() {
+        System.out.println("Dog eats");
+    }
+}
+```
+
+The class's implementation wins.
+
+so when you create a Dog object and call eat you get Dog eats but not animal eats.
+
 ## when two interfaces have same default method?
 
-```
-interface A {
-    default void show() {
-        System.out.println("A");
-    }
-}
-
-interface B {
-    default void show() {
-        System.out.println("B");
-    }
-}
-```
 
 ```
 
+Default method from A
+Default method from B
 ```
