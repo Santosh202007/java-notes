@@ -10052,4 +10052,63 @@ interface Vehicle {
 ```
 
 now this is gonna be the problem
- Both car and bike must implement stop().If an interface is implememted by hundr
+
+Both `Car` and `Bike` must now implement `stop()`. If an interface is implemented by hundreds of classes across different projects, adding a single abstract method can break existing code.
+
+This is called a backward compatibility problem.
+
+### The solution:
+
+Java 8 introduced the `default` keyword, allowing an interface to provide a method with an implementation.
+
+```
+interface Vehicle {
+    void start();
+
+    default void stop() {
+        System.out.println("Vehicle stopped");
+    }
+}
+```
+
+Now, the existing `Car` and `Bike` classes don't need to implement `stop()`.
+
+```
+class Car implements Vehicle {
+    public void start() {
+        System.out.println("Car starts");
+    }
+}
+```
+
+```
+Car c = new Car();
+c.start();
+c.stop();
+```
+
+Output:
+
+```
+Car starts
+Vehicle stopped
+```
+
+The `Car` class automatically inherits the default implementation of `stop()`.
+
+If a class needs different behavior, it can override the default method.
+
+```
+class Car implements Vehicle {
+    public void start() {
+        System.out.println("Car starts");
+    }
+
+    @Override
+    public void stop() {
+        System.out.println("Car stops safely");
+    }
+}
+```
+
+
