@@ -10359,9 +10359,11 @@ class Child extends Parent implements A {
 ```
 
 Now  the rule is
+```
 Class inheritance takes priority over interface default methods.
-
+```
 So when you do Child c=new child();
-and call c.show()
+and call `c.show()`
 you get output parent.
- 
+
+## Interface reference + polymorphism
