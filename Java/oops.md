@@ -10163,9 +10163,95 @@ so when you create a Dog object and call eat you get Dog eats but not animal eat
 
 ## when two interfaces have same default method?
 
+```
+interface A {
+    default void show() {
+        System.out.println("Default method from A");
+    }
+}
 
+interface B {
+    default void show() {
+        System.out.println("Default method from B");
+    }
+}
+
+class Test implements A, B {
+
+    @Override
+    public void show() {
+    System.out.prinltn("Ovveriden method);
+        A.super.show();
+        B.super.show();
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Test obj = new Test();
+        obj.show();
+    }
+}
 ```
 
+
+```
+Ovveriden method
 Default method from A
 Default method from B
 ```
+
+## Static methods in interfaces
+
+```
+interface MathUtil {
+
+    static void show() {
+        System.out.println("Hello");
+    }
+}
+```
+
+Call it using:
+
+```
+MathUtil.show();
+```
+
+Not:
+
+```
+Dog d = new Dog();
+d.show();   // ❌
+```
+
+Interface static methods belong to the **interface itself**.
+
+
+### Can static interface methods be overridden?
+No.
+This is a common trap
+```
+interface A {
+
+    static void show() {
+        System.out.println("A");
+    }
+}
+```
+
+A class cannot override it:
+
+```
+class B implements A {
+
+    static void show() {
+        System.out.println("B");
+    }
+}
+```
+
+This creates a completely separate static method in `B`; it does **not** override `A.show()`.
+
+
+
