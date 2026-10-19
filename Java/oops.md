@@ -10281,6 +10281,5 @@ The private method is used internally by the interface.
 
 It cannot be called from the implementing class.
 
-
-
-
+### Note
+An interface cannot have a constructor and it cannot be final.
