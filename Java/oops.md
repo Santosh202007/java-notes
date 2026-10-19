@@ -10165,8 +10165,9 @@ so when you create a Dog object and call eat you get Dog eats but not animal eat
 
 Interface Inheritance and Default Method Conflict
 
-The class must override the method by this we resolve the conflict
-
+The class must override the method by this we resolve the conflict and now there is no ambiguity.
+You can also explicitly choose a default implementation.
+by `InterfaceName.super.method()`
 ```
 interface A {
     default void show() {
