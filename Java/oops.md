@@ -10332,5 +10332,36 @@ interface Calculator {
 
 the compiler gives an error.
 
-##
+## what if  a class and  interface have the same method?
 
+```
+class Parent {
+
+    void show() {
+        System.out.println("Parent");
+    }
+}
+```
+
+
+```
+interface A {
+
+    default void show() {
+        System.out.println("A");
+    }
+}
+```
+Then:
+```
+class Child extends Parent implements A {
+}
+```
+
+Now  the rule is
+Class inheritance takes priority over interface default methods.
+
+So when you do Child c=new child();
+and call c.show()
+you get output parent.
+ 
