@@ -10009,7 +10009,12 @@ Eating
 ```
 This was introduced in java 8.
 
-## Why were Default methods introduced?
+## Why were Default methods introduced in java8?
+
+Default methods were introduced to allow developers to add new methods to exsisting
+interfaces without breaking the classes that already io
+
+
 
 ```
 
