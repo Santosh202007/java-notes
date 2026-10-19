@@ -9951,5 +9951,30 @@ This gives:
 ## Abstract class implementing an interface
 
 ```
+interface Animal {
+    void sound();
+}
+```
 
 ```
+abstract class Dog implements Animal {
+
+}
+```
+
+This is valid.
+
+Here dog doesn't need to implement sound 
+because dog is itself abstract.
+
+Later:
+```
+class Labrador extends Dog {
+
+    public void sound() {
+        System.out.println("Bark");
+    }
+}
+```
+So the implementation responsibility can be passed down.
+
