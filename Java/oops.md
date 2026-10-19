@@ -10163,6 +10163,10 @@ so when you create a Dog object and call eat you get Dog eats but not animal eat
 
 ## when two interfaces have same default method?
 
+Interface Inheritance and Default Method Conflict
+
+The class must override the method by this we resolve the conflict
+
 ```
 interface A {
     default void show() {
@@ -10285,3 +10289,46 @@ It cannot be called from the implementing class.
 An interface cannot have a constructor and it cannot be final.
 
 ## Functional interface
+
+A functional interface has exactly on abstract method.
+
+Example:
+
+```
+@FunctionalInterface
+interface Calculator {
+
+    int add(int a, int b);
+}
+```
+
+It can have:
+
+- One abstract method
+- Any number of `default` methods
+- Any number of `static` methods
+- Private methods
+
+The restriction is specifically on **abstract methods**.
+
+ `@FunctionalInterface`
+This annotation tells Java:
+
+> "This interface is supposed to have exactly one abstract method."
+
+
+If you add another abstract method:
+
+```
+@FunctionalInterface
+interface Calculator {
+
+    int add(int a, int b);
+
+    int subtract(int a, int b);   // ❌
+}
+```
+
+the compiler gives an error.
+
+
