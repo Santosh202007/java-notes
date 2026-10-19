@@ -10011,12 +10011,45 @@ This was introduced in java 8.
 
 ## Why were Default methods introduced in java8?
 
-Default methods were introduced to allow developers to add new methods to exsisting
-interfaces without breaking the classes that already io
+Default methods were introduced to allow developers to add new methods to existing
+interfaces without breaking the classes that already implement them.
 
+Before java 8 interfaces could have abstract but not implemented instance methods.
+so if a new abstract method was added to an existing interface, every implementing class would have to implement it.
 
+### The problem here:
 
+Imagine you have an interface
+```
+interface Vehicle {
+    void start();
+}
 ```
 
+And two classes implement it:
+```
+class Car implements Vehicle {
+    public void start() {
+        System.out.println("Car starts");
+    }
+}
+
+class Bike implements Vehicle {
+    public void start() {
+        System.out.println("Bike starts");
+    }
+}
+```
+Everything works fine.
+
+Now, suppose we want to add a new method called `stop()` to the `Vehicle` interface.
+
+```
+interface Vehicle {
+    void start();
+    void stop();  // New method
+}
 ```
 
+now this is gonna be the problem
+ Both car and bike must implement stop().If an interface is implememted by hundr
