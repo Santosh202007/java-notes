@@ -9950,4 +9950,6 @@ This gives:
 
 ## Abstract class implementing an interface
 
+```
 
+```
