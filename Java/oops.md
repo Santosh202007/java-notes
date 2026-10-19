@@ -9347,7 +9347,7 @@ a1.sound();
 Output:
 
 ```
-Bark
+ Dog barks
 ```
 
 The reference type is:
