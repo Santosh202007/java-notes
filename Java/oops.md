@@ -10367,3 +10367,93 @@ and call `c.show()`
 you get output parent.
 
 ## Interface reference + polymorphism
+
+```
+interface Payment {
+
+    void pay();
+}
+```
+
+```
+class UPI implements Payment {
+
+    public void pay() {
+        System.out.println("UPI");
+    }
+}
+```
+
+
+Then:
+
+```
+Payment p = new UPI();
+p.pay();
+```
+
+Why is this powerful?
+
+Your code can depend on:
+
+```
+Payment
+```
+
+rather than:
+
+```
+UPI
+```
+
+So later:
+
+```
+p = new CreditCard();
+```
+
+could work without changing code that only cares about the `Payment` contract.
+
+
+## Rules for interface
+### Implementing class
+
+Must make the implementation:
+
+```
+public
+```
+
+### Interface cannot be instantiated
+
+```
+new Animal(); // ❌
+```
+
+### Class can implement multiple interfaces
+
+```
+class C implements A, B, C
+```
+
+### Interface can extend multiple interfaces
+
+```
+interface C extends A, B
+```
+
+### Class cannot extend multiple classes
+
+```
+class C extends A, B // ❌
+```
+
+### Interface doesn't have constructors
+
+### Interface cannot be final
+
+### Interface static methods aren't overridden
+
+### Default-method conflicts must be resolved
+
+## Abstraction + Polymorphsim
