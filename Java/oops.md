@@ -10011,6 +10011,8 @@ This was introduced in java 8.
 
 ## Why were Default methods introduced in java8?
 
+### Reason 1
+
 Default methods were introduced to allow developers to add new methods to existing
 interfaces without breaking the classes that already implement them.
 
@@ -10112,3 +10114,41 @@ class Car implements Vehicle {
 ```
 
 
+### Reason 2
+### The second major reason: Functional enhancements in Java 8
+
+Java 8 introduced the Stream API and several new methods to existing collection-related interfaces.
+
+For example, the `Collection` interface gained methods such as `stream()` and `parallelStream()`.
+
+```
+List<Integer> numbers = Arrays.asList(1, 2, 3, 4, 5);
+
+numbers.stream()
+       .filter(n -> n % 2 == 0)
+       .forEach(System.out::println);
+```
+
+How could Java add these methods to existing interfaces without forcing every collection implementation to rewrite its code?
+
+Default methods made this possible. Existing implementations could receive the new behavior while remaining compatible with older code.
+
+## when two interfaces have same default method?
+
+```
+interface A {
+    default void show() {
+        System.out.println("A");
+    }
+}
+
+interface B {
+    default void show() {
+        System.out.println("B");
+    }
+}
+```
+
+```
+
+```
