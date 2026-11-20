@@ -978,7 +978,7 @@ So there is **one stack per thread**, and **each method call pushes a new frame 
 
 
 
-# Note
+# Reference Variable
 a reference variable can be **either local, instance, or static**.
 
 ## 1. Local Reference Variable
