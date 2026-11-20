@@ -3812,7 +3812,7 @@ Output
 10
 Child
 ```
-###  Note:
+#####  Note:
 if there is no default parent constructor
 If the child constructor is
 
@@ -4041,6 +4041,7 @@ Every constructor reaches its parent through `super()`.
 | Parent static method             | `super.method()` _(works but `Parent.method()` is preferred)_ |
 
 
+## Object Class
 
 
 
