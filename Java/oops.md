@@ -1,4 +1,3 @@
-
 # Java OOP
 
 > "Object-Oriented Programming (OOP) is a programming paradigm that organizes software around **objects**, which combine data (attributes) and behavior (methods)."
@@ -8,7 +7,7 @@
 Before OOP, programs were written as a collection of functions. As applications grew larger, this became difficult to manage.
 
 OOP solves these problems by promoting:
-
+in the rthe sumbncton the mian vector/,<int int mp;>
 - Modularity
 - Reusability
 - Scalability
